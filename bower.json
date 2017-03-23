@@ -1,0 +1,9 @@
+{
+  "name": "portfolio",
+  "dependencies": {
+    "angular": "latest",
+    "bootstrap": "latest",
+    "angular-ui-router": "latest",
+    "jquery": "latest"
+  }
+}
