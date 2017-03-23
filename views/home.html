@@ -1,11 +1,13 @@
 <div class="row">
 	<div ng-repeat="project in projects">
 		<div class="col-xs-4">
-			<div class="preview" preview>
-				<video name="{{project.title}}" loop>
-					<source ng-src=previews/{{project.id}}-thumb.mov>
-				</video>
-			</div>
+			<a ui-sref="project({id: project.id})">
+				<div class="preview-thumb" preview>
+					<video name="{{project.title}}" loop>
+						<source ng-src=previews/{{project.name}}-thumb.mov>
+					</video>
+				</div>
+			</a>
 		</div>
 	</div>
 </div>

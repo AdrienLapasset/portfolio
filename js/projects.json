@@ -2,21 +2,25 @@
 	{
 		"title": "Wind Mile",
 		"description": "Tata",
-		"id": "windmile"
+		"name": "windmile",
+		"id": 0
 	},
 	{
 		"title": "TOTO",
 		"description": "Tata",
-		"id": "toto"
+		"name": "toto",
+		"id": 1
 	},
 	{
 		"title": "TOTO",
 		"description": "Tata",
-		"id": "toto"
+		"name": "toto",
+		"id": 2
 	},
 	{
 		"title": "TOTO",
 		"description": "Tata",
-		"id": "toto"
+		"name": "toto",
+		"id": 3
 	}
 ]
