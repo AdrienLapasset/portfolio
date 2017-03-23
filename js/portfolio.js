@@ -19,3 +19,20 @@ portfolio.controller('homeCtrl', function($http, $scope) {
 		$scope.projects = res.data;
 	});
 });
+
+portfolio.directive("preview", function() {
+	return {
+		restrict: "A",
+		link: function(scope, elem, attrs) {
+			var figure = $(".preview").hover( hoverVideo, hideVideo );
+
+			function hoverVideo(e) {  
+				$('video', this).get(0).play(); 
+			}
+
+			function hideVideo(e) {
+				$('video', this).get(0).pause(); 
+			}
+		}
+	}
+});

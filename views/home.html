@@ -1,3 +1,11 @@
-<p>TOTO !</p>
-
-{{projects}}
+<div class="row">
+	<div ng-repeat="project in projects">
+		<div class="col-xs-4">
+			<div class="preview" preview>
+				<video name="{{project.title}}" loop>
+					<source ng-src=previews/{{project.id}}-thumb.mov>
+				</video>
+			</div>
+		</div>
+	</div>
+</div>
