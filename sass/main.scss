@@ -1,12 +1,6 @@
-// @import "home";
-// @import "menu";
-// @import "menu-button";
-// @import "underline";
+@import "home";
+@import "project";
 
-// @font-face {
-// 	font-family: Zorus_Serif_Italic;
-// 	src: url('../fonts/Zorus_Serif_Italic.otf');
-// }
 
 * {
 	margin: 0;
@@ -18,15 +12,18 @@ video {
     height: auto;
 }
 
-// body {
-// 	font-family: Zorus_Serif_Italic;
-// 	text-transform: uppercase;
-// 	overflow: hidden;
-// }
+body {
+	font-family: Work Sans;
+	color: black;
+}
 
-// a {
-// 	text-decoration: none;
-// 	display: inline-block;
-// }
+a {
+	text-decoration: none;
+	display: inline-block;
+}
+
+h1,h2,h3,p {
+	color: black;
+}
 
 

@@ -1,0 +1,9 @@
+.navbar {
+  background-color: white;
+  border: none;
+  border-bottom: solid black 2px;
+  border-radius: 0; }
+  .navbar .navbar-brand {
+    color: black; }
+
+/*# sourceMappingURL=home.css.map */

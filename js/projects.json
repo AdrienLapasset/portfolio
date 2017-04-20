@@ -1,26 +1,32 @@
 [
 	{
 		"title": "Wind Mile",
-		"description": "Tata",
+		"description": "Wind Mile est un groupe de musique Lillois",
 		"name": "windmile",
 		"id": 0
 	},
 	{
-		"title": "TOTO",
+		"title": "Spaceships",
 		"description": "Tata",
-		"name": "toto",
+		"name": "spaceship",
 		"id": 1
 	},
 	{
-		"title": "TOTO",
+		"title": "Generator",
 		"description": "Tata",
-		"name": "toto",
+		"name": "generator",
 		"id": 2
 	},
 	{
-		"title": "TOTO",
+		"title": "Une saison graphique",
 		"description": "Tata",
-		"name": "toto",
+		"name": "usg",
 		"id": 3
+	},
+	{
+		"title": "Alpaga",
+		"description": "Tata",
+		"name": "alpaga",
+		"id": 4
 	}
 ]
