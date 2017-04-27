@@ -1,9 +1,15 @@
 .navbar {
   background-color: white;
-  border: none;
-  border-bottom: solid black 1px;
-  border-radius: 0; }
+  border: none; }
   .navbar .navbar-brand {
     color: black; }
+  .navbar .progress {
+    background-color: black;
+    height: 1px;
+    width: 0px; }
+
+.project-thumb {
+  opacity: 0;
+  transition: opacity 0.3s; }
 
 /*# sourceMappingURL=home.css.map */

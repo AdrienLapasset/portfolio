@@ -20,15 +20,15 @@
 
 	<!-- JS files -->
 	<script src="js/portfolio.js"></script>
+	<script src="js/ui.js"></script>
 </head>
 <body class="index">
 	<nav class="navbar navbar-default" ng-controller="navCtrl">
 		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="home">Adrien Lapasset</a>
-				<a class="navbar-link pull-right" href="contact">Contact me</a>
-			</div>				
+			<a class="navbar-brand" ui-sref="/">Adrien Lapasset</a>
+			<a class="navbar-brand navbar-right" ui-sref="contact">Contact</a>
 		</div>
+		<div class="progress"></div>				
 	</nav>
 	<div class="container-fluid">
 		<ui-view></ui-view>
