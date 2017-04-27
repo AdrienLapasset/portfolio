@@ -15,16 +15,9 @@ portfolio.config(function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise('/');
 });
 
-portfolio.controller('navCtrl', function() {
-
-});
-
 portfolio.controller('homeCtrl', function($http, $scope) {
 	$http.get('js/projects.json').then(function(res) {
 		$scope.projects = res.data;
-	});
-	$scope.$on('$viewContentLoaded', function(){
-		console.log('TOTO')
 	});
 });
 

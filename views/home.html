@@ -1,14 +1,17 @@
 <div class="row">
-	<div ng-repeat="project in projects" class="project-thumb">
+	<div ng-repeat="project in projects">
 		<div class="col-md-4 col-sm-6 col-xs-12">
-			<a ui-sref="project({id: project.id})">
-				<div class="preview-thumb" preview>
-					<video name="{{project.title}}" loop>
-						<source ng-src=previews/{{project.name}}-thumb.mov>
-					</video>
-				</div>
-				<h2>{{ project.title }}</h2>
-			</a>
+			<div class="project-thumb">
+				<a ui-sref="project({id: project.id})">
+					<div class="preview-thumb" preview>
+						<video name="{{project.title}}" loop><source ng-src=previews/{{project.name}}-thumb.mov></video>
+					</div>
+					<div class="footer">
+						<h2>{{ project.title }}</h2>
+						<label>{{ project.category }}</label>
+					</div>
+				</a>
+			</div>
 		</div>
 	</div>
 </div>

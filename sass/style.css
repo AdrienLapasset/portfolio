@@ -1,6 +1,8 @@
 .navbar {
   background-color: white;
-  border: none; }
+  border: none;
+  background-color: #f8f8f8;
+  margin: 0; }
   .navbar .navbar-brand {
     color: black; }
   .navbar .progress {
@@ -10,7 +12,20 @@
 
 .project-thumb {
   opacity: 0;
-  transition: opacity 0.3s; }
+  transition: opacity 0.4s;
+  padding: 20px;
+  height: 300px; }
+  .project-thumb video {
+    max-width: 400px;
+    box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.25); }
+  .project-thumb .footer {
+    margin-top: 10px; }
+    .project-thumb .footer h2 {
+      font-size: 16px;
+      font-weight: 700; }
+    .project-thumb .footer label {
+      text-transform: uppercase;
+      font-size: 12px; }
 
 .project .header a {
   display: inline-block; }
@@ -28,14 +43,17 @@ video {
 body {
   font-family: Work Sans;
   font-weight: regular;
-  color: black; }
+  color: black;
+  background-color: #f8f8f8; }
 
 a {
   text-decoration: none;
   display: inline-block; }
 
-h1, h2, h3, p {
+h1, h2, h3, p, label {
   font-weight: normal;
-  color: black; }
+  color: black;
+  margin: 0;
+  padding: 0; }
 
 /*# sourceMappingURL=style.css.map */

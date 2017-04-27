@@ -1,21 +1,21 @@
 @import "home";
 @import "project";
 
-
 * {
 	margin: 0;
 	padding: 0;
 }
 
 video {
-    width: 100%;
-    height: auto;
+	width: 100%;
+	height: auto;
 }
 
 body {
 	font-family: Work Sans;
 	font-weight: regular;
 	color: black;
+	background-color: #f8f8f8; 
 }
 
 a {
@@ -23,9 +23,11 @@ a {
 	display: inline-block;
 }
 
-h1,h2,h3,p {
+h1,h2,h3,p,label {
 	font-weight: normal;
 	color: black;
+	margin: 0;
+	padding: 0;
 }
 
 

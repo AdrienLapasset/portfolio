@@ -1,12 +1,14 @@
 [
 	{
 		"title": "Wind Mile",
+		"category": "Music",
 		"description": "Wind Mile est un groupe de musique Lillois",
 		"name": "windmile",
 		"id": 0
 	},
 	{
 		"title": "Spaceships",
+		"category": "Graphic design",
 		"description": "Tata",
 		"name": "spaceship",
 		"id": 1
@@ -19,12 +21,14 @@
 	},
 	{
 		"title": "Une saison graphique",
+		"category": "Graphic design",
 		"description": "Tata",
 		"name": "usg",
 		"id": 3
 	},
 	{
 		"title": "Alpaga",
+		"category": "Music",
 		"description": "Tata",
 		"name": "alpaga",
 		"id": 4
