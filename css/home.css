@@ -10,21 +10,22 @@
     height: 1px;
     width: 0px; }
 
-.project-thumb {
-  opacity: 0;
-  transition: opacity 0.4s;
-  padding: 20px;
-  height: 300px; }
-  .project-thumb video {
-    max-width: 400px;
-    box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.25); }
-  .project-thumb .footer {
-    margin-top: 10px; }
-    .project-thumb .footer h2 {
-      font-size: 16px;
-      font-weight: 700; }
-    .project-thumb .footer label {
-      text-transform: uppercase;
-      font-size: 12px; }
+.home {
+  display: none; }
+  .home .project-thumb {
+    transition: opacity 0.4s;
+    padding: 20px;
+    height: 340px; }
+    .home .project-thumb video {
+      max-width: 400px;
+      box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.25); }
+    .home .project-thumb .footer {
+      margin-top: 10px; }
+      .home .project-thumb .footer h2 {
+        font-size: 16px;
+        font-weight: 700; }
+      .home .project-thumb .footer label {
+        text-transform: uppercase;
+        font-size: 12px; }
 
 /*# sourceMappingURL=home.css.map */

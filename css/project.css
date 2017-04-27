@@ -1,6 +1,5 @@
-.project .header a {
-  display: inline-block; }
-.project .header h2 {
-  display: inline-block; }
+.project h2 {
+  font-weight: 700;
+  font-size: 20px; }
 
 /*# sourceMappingURL=project.css.map */

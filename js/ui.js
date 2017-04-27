@@ -1,5 +1,8 @@
 $(document).ready(function() {
-	$('.progress').animate({ width: '100%'}, 3000, function() {
-		$('.project-thumb').css('opacity', '1');
+	$('.progress').animate({ width: '100%' }, 3000, function() {
+		$('.home').fadeIn('slow');
+	});
+	$( '.navbar-brand' ).click(function() {
+		$('.home').fadeIn('slow');
 	});
 });
