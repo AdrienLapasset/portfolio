@@ -1,7 +1,7 @@
 .navbar {
   background-color: white;
   border: none;
-  border-bottom: solid black 2px;
+  border-bottom: solid black 1px;
   border-radius: 0; }
   .navbar .navbar-brand {
     color: black; }
@@ -21,6 +21,7 @@ video {
 
 body {
   font-family: Work Sans;
+  font-weight: regular;
   color: black; }
 
 a {
@@ -28,6 +29,7 @@ a {
   display: inline-block; }
 
 h1, h2, h3, p {
+  font-weight: normal;
   color: black; }
 
 /*# sourceMappingURL=style.css.map */

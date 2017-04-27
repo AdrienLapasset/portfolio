@@ -1,7 +1,7 @@
 .navbar {
   background-color: white;
   border: none;
-  border-bottom: solid black 2px;
+  border-bottom: solid black 1px;
   border-radius: 0; }
   .navbar .navbar-brand {
     color: black; }
