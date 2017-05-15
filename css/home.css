@@ -5,10 +5,28 @@
   margin: 0; }
   .navbar .navbar-brand {
     color: black; }
+    .navbar .navbar-brand.navbar-right {
+      width: 171px; }
+      .navbar .navbar-brand.navbar-right .text {
+        display: inline-block;
+        opacity: 0;
+        transform: translateX(10px);
+        transition: all 0.3s ease-in-out; }
+      .navbar .navbar-brand.navbar-right .contact-icon {
+        float: right;
+        display: inline-block;
+        width: 25px;
+        margin-left: 10px;
+        margin-top: -1px; }
+      .navbar .navbar-brand.navbar-right:hover > .text {
+        color: black;
+        opacity: 1;
+        transform: translateX(0px); }
   .navbar .progress {
     background-color: black;
     height: 1px;
-    width: 0px; }
+    width: 0px;
+    margin: 0; }
 
 .home {
   display: none; }
@@ -27,5 +45,8 @@
       .home .project-thumb .footer label {
         text-transform: uppercase;
         font-size: 12px; }
+
+.view {
+  margin-top: 60px; }
 
 /*# sourceMappingURL=home.css.map */
