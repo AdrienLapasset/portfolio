@@ -1,0 +1,24 @@
+.contact {
+	.form {
+		margin-top: 40px;
+
+		form {
+			label {
+				font-size: 28px;
+			}
+			input, textarea {
+				width: 100%;
+				background-color: #e8e8e8;
+				border: none;
+				font-size: 28px;
+				padding: 15px;
+				outline: none;
+				margin-bottom: 40px;
+
+				& :focus {
+					outline: none;
+				}
+			}
+		}	
+	}
+}

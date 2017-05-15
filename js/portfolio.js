@@ -7,6 +7,13 @@ portfolio.config(function($stateProvider, $urlRouterProvider) {
 		templateUrl: 'views/home.html',
 		controller: 'homeCtrl',
 	})
+
+	.state('contact', {
+		url: '/contact',
+		templateUrl: 'views/contact.html',
+		controller: 'contactCtrl',
+	})
+
 	.state('project', {
 		url: '/project/:id',
 		templateUrl: 'views/project.html',
@@ -19,6 +26,10 @@ portfolio.controller('homeCtrl', function($http, $scope) {
 	$http.get('js/projects.json').then(function(res) {
 		$scope.projects = res.data;
 	});
+});
+
+portfolio.controller('contactCtrl', function($scope) {
+	
 });
 
 portfolio.controller('projectCtrl', function($http, $scope, $stateParams) {
