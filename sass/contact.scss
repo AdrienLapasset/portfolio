@@ -4,19 +4,52 @@
 
 		form {
 			label {
-				font-size: 28px;
+				font-size: 18px;
+				margin: 0 0 8px 0;
 			}
+
 			input, textarea {
 				width: 100%;
 				background-color: #ececec;
 				border: none;
-				font-size: 28px;
+				font-size: 18px;
 				padding: 15px;
 				outline: none;
 				margin-bottom: 40px;
+				border-radius: 3px;
+				transition: all 0.2s;
 
-				& :focus {
+				&:focus {
 					outline: none;
+					box-shadow: -1px 1px 8px 0px rgba(0,0,0,0.25);
+				}
+			}
+
+			.submit-btn {
+				input[value="Send"] {
+					text-transform: uppercase;
+					// font-weight: 700;
+					font-size: 24px;
+				}
+
+				input {
+					background-color: transparent;
+
+					&:hover + .send-icon {
+						opacity: 1;
+						transform: translate(10px, -10px);
+						opacity: 0;
+					}
+				}
+
+				.send-icon {
+					float: right;
+					display: inline-block;
+					width: 30px;
+					position: relative;
+					top: -85px;
+					right: 280px;
+					transition: all 0.3s;
 				}
 			}
 		}	

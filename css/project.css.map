@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AACC,WAAG;EACF,WAAW,EAAE,GAAG;EAChB,SAAS,EAAE,IAAI",
+"mappings": "AAAA,QAAS;EACR,OAAO,EAAE,IAAI;EAMb,WAAG;IACF,WAAW,EAAE,GAAG;IAChB,SAAS,EAAE,IAAI",
 "sources": ["../sass/project.scss"],
 "names": [],
 "file": "project.css"

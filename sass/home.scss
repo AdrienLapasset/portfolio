@@ -1,49 +1,4 @@
-.navbar {
-	background-color: white;
-	border: none;
-	background-color: #f8f8f8; 
-	margin: 0;
-
-	.navbar-brand {
-		color: black;
-
-		&.navbar-right {
-			width: 171px;
-
-			.text {
-				display: inline-block; 
-				opacity: 0;
-				transform: translateX(10px);
-				transition: all 0.3s ease-in-out;
-			}
-
-			.contact-icon {
-				float: right;
-				display: inline-block;
-				width: 25px;
-				margin-left: 10px;
-				margin-top: -1px;
-			}
-
-			&:hover > .text {
-				color: black;
-				opacity: 1;
-				transform: translateX(0px);
-			}
-		}
-	}
-
-	.progress {
-		background-color: black;
-		height: 1px;
-		width: 0px;
-		margin: 0;
-	}
-}
-
 .home {
-	display: none;
-	
 	.project-thumb {
 		transition: opacity 0.4s;
 		padding: 20px;
@@ -51,7 +6,7 @@
 
 		video {
 			max-width: 400px;
-			box-shadow: -2px 2px 5px 0px rgba(0,0,0,0.25);
+			box-shadow: -1px 1px 8px 0px rgba(0,0,0,0.25);
 		}
 		.footer {
 			margin-top: 10px;
@@ -67,8 +22,4 @@
 			}
 		}
 	}
-}
-
-.view {
-	margin-top: 60px;	
 }

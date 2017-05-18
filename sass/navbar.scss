@@ -1,0 +1,42 @@
+.navbar {
+	background-color: white;
+	border: none;
+	background-color: #f8f8f8; 
+	margin: 0;
+
+	.navbar-brand {
+		color: black;
+
+		&.navbar-right {
+			width: 171px;
+
+			.text {
+				display: inline-block; 
+				opacity: 0;
+				transform: translateX(10px);
+				transition: all 0.3s ease-in-out;
+			}
+
+			.contact-icon {
+				float: right;
+				display: inline-block;
+				width: 25px;
+				margin-left: 10px;
+				margin-top: -1px;
+			}
+
+			&:hover > .text {
+				color: black;
+				opacity: 1;
+				transform: translateX(0px);
+			}
+		}
+	}
+
+	.progress {
+		background-color: black;
+		height: 1px;
+		width: 0px;
+		margin: 0;
+	}
+}

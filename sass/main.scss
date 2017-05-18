@@ -1,7 +1,9 @@
+@import "navbar";
 @import "home";
 @import "project";
 @import "contact";
 
+$grey: #f8f8f8;
 
 * {
 	margin: 0;
@@ -17,7 +19,7 @@ body {
 	font-family: Work Sans;
 	font-weight: regular;
 	color: black;
-	background-color: #f8f8f8; 
+	background-color: $grey; 
 }
 
 a {
@@ -30,4 +32,8 @@ h1,h2,h3,p,label {
 	color: black;
 	margin: 0;
 	padding: 0;
+}
+
+.view {
+	margin-top: 60px;	
 }

@@ -1,5 +1,7 @@
-.project h2 {
-  font-weight: 700;
-  font-size: 20px; }
+.project {
+  padding: 20px; }
+  .project h2 {
+    font-weight: 700;
+    font-size: 20px; }
 
 /*# sourceMappingURL=project.css.map */

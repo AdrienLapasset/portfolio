@@ -28,45 +28,63 @@
     width: 0px;
     margin: 0; }
 
-.home {
-  display: none; }
-  .home .project-thumb {
-    transition: opacity 0.4s;
-    padding: 20px;
-    height: 340px; }
-    .home .project-thumb video {
-      max-width: 400px;
-      box-shadow: -2px 2px 5px 0px rgba(0, 0, 0, 0.25); }
-    .home .project-thumb .footer {
-      margin-top: 10px; }
-      .home .project-thumb .footer h2 {
-        font-size: 16px;
-        font-weight: 700; }
-      .home .project-thumb .footer label {
-        text-transform: uppercase;
-        font-size: 12px; }
+.home .project-thumb {
+  transition: opacity 0.4s;
+  padding: 20px;
+  height: 340px; }
+  .home .project-thumb video {
+    max-width: 400px;
+    box-shadow: -1px 1px 8px 0px rgba(0, 0, 0, 0.25); }
+  .home .project-thumb .footer {
+    margin-top: 10px; }
+    .home .project-thumb .footer h2 {
+      font-size: 16px;
+      font-weight: 700; }
+    .home .project-thumb .footer label {
+      text-transform: uppercase;
+      font-size: 12px; }
 
-.view {
-  margin-top: 60px; }
-
-.project h2 {
-  font-weight: 700;
-  font-size: 20px; }
+.project {
+  padding: 20px; }
+  .project h2 {
+    font-weight: 700;
+    font-size: 20px; }
 
 .contact .form {
   margin-top: 40px; }
   .contact .form form label {
-    font-size: 28px; }
+    font-size: 18px;
+    margin: 0 0 8px 0; }
   .contact .form form input, .contact .form form textarea {
     width: 100%;
     background-color: #ececec;
     border: none;
-    font-size: 28px;
+    font-size: 18px;
     padding: 15px;
     outline: none;
-    margin-bottom: 40px; }
-    .contact .form form input :focus, .contact .form form textarea :focus {
-      outline: none; }
+    margin-bottom: 40px;
+    border-radius: 3px;
+    transition: all 0.2s; }
+    .contact .form form input:focus, .contact .form form textarea:focus {
+      outline: none;
+      box-shadow: -1px 1px 8px 0px rgba(0, 0, 0, 0.25); }
+  .contact .form form .submit-btn input[value="Send"] {
+    text-transform: uppercase;
+    font-size: 24px; }
+  .contact .form form .submit-btn input {
+    background-color: transparent; }
+    .contact .form form .submit-btn input:hover + .send-icon {
+      opacity: 1;
+      transform: translate(10px, -10px);
+      opacity: 0; }
+  .contact .form form .submit-btn .send-icon {
+    float: right;
+    display: inline-block;
+    width: 30px;
+    position: relative;
+    top: -85px;
+    right: 280px;
+    transition: all 0.3s; }
 
 * {
   margin: 0;
@@ -91,5 +109,8 @@ h1, h2, h3, p, label {
   color: black;
   margin: 0;
   padding: 0; }
+
+.view {
+  margin-top: 60px; }
 
 /*# sourceMappingURL=style.css.map */
