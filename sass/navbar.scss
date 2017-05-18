@@ -7,8 +7,14 @@
 	.navbar-brand {
 		color: black;
 
+		h1 {
+			font-size: 18px;
+			transition: all 0.3s;
+		}
+
 		&.navbar-right {
 			width: 171px;
+			float: right;
 
 			.text {
 				display: inline-block; 
@@ -17,26 +23,29 @@
 				transition: all 0.3s ease-in-out;
 			}
 
-			.contact-icon {
-				float: right;
-				display: inline-block;
-				width: 25px;
-				margin-left: 10px;
-				margin-top: -1px;
-			}
-
 			&:hover > .text {
 				color: black;
 				opacity: 1;
 				transform: translateX(0px);
 			}
 		}
-	}
 
-	.progress {
-		background-color: black;
-		height: 1px;
-		width: 0px;
-		margin: 0;
+		.contact-icon, .back-icon {
+			float: right;
+			display: inline-block;
+			width: 25px;
+			margin-left: 10px;
+			margin-top: -1px;
+		}
+
+		.back-icon {
+			display: none;
+			float: left;
+			margin: 0;
+			position: relative;
+			top: -18px;
+			transform: translateX(-40px);
+			transition: all 0.2s ease-in-out;
+		}
 	}
 }

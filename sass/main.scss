@@ -1,9 +1,5 @@
-@import "navbar";
-@import "home";
-@import "project";
-@import "contact";
-
 $grey: #f8f8f8;
+$grey-dark: #ececec;
 
 * {
 	margin: 0;
@@ -37,3 +33,15 @@ h1,h2,h3,p,label {
 .view {
 	margin-top: 60px;	
 }
+
+.line {
+	background-color: $grey-dark;
+	height: 1px;
+	width: 100%;
+	margin: 0;
+}
+
+@import "navbar";
+@import "home";
+@import "project";
+@import "contact";

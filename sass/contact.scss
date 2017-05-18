@@ -10,7 +10,7 @@
 
 			input, textarea {
 				width: 100%;
-				background-color: #ececec;
+				background-color: $grey-dark;
 				border: none;
 				font-size: 18px;
 				padding: 15px;
@@ -27,13 +27,12 @@
 
 			.submit-btn {
 				input[value="Send"] {
-					text-transform: uppercase;
-					// font-weight: 700;
 					font-size: 24px;
 				}
 
 				input {
 					background-color: transparent;
+					margin: 0;
 
 					&:hover + .send-icon {
 						opacity: 1;

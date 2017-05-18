@@ -25,13 +25,16 @@
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
-			<a class="navbar-brand" ui-sref="home">Adrien Lapasset</a>
+			<a class="navbar-brand" ui-sref="home">
+				<h1>Adrien Lapasset</h1>
+				<img class="back-icon" src="icons/back.svg">
+			</a>
 			<a class="navbar-brand navbar-right" ui-sref="contact">
 				<div class="text">Contact me</div>
 				<img class="contact-icon" src="icons/contact.svg">
 			</a>
 		</div>
-		<div class="progress"></div>				
+		<div class="line"></div>				
 	</nav>
 	<div class="container-fluid view">
 		<ui-view></ui-view>

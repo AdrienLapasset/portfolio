@@ -7,13 +7,11 @@ portfolio.config(function($stateProvider, $urlRouterProvider) {
 		templateUrl: 'views/home.html',
 		controller: 'homeCtrl',
 	})
-
 	.state('contact', {
 		url: '/contact',
 		templateUrl: 'views/contact.html',
 		controller: 'contactCtrl',
 	})
-
 	.state('project', {
 		url: '/project/:id',
 		templateUrl: 'views/project.html',
@@ -26,6 +24,11 @@ portfolio.controller('homeCtrl', function($http, $scope) {
 	$http.get('js/projects.json').then(function(res) {
 		$scope.projects = res.data;
 	});
+	//jquery
+	$('.back-icon').fadeOut(100).css("transform", "translateX(-40px)");
+	$('h1').css("transform", "translateX(0)");
+	$('.home').hide();
+	$('.home').fadeIn('slow');
 });
 
 portfolio.controller('contactCtrl', function($scope) {
@@ -37,6 +40,11 @@ portfolio.controller('projectCtrl', function($http, $scope, $stateParams) {
 	$http.get('js/projects.json').then(function(res) {
 		$scope.project = res.data[id];
 	});
+	//jquery
+	$('.back-icon').fadeIn(100).css("transform", "translateX(0)");
+	$('h1').css("transform", "translateX(40px)");
+	$('.project').hide();
+	$('.project').fadeIn('slow');
 });
 
 portfolio.directive("preview", function() {
