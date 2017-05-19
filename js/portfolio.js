@@ -32,7 +32,11 @@ portfolio.controller('homeCtrl', function($http, $scope) {
 });
 
 portfolio.controller('contactCtrl', function($scope) {
-	
+	//jquery
+	$('.back-icon').fadeIn(100).css("transform", "translateX(0)");
+	$('h1').css("transform", "translateX(40px)");
+	$('.project').hide();
+	$('.project').fadeIn('slow');
 });
 
 portfolio.controller('projectCtrl', function($http, $scope, $stateParams) {
