@@ -3,7 +3,7 @@
 		<div ng-repeat="project in projects">
 			<div class="col-md-4 col-sm-6 col-xs-12">
 				<div class="project-thumb">
-					<a ui-sref="project({id: project.id})">
+					<a ui-sref="project({name: project.name})">
 						<div class="preview-thumb" preview>
 							<video name="{{project.title}}" loop><source ng-src=previews/{{project.name}}-thumb.mov></video>
 						</div>

@@ -4,15 +4,15 @@
 
 		form {
 			label {
-				font-size: 18px;
+				font-size: 14px;
 				margin: 0 0 8px 0;
 			}
 
 			input, textarea {
 				width: 100%;
-				background-color: $grey-dark;
+				background-color: $grey-light;
 				border: none;
-				font-size: 18px;
+				font-size: 14px;
 				padding: 15px;
 				outline: none;
 				margin-bottom: 40px;
@@ -25,32 +25,31 @@
 				}
 			}
 
+			input#submit {
+				background-color: transparent;
+				margin: 0;
+				border: solid 2px $grey-light;
+			}
+
 			.submit-btn {
-				input[value="Send"] {
-					font-size: 24px;
-				}
+				position: relative;
+				text-align: center;
+				top: -40px;
+				z-index: -10;
+					// &:active + .send-icon {
+					// 	opacity: 1;
+					// 	transform: translate(10px, -10px);
+					// 	opacity: 0;
+					// }
+					span {
+						font-size: $regular;
 
-				input {
-					background-color: transparent;
-					margin: 0;
-
-					&:hover + .send-icon {
-						opacity: 1;
-						transform: translate(10px, -10px);
-						opacity: 0;
+						img.send-icon {
+							width: 25px;
+						// transition: all 0.3s;
 					}
 				}
-
-				.send-icon {
-					float: right;
-					display: inline-block;
-					width: 30px;
-					position: relative;
-					top: -85px;
-					right: 280px;
-					transition: all 0.3s;
-				}
 			}
-		}	
-	}
+		}
+	}	
 }

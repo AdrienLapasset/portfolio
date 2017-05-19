@@ -1,0 +1,50 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+video {
+	width: 100%;
+	height: auto;
+}
+
+body {
+	font-family: Work Sans;
+	font-weight: regular;
+	color: black;
+	background-color: $grey-lightest; 
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+	
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+h1,h2,h3,p,label {
+	font-weight: normal;
+	color: black;
+	margin: 0;
+	padding: 0;
+}
+
+.view {
+	margin-top: 60px;	
+}
+
+.line {
+	background-color: $grey-light;
+	height: 2px;
+	width: 100%;
+	margin: 0;
+}
+
+// footer {
+// 	position: fixed;
+// 	bottom: 0;
+// 	height: 100px;
+// 	background-color: $grey-light;
+// }

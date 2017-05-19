@@ -15,6 +15,8 @@ body {
 a {
   text-decoration: none;
   display: inline-block; }
+  a:hover {
+    text-decoration: none; }
 
 h1, h2, h3, p, label {
   font-weight: normal;
@@ -27,7 +29,7 @@ h1, h2, h3, p, label {
 
 .line {
   background-color: #ececec;
-  height: 1px;
+  height: 2px;
   width: 100%;
   margin: 0; }
 
@@ -42,9 +44,9 @@ h1, h2, h3, p, label {
       font-size: 18px;
       transition: all 0.3s; }
     .navbar .navbar-brand.navbar-right {
-      width: 171px;
       float: right; }
       .navbar .navbar-brand.navbar-right .text {
+        font-size: 14px;
         display: inline-block;
         opacity: 0;
         transform: translateX(10px);
@@ -82,24 +84,38 @@ h1, h2, h3, p, label {
       font-weight: 700; }
     .home .project-thumb .footer label {
       text-transform: uppercase;
-      font-size: 12px; }
+      font-size: 12px;
+      color: #b1b1b1; }
 
 .project {
   padding: 20px; }
   .project h2 {
     font-weight: 700;
-    font-size: 20px; }
+    font-size: 20px;
+    margin-bottom: 5px; }
+  .project label {
+    text-transform: uppercase;
+    color: #b1b1b1; }
+  .project p {
+    margin: 12px 0 12px 0; }
+  .project a {
+    color: black; }
+    .project a .launch {
+      text-decoration: underline;
+      font-size: 12px; }
+    .project a img {
+      width: 25px; }
 
 .contact .form {
   margin-top: 40px; }
   .contact .form form label {
-    font-size: 18px;
+    font-size: 14px;
     margin: 0 0 8px 0; }
   .contact .form form input, .contact .form form textarea {
     width: 100%;
     background-color: #ececec;
     border: none;
-    font-size: 18px;
+    font-size: 14px;
     padding: 15px;
     outline: none;
     margin-bottom: 40px;
@@ -108,22 +124,18 @@ h1, h2, h3, p, label {
     .contact .form form input:focus, .contact .form form textarea:focus {
       outline: none;
       box-shadow: -1px 1px 8px 0px rgba(0, 0, 0, 0.25); }
-  .contact .form form .submit-btn input[value="Send"] {
-    font-size: 24px; }
-  .contact .form form .submit-btn input {
+  .contact .form form input#submit {
     background-color: transparent;
-    margin: 0; }
-    .contact .form form .submit-btn input:hover + .send-icon {
-      opacity: 1;
-      transform: translate(10px, -10px);
-      opacity: 0; }
-  .contact .form form .submit-btn .send-icon {
-    float: right;
-    display: inline-block;
-    width: 30px;
+    margin: 0;
+    border: solid 2px #ececec; }
+  .contact .form form .submit-btn {
     position: relative;
-    top: -85px;
-    right: 280px;
-    transition: all 0.3s; }
+    text-align: center;
+    top: -40px;
+    z-index: -10; }
+    .contact .form form .submit-btn span {
+      font-size: 18px; }
+      .contact .form form .submit-btn span img.send-icon {
+        width: 25px; }
 
 /*# sourceMappingURL=style.css.map */

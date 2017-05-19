@@ -2,11 +2,34 @@
 	padding: 20px;
 
 	.preview {
-	
+
 	}
 
 	h2 {
 		font-weight: 700;
 		font-size: 20px;
+		margin-bottom: 5px;
+	}
+
+	label {
+		text-transform: uppercase;
+		color: $grey;
+	}
+
+	p {
+		margin: 12px 0 12px 0;
+	}
+
+	a {
+		color: black;
+
+		.launch {
+			text-decoration: underline;
+			font-size: 12px;
+		}
+
+		img {
+			width: 25px;
+		}
 	}
 }

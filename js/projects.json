@@ -2,35 +2,31 @@
 	{
 		"title": "Wind Mile",
 		"category": "Music",
-		"description": "A smooth and acoustic site for this indie-rock / heavy-pop music band from Lille, France",
-		"name": "windmile",
-		"id": 0
+		"description": "A smooth and acoustic site for this indie-rock / heavy-pop music band from Lille, France.",
+		"name": "windmile"
 	},
 	{
 		"title": "Spaceships",
 		"category": "Graphic design",
-		"description": "Tata",
-		"name": "spaceship",
-		"id": 1
+		"description": "",
+		"name": "spaceship"
 	},
 	{
 		"title": "Generator",
-		"description": "Tata",
-		"name": "generator",
-		"id": 2
+		"category": "Graphic design",
+		"description": "",
+		"name": "generator"
 	},
 	{
-		"title": "Une saison graphique",
+		"title": "Une saison graphique 2014",
 		"category": "Graphic design",
-		"description": "Tata",
-		"name": "usg",
-		"id": 3
+		"description": "Let the user create his own layout on the graphic design festival site from Le Havre, France.",
+		"name": "usg"
 	},
 	{
 		"title": "Alpaga",
 		"category": "Music",
-		"description": "Tata",
-		"name": "alpaga",
-		"id": 4
+		"description": "Find the hidden links in this Toulouse based music band site.",
+		"name": "alpaga"
 	}
 ]

@@ -8,15 +8,15 @@
 		color: black;
 
 		h1 {
-			font-size: 18px;
+			font-size: $regular;
 			transition: all 0.3s;
 		}
 
 		&.navbar-right {
-			width: 171px;
 			float: right;
 
 			.text {
+				font-size: $small;
 				display: inline-block; 
 				opacity: 0;
 				transform: translateX(10px);

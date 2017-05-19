@@ -1,46 +1,13 @@
-$grey: #f8f8f8;
-$grey-dark: #ececec;
+// Variables
+$grey-lightest: #f8f8f8;
+$grey-light: #ececec;
+$grey: #b1b1b1;
 
-* {
-	margin: 0;
-	padding: 0;
-}
+$regular: 18px;
+$small: 14px;
 
-video {
-	width: 100%;
-	height: auto;
-}
-
-body {
-	font-family: Work Sans;
-	font-weight: regular;
-	color: black;
-	background-color: $grey; 
-}
-
-a {
-	text-decoration: none;
-	display: inline-block;
-}
-
-h1,h2,h3,p,label {
-	font-weight: normal;
-	color: black;
-	margin: 0;
-	padding: 0;
-}
-
-.view {
-	margin-top: 60px;	
-}
-
-.line {
-	background-color: $grey-dark;
-	height: 1px;
-	width: 100%;
-	margin: 0;
-}
-
+// Partials
+@import "base";
 @import "navbar";
 @import "home";
 @import "project";
