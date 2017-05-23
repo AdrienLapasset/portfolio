@@ -22,24 +22,27 @@
 	<script src="js/portfolio.js"></script>
 </head>
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container-fluid">
-			<a class="navbar-brand" ui-sref="home">
-				<h1>Adrien Lapasset</h1>
-				<img class="back-icon" ng-src="pictos/back.svg">
-			</a>
-			<a class="navbar-brand navbar-right" ui-sref="contact">
-				<div class="text">Contact me</div>
-				<img class="contact-icon" ng-src="pictos/contact.svg">
-			</a>
-		</div>
-		<div class="line"></div>				
-	</nav>
+	<header>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<a class="navbar-brand" ui-sref="home">
+					<h1>Adrien Lapasset</h1>
+					<img class="back-icon" ng-src="pictos/back.svg">
+				</a>
+				<a class="navbar-brand navbar-right" ui-sref="contact">
+					<div class="text">Contact me</div>
+					<img class="contact-icon" ng-src="pictos/contact.svg">
+				</a>
+			</div>
+			<div class="line"></div>				
+		</nav>
+	</header>
 	<div class="container-fluid view">
 		<ui-view></ui-view>
 	</div>
-	<footer>
-	</footer>
+	<!-- <footer class="footer">
+		<p class="copyrights">Copyrights © <script>document.write(new Date().getFullYear())</script> Adrien Lapasset</p>
+	</footer> -->
 </body>
 </html>
 

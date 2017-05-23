@@ -3,30 +3,35 @@
 		"title": "Wind Mile",
 		"category": "Music",
 		"description": "A smooth and acoustic site for this indie-rock / heavy-pop music band from Lille, France.",
-		"name": "windmile"
+		"name": "windmile",
+		"local": true
 	},
 	{
 		"title": "Spaceships",
 		"category": "Graphic design",
-		"description": "",
-		"name": "spaceship"
+		"description": "A series of spaceships made by Louise Humbert for her graphic design diploma in ESADHaR",
+		"name": "spaceship",
+		"local": false
 	},
 	{
 		"title": "Generator",
 		"category": "Graphic design",
-		"description": "",
-		"name": "generator"
+		"description": "The spaceships generator in collaboration with Louise Humbert",
+		"name": "generator",
+		"local": false
 	},
 	{
 		"title": "Une saison graphique 2014",
 		"category": "Graphic design",
 		"description": "Let the user create his own layout on the graphic design festival site from Le Havre, France.",
-		"name": "usg"
+		"name": "usg",
+		"local": false
 	},
 	{
 		"title": "Alpaga",
 		"category": "Music",
 		"description": "Find the hidden links in this Toulouse based music band site.",
-		"name": "alpaga"
+		"name": "alpaga",
+		"local": false
 	}
 ]

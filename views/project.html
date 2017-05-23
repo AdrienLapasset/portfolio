@@ -9,7 +9,7 @@
 			<h2>{{ project.title }}</h2>
 			<label>{{ project.category }}</label>
 			<p>{{ project.description }}</p>
-			<a href="http://projects.adrienlapasset.fr/{{ project.name }}">
+			<a ng-if="project.local" href="http://projects.adrienlapasset.fr/{{ project.name }}">
 				<!-- <span><img class="mouse-icon" src="icons/mouse.svg"></span> -->
 				<span class="launch">Launch site</span>
 			</a>

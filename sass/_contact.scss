@@ -36,20 +36,27 @@
 				text-align: center;
 				top: -40px;
 				z-index: -10;
-					// &:active + .send-icon {
-					// 	opacity: 1;
-					// 	transform: translate(10px, -10px);
-					// 	opacity: 0;
-					// }
+
+					&:active + .send-icon {
+						opacity: 1;
+						transform: translate(10px, -10px);
+						opacity: 0;
+					}
 					span {
 						font-size: $regular;
+						margin-right: 6px;
+
 
 						img.send-icon {
-							width: 25px;
-						// transition: all 0.3s;
+							width: 20px;
+						transition: all 0.3s;
 					}
 				}
 			}
 		}
 	}	
+}
+
+.sent {
+	text-align: center;
 }

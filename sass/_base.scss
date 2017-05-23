@@ -10,9 +10,10 @@ video {
 
 body {
 	font-family: Work Sans;
-	font-weight: regular;
+	font-weight: 400;
 	color: black;
-	background-color: $grey-lightest; 
+	background-color: $grey-lightest;
+	position: relative; 
 }
 
 a {
@@ -42,9 +43,17 @@ h1,h2,h3,p,label {
 	margin: 0;
 }
 
-// footer {
-// 	position: fixed;
-// 	bottom: 0;
-// 	height: 100px;
-// 	background-color: $grey-light;
-// }
+footer {
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background-color: $grey-light;
+	padding: 8px;
+
+	p.copyrights {
+		color: white;
+		font-size: 11px;
+		text-align: center;
+	}
+}
