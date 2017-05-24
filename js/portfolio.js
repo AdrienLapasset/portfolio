@@ -24,21 +24,12 @@ portfolio.controller('homeCtrl', function($http, $scope) {
 	$http.get('js/projects.json').then(function(res) {
 		$scope.projects = res.data;
 	});
+
 	//jquery
-	intro();
-
-	function intro() { 
-		$('.home').css("display", "none");
-		$('.line').css("width", "0");
-		$('.line').animate({ width: '100%' }, 3000, function() {
-			$('.home').fadeIn('slow');
-		});
-	};
-
 	$('.back-icon').fadeOut(100).css("transform", "translateX(-40px)");
 	$('h1').css("transform", "translateX(0)");
 	$('.home').hide();
-	$('.home').fadeIn('slow');
+	$('.home').fadeIn(800);
 });
 
 portfolio.controller('contactCtrl', function($scope) {
@@ -46,7 +37,7 @@ portfolio.controller('contactCtrl', function($scope) {
 	$('.back-icon').fadeIn(100).css("transform", "translateX(0)");
 	$('h1').css("transform", "translateX(40px)");
 	$('.project').hide();
-	$('.project').fadeIn('slow');
+	$('.project').fadeIn(800);
 });
 
 portfolio.controller('projectCtrl', function($http, $scope, $stateParams) {
@@ -59,7 +50,7 @@ portfolio.controller('projectCtrl', function($http, $scope, $stateParams) {
 	$('.back-icon').fadeIn(100).css("transform", "translateX(0)");
 	$('h1').css("transform", "translateX(40px)");
 	$('.project').hide();
-	$('.project').fadeIn('slow');
+	$('.project').fadeIn(800);
 });
 
 portfolio.directive("preview", function() {
