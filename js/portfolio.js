@@ -25,6 +25,16 @@ portfolio.controller('homeCtrl', function($http, $scope) {
 		$scope.projects = res.data;
 	});
 	//jquery
+	intro();
+
+	function intro() { 
+		$('.home').css("display", "none");
+		$('.line').css("width", "0");
+		$('.line').animate({ width: '100%' }, 3000, function() {
+			$('.home').fadeIn('slow');
+		});
+	};
+
 	$('.back-icon').fadeOut(100).css("transform", "translateX(-40px)");
 	$('h1').css("transform", "translateX(0)");
 	$('.home').hide();

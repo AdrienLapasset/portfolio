@@ -82,8 +82,18 @@ footer {
       top: -18px;
       transform: translateX(-40px);
       transition: all 0.2s ease-in-out; }
-
+    .navbar .navbar-brand:hover > .back-icon {
+      animation-name: back-anim;
+      animation-duration: 0.3s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate; }
+@keyframes back-anim {
+  from {
+    transform: translateX(0px); }
+  to {
+    transform: translateX(-5px); } }
 .home .project-thumb {
+  text-align: center;
   transition: opacity 0.4s;
   padding: 20px;
   height: 340px; }
