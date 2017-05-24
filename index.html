@@ -3,6 +3,7 @@
 <head>
 	<title>Adrien Lapasset</title>
 	<meta charset="UTF-8">
+	<link rel="shortcut icon" type="image/png" href="pictos/favicon.png"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- Fonts -->
@@ -22,9 +23,12 @@
 	<header>
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container-fluid">
-				<a class="navbar-brand" ui-sref="home">
-					<h1>Adrien Lapasset</h1>
-					<img class="back-icon" ng-src="pictos/back.svg">
+				<a class="navbar-brand navbar-left" ui-sref="home">
+					<span><img class="back-icon" ng-src="pictos/back.svg"></span>
+					<div class="move-right">
+						<h1>Adrien Lapasset</h1>
+						<span class="skills">Web design / Data design / Développement</span>
+					</div>
 				</a>
 				<a class="navbar-brand navbar-right" ui-sref="contact">
 					<div class="text hidden-xs">Contact me</div>
@@ -43,7 +47,7 @@
 </body>
 
 <!-- JS files -->
-	<script src="js/ui.js"></script>
-	<script src="js/portfolio.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/portfolio.js"></script>
 </html>
 

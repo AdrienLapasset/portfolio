@@ -27,7 +27,7 @@ portfolio.controller('homeCtrl', function($http, $scope) {
 
 	//jquery
 	$('.back-icon').fadeOut(100).css("transform", "translateX(-40px)");
-	$('h1').css("transform", "translateX(0)");
+	$('.move-right').css("transform", "translateX(0)");
 	$('.home').hide();
 	$('.home').fadeIn(800);
 });
@@ -35,7 +35,7 @@ portfolio.controller('homeCtrl', function($http, $scope) {
 portfolio.controller('contactCtrl', function($scope) {
 	//jquery
 	$('.back-icon').fadeIn(100).css("transform", "translateX(0)");
-	$('h1').css("transform", "translateX(40px)");
+	$('.move-right').css("transform", "translateX(30px)");
 	$('.project').hide();
 	$('.project').fadeIn(800);
 });
@@ -48,7 +48,7 @@ portfolio.controller('projectCtrl', function($http, $scope, $stateParams) {
 	});
 	//jquery
 	$('.back-icon').fadeIn(100).css("transform", "translateX(0)");
-	$('h1').css("transform", "translateX(40px)");
+	$('.move-right').css("transform", "translateX(30px)");
 	$('.project').hide();
 	$('.project').fadeIn(800);
 });
