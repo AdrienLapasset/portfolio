@@ -32,8 +32,7 @@ portfolio.config(function($stateProvider, $urlRouterProvider) {
 
 portfolio.controller('headerCtrl', function($scope, animations) {
 	$scope.backHide = function() { 
-		$('.back-icon').fadeOut(100).css("transform", "translateX(-40px)");
-		$('.move-right').css("transform", "translateX(0)");
+		$('.navbar-left').css("transform", "translateX(0)");
 		//When page is loaded then fadeIn
 		$scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) { // https://stackoverflow.com/questions/18961332/angular-ui-router-show-loading-animation-during-resolve-process
 			$('.home').fadeIn(800); 
@@ -57,12 +56,14 @@ portfolio.controller('projectCtrl', function($http, $scope, $stateParams, animat
 		var result = $.grep(res.data, function(e){ return e.name == name; }); // http://stackoverflow.com/questions/7364150/find-object-by-id-in-an-array-of-javascript-objects
 		$scope.project = result[0];
 	});
+	$scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+		$('.project').fadeIn(800); 
+	});		
 });
 
 portfolio.service('animations', function() {
 	this.backShow = function() {
-		$('.back-icon').fadeIn(100).css("transform", "translateX(0)");
-		$('.move-right').css("transform", "translateX(30px)");
+		$('.navbar-left').css("transform", "translateX(37px)");
 	}
 });
 

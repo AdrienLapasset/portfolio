@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('.home').fadeIn(800);
+	// $('.home').fadeIn(800);
 	intro();
 
 	// $("video").on('loadstart', function (event) {
