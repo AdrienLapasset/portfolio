@@ -8,7 +8,7 @@ portfolio.config(function($stateProvider, $urlRouterProvider) {
 		controller: 'homeCtrl',
 		resolve: {
 			getData: function($http) {
-				return $http.get('js/projects.json').then(function(res) {
+				return $http.get('projects.json').then(function(res) {
 					return res.data;
 				});
 			}
@@ -52,7 +52,7 @@ portfolio.controller('contactCtrl', function($scope, animations) {
 
 portfolio.controller('projectCtrl', function($http, $scope, $stateParams, animations) {
 	var name = $stateParams.name;
-	$http.get('js/projects.json').then(function(res) {
+	$http.get('projects.json').then(function(res) {
 		var result = $.grep(res.data, function(e){ return e.name == name; }); // http://stackoverflow.com/questions/7364150/find-object-by-id-in-an-array-of-javascript-objects
 		$scope.project = result[0];
 	});
