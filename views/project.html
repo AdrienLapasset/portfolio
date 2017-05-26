@@ -1,15 +1,15 @@
 <div class="project">
 	<div class="row">
-		<div class="col-xs-12 col-sm-8">
+		<div class="col-xs-12 col-md-8">
 			<div class="preview">
-				<video name="{{project.title}}" ng-src=previews/{{project.name}}.mov autoplay loop></video>
+				<video name="{{project.title}}" poster="videos/{{project.name}}.jpg" ng-src=videos/{{project.name}}.mov autoplay loop></video>
 			</div>
 		</div>
-		<div class="col-xs-12 col-sm-4">
-			<h2>{{ project.title }}</h2>
-			<label>{{ project.category }}</label>
-			<p>{{ project.description }}</p>
-			<a ng-if="project.local" href="http://projects.adrienlapasset.fr/{{ project.name }}">
+		<div class="col-xs-12 col-md-4">
+			<h2>{{project.title}}</h2>
+			<label>{{project.category}}</label>
+			<p>{{project.description}}</p>
+			<a ng-if="project.local" href="http://projects.adrienlapasset.fr/{{project.name}}">
 				<!-- <span><img class="mouse-icon" src="icons/mouse.svg"></span> -->
 				<span class="launch">Launch site</span>
 			</a>
