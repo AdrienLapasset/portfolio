@@ -17,37 +17,60 @@ portfolio.config(function($stateProvider, $urlRouterProvider) {
 	.state('contact', {
 		url: '/contact',
 		templateUrl: 'views/contact.html',
-		controller: 'contactCtrl',
+		controller: 'contactCtrl'
 	})
 	.state('project', {
 		url: '/project/:name',
 		templateUrl: 'views/project.html',
 		controller: 'projectCtrl',
-		onEnter: function(animations){
-			animations.backShow;
-		},
+	})
+	.state('about', {
+		url: '/about',
+		templateUrl: 'views/about.html',
+		controller: 'aboutCtrl'
+	})
+	.state('feedback', {
+		url: '/feedback',
+		templateUrl: 'views/feedback.html',
 	})
 	$urlRouterProvider.otherwise('/');
 });
 
 portfolio.controller('headerCtrl', function($scope, animations) {
 	$scope.backHide = function() { 
-		$('.navbar-left').css("transform", "translateX(0)");
-		//When page is loaded then fadeIn
-		$scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) { // https://stackoverflow.com/questions/18961332/angular-ui-router-show-loading-animation-during-resolve-process
-			$('.home').fadeIn(800); 
-		});		
+		$('.navbar-left').removeClass("offset");	
 	};
 	$scope.backShow = animations.backShow;
 });
 
+var executed = false;
+
 portfolio.controller('homeCtrl', function(getData, $scope, animations) {
+	if (!executed) {
+		executed = true;
+		intro();
+	}
+	function intro() { 
+		$('.home').hide();
+		$('.line').css("width", "0");
+		$('.line').animate({ width: '100%' }, 3000, function() {
+			$('.home').fadeIn(800);
+		});
+	};
 	$scope.projects = getData;
-	$scope.backShow = animations.backShow;
+	$scope.backShow = animations.backShow;		
 });
 
 portfolio.controller('contactCtrl', function($scope, animations) {
-	animations.backShow;
+	$scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) { // https://stackoverflow.com/questions/18961332/angular-ui-router-show-loading-animation-during-resolve-process
+		$('.navbar-left').addClass("offset");
+	});
+});
+
+portfolio.controller('aboutCtrl', function($scope) {
+	$scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+		$('.navbar-left').addClass("offset");
+	});	
 });
 
 portfolio.controller('projectCtrl', function($http, $scope, $stateParams, animations) {
@@ -63,23 +86,19 @@ portfolio.controller('projectCtrl', function($http, $scope, $stateParams, animat
 
 portfolio.service('animations', function() {
 	this.backShow = function() {
-		$('.navbar-left').css("transform", "translateX(37px)");
+		$('.navbar-left').addClass("offset");
 	}
 });
 
-portfolio.directive("preview", function() {
+portfolio.directive("playonhover", function() {
 	return {
 		restrict: "A",
 		link: function(scope, elem, attrs) {
-			var figure = $(".preview-thumb").hover( hoverVideo, hideVideo );
-
-			function hoverVideo(e) {  
-				$('video', this).get(0).play(); 
-			}
-
-			function hideVideo(e) {
-				$('video', this).get(0).pause(); 
-			}
+			$(".preview-thumb").hover(function () {
+				$(this).children("video")[0].play();
+			}, function () {
+				$(this).children("video")[0].pause();
+			});
 		}
 	}
 });

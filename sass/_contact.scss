@@ -29,6 +29,10 @@
 				background-color: transparent;
 				margin: 0;
 				border: solid 2px $grey-light;
+
+				&:focus {
+					box-shadow: none;
+				} 
 			}
 
 			.submit-btn {
@@ -38,7 +42,6 @@
 				z-index: -10;
 
 					&:active + .send-icon {
-						opacity: 1;
 						transform: translate(10px, -10px);
 						opacity: 0;
 					}

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html ng-app='portfolio'>
 <head>
-	<title>Adrien Lapasset - Web design / Data design / Développement </title>
 	<meta charset="UTF-8">
+	<title>Adrien Lapasset - Web design / Data design / Development </title>
+	<meta name="description" content="Hello, I am a freelance web designer and developer living in Montpellier, France. Here is a preview of my work.">
 	<link rel="shortcut icon" type="image/png" href="pictos/favicon.png"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,11 +19,10 @@
 	<header ng-controller="headerCtrl">
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container-fluid">
-				<a class="navbar-brand navbar-left" ui-sref="home" ng-click="backHide()">
-					<span><img class="back-icon" ng-src="pictos/back.svg"></span>
-					<h1>Adrien Lapasset</h1>
-					<span class="skills">Web design / Data design / Développement</span>
-				</a>
+				<div class="navbar-brand navbar-left">
+					<a ui-sref="home" ng-click="backHide()"><img class="back-icon" ng-src="pictos/back.svg"></a>
+					<a ui-sref="about" ng-click="backShow()"><h1>Adrien Lapasset</h1><span class="skills">Web design / Data design / Development</span></a>
+				</div>
 				<a class="navbar-brand navbar-right" ui-sref="contact" ng-click="backShow()">
 					<div class="text hidden-xs">Contact me</div>
 					<img class="contact-icon" ng-src="pictos/contact.svg">
@@ -34,9 +34,9 @@
 	<div class="container-fluid view">
 		<ui-view></ui-view>
 	</div>
-	<!-- <footer class="footer">
+	<footer class="footer">
 		<p class="copyrights">Copyrights © <script>document.write(new Date().getFullYear())</script> Adrien Lapasset</p>
-	</footer> -->
+	</footer>
 </body>
 
 <!-- JS librairies -->
@@ -45,7 +45,5 @@
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 
 <!-- JS files -->
-<script src="js/ui.js"></script>
 <script src="js/portfolio.js"></script>
 </html>
-
