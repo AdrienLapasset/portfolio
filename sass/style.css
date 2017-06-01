@@ -22,8 +22,11 @@ video {
   height: auto; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease-in-out; }
   a:hover {
+    color: #585858;
     text-decoration: none; }
 
 h1, h2, h3, p, label {
@@ -33,7 +36,7 @@ h1, h2, h3, p, label {
   padding: 0; }
 
 .view {
-  margin-top: 54px;
+  padding-top: 54px;
   height: 100%; }
   @media (max-width: 767px) {
     .view {
