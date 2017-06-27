@@ -94,13 +94,14 @@
 					&:hover {
 						animation-name: back-anim;
 						animation-duration: 0.3s;
-						animation-iteration-count: infinite;
+						// animation-iteration-count: infinite;
 						animation-direction: alternate;
 					}
 
 					@keyframes back-anim {
-						from { transform: translateX(0px); }
-						to { transform: translateX(-5px); }
+						0% { transform: translateX(0px); }
+						50% { transform: translateX(-7px);}
+						100% { transform: translateX(0px); }
 					}
 				}
 			}
