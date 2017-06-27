@@ -1,4 +1,4 @@
-var portfolio = angular.module('portfolio', ['ui.router']);
+var portfolio = angular.module('portfolio', ['ui.router', 'pascalprecht.translate']);
 
 portfolio.config(function($stateProvider, $urlRouterProvider) {
 	$stateProvider

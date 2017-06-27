@@ -8,6 +8,15 @@ html {
 strong {
   font-weight: 700; }
 
+.en, .fr {
+  display: none;
+  opacity: 0; }
+
+.show {
+  transition: opacity 0.2s ease-in-out;
+  opacity: 1;
+  display: block; }
+
 body {
   font-family: Work Sans;
   font-weight: 400;
@@ -112,7 +121,7 @@ footer {
           margin: 0; } }
     .navbar .navbar-brand.navbar-right {
       float: right;
-      width: 150px; }
+      width: 170px; }
       .navbar .navbar-brand.navbar-right .text {
         font-size: 14px;
         display: inline-block;
@@ -123,6 +132,11 @@ footer {
         color: black;
         opacity: 1;
         transform: translateX(0px); }
+      .navbar .navbar-brand.navbar-right.languages {
+        width: 52px;
+        font-size: 14px; }
+        .navbar .navbar-brand.navbar-right.languages:hover {
+          cursor: pointer; }
       @media (max-width: 767px) {
         .navbar .navbar-brand.navbar-right {
           margin-top: 9px;
@@ -146,8 +160,7 @@ footer {
         @media (min-width: 768px) {
           .navbar .navbar-brand a:first-child .back-icon:hover {
             animation-name: back-anim;
-            animation-duration: 0.3s;
-            animation-direction: alternate; }
+            animation-duration: 0.3s; }
           @keyframes back-anim {
             0% {
               transform: translateX(0px); }

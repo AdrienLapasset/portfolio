@@ -4,6 +4,7 @@
     "angular": "latest",
     "bootstrap": "latest",
     "angular-ui-router": "latest",
-    "jquery": "latest"
+    "jquery": "latest",
+    "angular-translate": "^2.15.2"
   }
 }

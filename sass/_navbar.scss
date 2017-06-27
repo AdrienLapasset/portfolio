@@ -47,7 +47,7 @@
 
 		&.navbar-right {
 			float: right;
-			width: 150px;
+			width: 170px;
 
 			.text {
 				font-size: $small;
@@ -61,6 +61,15 @@
 				color: black;
 				opacity: 1;
 				transform: translateX(0px);
+			}
+
+			&.languages {
+				width: 52px;
+				font-size: $small;
+				
+				&:hover {
+					cursor: pointer;
+				}
 			}
 
 			@media (max-width:767px) {
@@ -94,8 +103,6 @@
 					&:hover {
 						animation-name: back-anim;
 						animation-duration: 0.3s;
-						// animation-iteration-count: infinite;
-						animation-direction: alternate;
 					}
 
 					@keyframes back-anim {
