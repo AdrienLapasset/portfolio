@@ -9,14 +9,14 @@
 	{
 		"title": "Spaceships",
 		"category": "Graphic design",
-		"description": "A series of spaceships made by Louise Humbert for her graphic design diploma in ESADHaR",
+		"description": "A series of interactive spaceship plans made by Louise Humbert for her graphic design diploma in ESADHaR.",
 		"name": "spaceship",
 		"local": false
 	},
 	{
 		"title": "Generator",
 		"category": "Graphic design",
-		"description": "The spaceships generator in collaboration with Louise Humbert",
+		"description": "Design your own spaceship with this random generator, in collaboration with Louise Humbert.",
 		"name": "generator",
 		"local": false
 	},
