@@ -2,7 +2,7 @@
 <html ng-app='portfolio'>
 <head>
 	<meta charset="UTF-8">
-	<title>Adrien Lapasset - Web design / Data design / Development </title>
+	<title>Adrien Lapasset | Webdesign / Data visualization / Front-development </title>
 	<meta name="description" content="Hello, I am a freelance web designer and developer living in Montpellier, France. Here is a preview of my work.">
 	<link rel="shortcut icon" type="image/png" href="pictos/favicon.png"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,13 +21,13 @@
 			<div class="container-fluid">
 				<div class="navbar-brand navbar-left">
 					<a ui-sref="home" ng-click="backHide()"><img class="back-icon" ng-src="pictos/back.svg"></a>
-					<a ui-sref="about" ng-click="backShow()"><h1>Adrien Lapasset</h1><span class="skills">Web design / Data design / Development</span></a>
+					<a ui-sref="about" ng-click="backShow()"><h1>Adrien Lapasset</h1><span class="skills">{{'Webdesign / Data visualization / Front-development' | translate}}</span></a>
 				</div>
-				<div class="navbar-brand navbar-right languages">
+				<div class="navbar-brand navbar-right languages hidden-xs">
 					<span class="en" ng-click="changeLanguage('en')">En</span>
 					<span class="fr" ng-click="changeLanguage('fr')">Fr</span>
 				</div>
-				<a class="navbar-brand navbar-right" ui-sref="contact" ng-click="backShow()">
+				<a class="navbar-brand navbar-right hidden-xs" ui-sref="contact" ng-click="backShow()">
 					<div class="text hidden-xs">{{ 'CONTACT' | translate }}</div>
 					<img class="contact-icon" ng-src="pictos/contact.svg">
 				</a>
@@ -38,9 +38,23 @@
 	<div class="container-fluid view">
 		<ui-view></ui-view>
 	</div>
-	<footer class="footer">
-		<p class="copyrights">Copyrights © <script>document.write(new Date().getFullYear())</script> Adrien Lapasset</p>
-	</footer>
+	<div class="row visible-xs menu-xs" ng-controller="navCtrl">
+		<div class="col-xs-12">
+			<div class="col-left">
+				<span class="en" ng-click="changeLanguage('en')">En</span>
+				<span class="fr" ng-click="changeLanguage('fr')">Fr</span>
+			</div>
+			<div class="col-right">
+				<a ui-sref="contact" ng-click="backShow()">
+					<img class="contact-icon" ng-src="pictos/contact.svg">
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<footer class="footer">
+	<p class="copyrights">Copyrights © <script>document.write(new Date().getFullYear())</script> Adrien Lapasset</p>
+</footer>
 </body>
 
 <!-- JS librairies -->

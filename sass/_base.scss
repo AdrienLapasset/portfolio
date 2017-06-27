@@ -60,7 +60,7 @@ h1,h2,h3,p,label {
 	height: 100%;
 
 	@media (max-width:767px) {
-		margin-top: 90px;	
+		margin-top: 42px;
 	}
 }
 
@@ -91,22 +91,5 @@ section.about {
 
 	@media (max-width:767px) {
 		margin-top: 10px;	
-	}
-}
-
-footer {
-	position: absolute;
-	right: 0;
-	left: 0;
-	bottom: 0;
-	background-color: $grey-light;
-	padding: 10px;
-
-	p.copyrights {
-		letter-spacing: 2px;
-		font-weight: 700;
-		color: white;
-		font-size: 11px;
-		text-align: center;
 	}
 }
