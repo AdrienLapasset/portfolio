@@ -63,12 +63,22 @@ h1,h2,h3,p,label {
 
 section.about {
 	text-align: center;
-	margin-top: 110px;
+	margin-top: 50px;
 
 	p {
-		font-size: 34px;
-		line-height: 48px;
+		font-size: 21px;
+
+		&.help {
+			margin: 40px 0;
+			font-size: 26px;
+			text-transform: uppercase;
+		}
+
+		&.links {
+			font-size: $regular;
+		}
 	}
+
 	@media (max-width:767px) {
 		margin-top: 10px;	
 	}
