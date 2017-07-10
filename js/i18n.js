@@ -26,7 +26,8 @@ portfolio.config(['$translateProvider', function ($translateProvider) {
 	});
 
 	$translateProvider.translations('en', {
-		'CONTACT': 'Contact me'
+		'CONTACT': 'Contact me',
+		'Application web': 'Web application'
 	});
 
 	$translateProvider.preferredLanguage('fr');

@@ -7,6 +7,13 @@
 		"local": true
 	},
 	{
+		"title": "Avis Utilitaires",
+		"category": "Application web",
+		"description": "Réservez un véhicule utilitaire dans toute la France avec cette application web. Design d'interface et intégration réalisés avec l'agence digitale \"Subvitamine\".",
+		"name": "avis",
+		"local": false
+	},
+	{
 		"title": "Spaceships",
 		"category": "Graphic design",
 		"description": "A series of interactive spaceship plans made by Louise Humbert for her graphic design diploma in ESADHaR.",
