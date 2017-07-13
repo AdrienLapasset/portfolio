@@ -24,7 +24,7 @@ body {
   background-color: #f8f8f8;
   position: relative;
   min-height: 100%;
-  padding-bottom: 50px; }
+  padding-bottom: 75px; }
 
 video {
   width: 100%;
@@ -248,6 +248,7 @@ section.about {
   text-align: center; }
 
 .menu-xs {
+  z-index: 1;
   text-align: center;
   position: fixed;
   background-color: #f8f8f8;
@@ -279,3 +280,6 @@ footer {
     color: white;
     font-size: 11px;
     text-align: center; }
+  @media (max-width: 767px) {
+    footer {
+      bottom: 52px; } }
