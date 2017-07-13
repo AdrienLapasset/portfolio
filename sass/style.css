@@ -73,6 +73,7 @@ section.about {
       margin-top: 10px; } }
 
 .navbar {
+  transition: top 0.2s ease-in-out;
   background-color: white;
   border: none;
   background-color: #f8f8f8;
@@ -157,6 +158,9 @@ section.about {
     @media (max-width: 767px) {
       .navbar .navbar-brand {
         width: 100%; } }
+
+.nav-up {
+  top: -72px; }
 
 .home .project-thumb {
   text-align: center;
