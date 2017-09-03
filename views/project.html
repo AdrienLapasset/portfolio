@@ -6,13 +6,15 @@
 			</div>
 		</div>
 		<div class="col-xs-12 col-md-4">
-			<h2>{{project.title}}</h2>
-			<label>{{project.category | translate}}</label>
-			<p>{{project.description | translate}}</p>
-			<a ng-if="project.local" href="http://projects.adrienlapasset.fr/{{project.name}}">
-				<!-- <span><img class="mouse-icon" src="icons/mouse.svg"></span> -->
-				<span class="launch">{{'Launch site' | translate}}</span>
-			</a>
+			<div class="info">
+				<h2>{{project.title}}</h2>
+				<label>{{project.category | translate}}</label>
+				<p>{{project.description | translate}}</p>
+				<a ng-if="project.local" href="http://projects.adrienlapasset.fr/{{project.name}}">
+					<!-- <span><img class="mouse-icon" src="icons/mouse.svg"></span> -->
+					<span class="launch">{{'Launch site' | translate}}</span>
+				</a>
+			</div>
 		</div>
 	</div>
 </div>

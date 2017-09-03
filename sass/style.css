@@ -189,22 +189,24 @@ section.about {
     margin-bottom: 20px; }
     .project .preview video {
       box-shadow: -1px 1px 8px 0px rgba(0, 0, 0, 0.25); }
-  .project h2 {
-    font-weight: 700;
-    font-size: 20px;
-    margin-bottom: 5px; }
-  .project label {
-    text-transform: uppercase;
-    color: #b1b1b1; }
-  .project p {
-    margin: 12px 0 12px 0; }
-  .project a {
-    color: black; }
-    .project a .launch {
-      text-decoration: underline;
-      font-size: 12px; }
-    .project a img {
-      width: 25px; }
+  .project .info {
+    display: none;
+    transform: translateX(-50px);
+    transition: transform .6s ease-out; }
+    .project .info h2 {
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 5px; }
+    .project .info label {
+      text-transform: uppercase;
+      color: #b1b1b1; }
+    .project .info p {
+      margin: 12px 0 12px 0; }
+    .project .info a {
+      color: black; }
+      .project .info a .launch {
+        text-decoration: underline;
+        font-size: 12px; }
   @media (max-width: 767px) {
     .project {
       padding: 0; } }
@@ -276,7 +278,7 @@ footer {
   right: 0;
   left: 0;
   bottom: 0;
-  background-color: #ececec;
+  background-color: #d8d8d8;
   padding: 10px; }
   footer p.copyrights {
     letter-spacing: 2px;

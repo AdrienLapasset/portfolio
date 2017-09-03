@@ -6,6 +6,8 @@ portfolio.controller('projectCtrl', function($http, $scope, $stateParams, animat
 	});
 	$scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
 		$('.navbar-left').addClass("offset");
-		$('.project').fadeIn(800); 
+		$('.project').fadeIn(800);
+		$('.info').fadeIn(1200);
+		$('.info').css('transform','translateX(0)');  
 	});		
 });

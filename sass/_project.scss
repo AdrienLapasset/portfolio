@@ -10,31 +10,33 @@
 		}
 	}
 
-	h2 {
-		font-weight: 700;
-		font-size: 20px;
-		margin-bottom: 5px;
-	}
+	.info {	
+		display: none;
+		transform: translateX(-50px);
+		transition: transform .6s ease-out;
 
-	label {
-		text-transform: uppercase;
-		color: $grey;
-	}
-
-	p {
-		margin: 12px 0 12px 0;
-	}
-
-	a {
-		color: black;
-
-		.launch {
-			text-decoration: underline;
-			font-size: 12px;
+		h2 {
+			font-weight: 700;
+			font-size: 20px;
+			margin-bottom: 5px;
 		}
 
-		img {
-			width: 25px;
+		label {
+			text-transform: uppercase;
+			color: $grey;
+		}
+
+		p {
+			margin: 12px 0 12px 0;
+		}
+
+		a {
+			color: black;
+
+			.launch {
+				text-decoration: underline;
+				font-size: 12px;
+			}
 		}
 	}
 	
