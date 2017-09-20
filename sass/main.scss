@@ -2,6 +2,7 @@
 $grey-lightest: #f8f8f8;
 $grey-light: #ececec;
 $grey: #b1b1b1;
+$blue: #001CE7;
 
 $regular: 18px;
 $small: 14px;
@@ -9,6 +10,7 @@ $small: 14px;
 // Partials
 @import "base";
 @import "navbar";
+@import "about";
 @import "home";
 @import "project";
 @import "contact";

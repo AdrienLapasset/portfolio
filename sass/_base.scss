@@ -7,10 +7,6 @@ html {
 	height: 100%;
 }
 
-strong {
-	font-weight: 700;
-}
-
 .en, .fr {
 	display: none;
 	opacity: 0;
@@ -22,9 +18,13 @@ strong {
 	display: block;
 }
 
+@font-face {
+	font-family: Regular-Semibold;
+	src: url(../fonts/Regular-Semibold.ttf);
+}
+
 body {
-	font-family: Work Sans;
-	font-weight: 400;
+	font-family: Regular-Semibold;
 	color: black;
 	background-color: $grey-lightest;
 	position: relative;
@@ -42,9 +42,10 @@ a {
 	color: black;
 	transition: all 0.3s ease-in-out;
 	
-	&:hover {
-		color: #585858;
+	&:hover, &:focus {
+		color: black;
 		text-decoration: none;
+		outline: none;
 	}
 }
 
@@ -69,27 +70,4 @@ h1,h2,h3,p,label {
 	height: 2px;
 	width: 100%;
 	margin: 0;
-}
-
-section.about {
-	text-align: center;
-	margin-top: 50px;
-
-	p {
-		font-size: 21px;
-
-		&.help {
-			margin: 40px 0;
-			font-size: 26px;
-			text-transform: uppercase;
-		}
-
-		&.links {
-			font-size: $regular;
-		}
-	}
-
-	@media (max-width:767px) {
-		margin-top: 10px;	
-	}
 }

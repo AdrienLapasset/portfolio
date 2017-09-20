@@ -5,9 +5,6 @@
 html {
   height: 100%; }
 
-strong {
-  font-weight: 700; }
-
 .en, .fr {
   display: none;
   opacity: 0; }
@@ -17,9 +14,11 @@ strong {
   opacity: 1;
   display: block; }
 
+@font-face {
+  font-family: Regular-Semibold;
+  src: url(../fonts/Regular-Semibold.ttf); }
 body {
-  font-family: Work Sans;
-  font-weight: 400;
+  font-family: Regular-Semibold;
   color: black;
   background-color: #f8f8f8;
   position: relative;
@@ -34,9 +33,10 @@ a {
   text-decoration: none;
   color: black;
   transition: all 0.3s ease-in-out; }
-  a:hover {
-    color: #585858;
-    text-decoration: none; }
+  a:hover, a:focus {
+    color: black;
+    text-decoration: none;
+    outline: none; }
 
 h1, h2, h3, p, label {
   font-weight: normal;
@@ -56,21 +56,6 @@ h1, h2, h3, p, label {
   height: 2px;
   width: 100%;
   margin: 0; }
-
-section.about {
-  text-align: center;
-  margin-top: 50px; }
-  section.about p {
-    font-size: 21px; }
-    section.about p.help {
-      margin: 40px 0;
-      font-size: 26px;
-      text-transform: uppercase; }
-    section.about p.links {
-      font-size: 18px; }
-  @media (max-width: 767px) {
-    section.about {
-      margin-top: 10px; } }
 
 .navbar {
   transition: top 0.2s ease-in-out;
@@ -98,13 +83,16 @@ section.about {
       display: inline-block;
       transition: color .2s; }
     .navbar .navbar-brand span.skills {
-      font-size: 12px;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
       color: #b1b1b1;
-      margin-left: 12px; }
+      margin-left: 12px;
+      position: relative;
+      bottom: 1px; }
       @media (max-width: 767px) {
         .navbar .navbar-brand span.skills {
           display: block;
-          font-size: 9px;
           margin: 0; } }
     .navbar .navbar-brand.navbar-right {
       float: right;
@@ -162,11 +150,57 @@ section.about {
 .nav-up {
   top: -72px; }
 
+section.about {
+  background-color: white;
+  height: 100vh;
+  margin: 0 -15px -40px;
+  padding-top: 50px; }
+  section.about .portrait {
+    transition: transform 0.2s ease-out;
+    opacity: .3;
+    position: absolute;
+    width: 55%;
+    max-width: 900px;
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%); }
+  section.about .presentation {
+    width: 45%;
+    position: absolute;
+    z-index: 70;
+    right: 10%; }
+  section.about .hello {
+    font-size: 72px;
+    margin-bottom: 30px; }
+  section.about .intro {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 700; }
+  section.about p:not(.intro):not(.hello) {
+    margin-bottom: 15px;
+    padding-right: 40%; }
+  section.about .links {
+    margin-top: 100px; }
+    section.about .links a {
+      font-size: 36px;
+      display: inline-block; }
+      section.about .links a:last-child {
+        float: right; }
+      section.about .links a:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        background: black;
+        transition: width .3s ease-out; }
+      section.about .links a:hover:after {
+        width: 100%;
+        color: black; }
+
 .home .project-thumb {
   text-align: center;
   transition: opacity 0.4s;
-  padding: 20px;
-  perspective: 1000px; }
+  padding: 20px; }
   .home .project-thumb video, .home .project-thumb img {
     box-shadow: -1px 1px 8px 0px rgba(0, 0, 0, 0.25); }
   .home .project-thumb .footer {
@@ -176,8 +210,9 @@ section.about {
       font-weight: 700; }
     .home .project-thumb .footer label {
       text-transform: uppercase;
-      font-size: 12px;
-      color: #b1b1b1; }
+      font-size: 11px;
+      color: #b1b1b1;
+      letter-spacing: 1px; }
   @media (max-width: 767px) {
     .home .project-thumb {
       padding: 0 0 20px 0; } }
@@ -195,9 +230,10 @@ section.about {
     transition: transform .6s ease-out; }
     .project .info h2 {
       font-weight: 700;
-      font-size: 20px;
-      margin-bottom: 5px; }
+      font-size: 20px; }
     .project .info label {
+      font-size: 13px;
+      letter-spacing: 1px;
       text-transform: uppercase;
       color: #b1b1b1; }
     .project .info p {

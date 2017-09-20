@@ -45,6 +45,19 @@ portfolio.controller('contactCtrl', function($scope, animations) {
 portfolio.controller('aboutCtrl', function($scope) {
 	$scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
 		$('.navbar-left').addClass("offset");
+
+		// Sensitive portrait
+		var mouseX;
+		var mouseY;
+		var greyscale;
+		var alpha = 100;
+		$(document).mousemove( function(e) {
+			mouseX = (e.pageX - $(window).width() / 2) / alpha; 
+			mouseY = (e.pageY - $(window).height() / 2) / alpha;
+			greyscale = (-e.pageY + $(window).height()) / $(window).height() * 100;
+			$(".portrait").css({"transform": "rotate3d(0, 1, 0, " + mouseX + "deg) rotate3d(-1, 0, 0, " + mouseY + "deg) translate3d(" + mouseX + "px, " + mouseY + "px, 0)",
+													"filter": "grayscale(" + greyscale + "%)"});
+		});
 	});	
 });
 
