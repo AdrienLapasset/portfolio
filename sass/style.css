@@ -198,7 +198,50 @@ section.about {
       section.about .links a:hover:after {
         width: 100%;
         color: black; }
-
+  section.about .portrait {
+    animation: 1s ease-out 0s 1 fadein-left; }
+  section.about .hello {
+    animation: 1s ease-out 0s 1 fadein-top; }
+  section.about p:not(:first-child) {
+    animation: 1.5s ease-out 0s 1 fadein-right-delay05; }
+  section.about .links {
+    animation: 2s ease-out 0s 1 fadein-bottom-delay1; }
+@keyframes fadein-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px); }
+  40% {
+    transform: translateX(0px); }
+  100% {
+    opacity: .3; } }
+@keyframes fadein-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px); }
+  40% {
+    transform: translateY(0px); }
+  100% {
+    opacity: 1; } }
+@keyframes fadein-right-delay05 {
+  0% {
+    opacity: 0; }
+  25% {
+    transform: translateX(10px);
+    opacity: 0; }
+  50% {
+    transform: translateX(0px); }
+  100% {
+    opacity: 1; } }
+@keyframes fadein-bottom-delay1 {
+  0% {
+    opacity: 0; }
+  50% {
+    transform: translateY(10px);
+    opacity: 0; }
+  70% {
+    transform: translateY(0px); }
+  100% {
+    opacity: 1; } }
 .home .project-thumb {
   text-align: center;
   transition: opacity 0.4s;
