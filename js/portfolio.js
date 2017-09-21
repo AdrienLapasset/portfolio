@@ -55,9 +55,7 @@ portfolio.controller('aboutCtrl', function($scope) {
 			// le zéro est centré au millieu de l'écran
 			mouseX = (e.pageX - $(window).width() / 2) / alpha; 
 			mouseY = (e.pageY - $(window).height() / 2) / alpha;
-
-			// 50% when mouse is on top, 0% on bottom 
-			$(".portrait").css({"transform": "rotate3d(0, 1, 0, " + mouseX + "deg) rotate3d(-1, 0, 0, " + mouseY + "deg) translate3d(" + mouseX/2 + "px, " + mouseY/2 + "px, 0)"});
+			$(".portrait").css({"transform": "rotate3d(0, 1, 0, " + mouseX + "deg) rotate3d(-1, 0, 0, " + mouseY + "deg) translate3d(" + mouseX + "px, " + mouseY + "px, 0)"});
 		});
 	});	
 });
