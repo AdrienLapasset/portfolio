@@ -27,7 +27,8 @@ portfolio.config(function($stateProvider, $urlRouterProvider) {
 	.state('about', {
 		url: '/about',
 		templateUrl: 'views/about.html',
-		controller: 'aboutCtrl'
+		controller: 'aboutCtrl',
+		onExit: function(){$(".about").fadeOut(800);}
 	})
 	.state('feedback', {
 		url: '/feedback',
@@ -40,24 +41,6 @@ portfolio.controller('contactCtrl', function($scope, animations) {
 	$scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) { // https://stackoverflow.com/questions/18961332/angular-ui-router-show-loading-animation-during-resolve-process
 		$('.navbar-left').addClass("offset");
 	});
-});
-
-portfolio.controller('aboutCtrl', function($scope) {
-	$scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
-		$('.navbar-left').addClass("offset");
-
-		// Sensitive portrait
-		var mouseX;
-		var mouseY;
-		var greyscale;
-		var alpha = 80;
-		$(document).mousemove( function(e) {
-			// le zéro est centré au millieu de l'écran
-			mouseX = (e.pageX - $(window).width() / 2) / alpha; 
-			mouseY = (e.pageY - $(window).height() / 2) / alpha;
-			$(".portrait").css({"transform": "rotate3d(0, 1, 0, " + mouseX + "deg) rotate3d(-1, 0, 0, " + mouseY + "deg) translate3d(" + mouseX + "px, " + mouseY + "px, 0)"});
-		});
-	});	
 });
 
 portfolio.service('animations', function() {

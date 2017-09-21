@@ -3,6 +3,7 @@ section.about {
 	height: 100vh;
 	margin: 0 -15px -40px; //full screen disable bootstrap margin
 	padding-top: 50px;
+	transition: opacity 1s ease-in;
 
 	.portrait {
 		transition: transform .2s ease-out;
@@ -83,6 +84,10 @@ section.about {
 
 	.links {
 		animation: 2s ease-out 0s 1 fadein-bottom-delay1;	
+	}
+
+	.fadeout {
+		opacity: 0;
 	}
 
 	@keyframes fadein-left {

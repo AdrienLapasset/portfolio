@@ -1,18 +1,21 @@
-var executed = false;
+var pageLoaded = false;
 
 portfolio.controller('homeCtrl', function(getData, $scope, animations) {
-	if (!executed) {
-		executed = true;
+	$scope.projects = getData;
+	
+	if (!pageLoaded) {
+		pageLoaded = true;
 		intro();
 	}
-	$scope.projects = getData;
-	$scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
-		$('.navbar-left').removeClass("offset");
-	});
+
+	else {
+		$('.home').fadeIn(800);
+	}
+
+	$('.navbar-left').removeClass("offset");
 });
 
 function intro() { 
-	$('.home').hide();
 	$('.line').css("width", "0");
 	$('.line').animate({ width: '100%' }, 3000, function() {
 		$('.home').fadeIn(800);
