@@ -38,9 +38,7 @@ portfolio.config(function($stateProvider, $urlRouterProvider) {
 });
 
 portfolio.controller('contactCtrl', function($scope, animations) {
-	$scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) { // https://stackoverflow.com/questions/18961332/angular-ui-router-show-loading-animation-during-resolve-process
-		$('.navbar-left').addClass("offset");
-	});
+	$('.navbar-left').addClass("offset");
 });
 
 portfolio.service('animations', function() {

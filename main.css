@@ -17,6 +17,7 @@ html {
 @font-face {
   font-family: Regular-Semibold;
   src: url(../fonts/Regular-Semibold.ttf); }
+
 body {
   font-family: Regular-Semibold;
   color: black;
@@ -156,18 +157,22 @@ section.about {
   margin: 0 -15px -40px;
   padding-top: 50px;
   transition: opacity 1s ease-in; }
+  section.about .wrap {
+    max-width: 1100px;
+    margin: 0 auto; }
   section.about .portrait {
+    float: left;
+    position: absolute;
     transition: transform .2s ease-out;
     opacity: .3;
-    position: absolute;
-    width: 55%;
-    max-width: 900px;
+    width: 68%;
+    max-width: 740px;
     -webkit-filter: grayscale(100%);
     /* Safari 6.0 - 9.0 */
     filter: grayscale(100%); }
   section.about .presentation {
-    width: 45%;
     position: absolute;
+    width: 45%;
     z-index: 70;
     right: 10%; }
   section.about .hello {
@@ -195,7 +200,7 @@ section.about {
         position: relative;
         top: -2px;
         background: black;
-        transition: width .2s ease-out; }
+        transition: width 0.2s cubic-bezier(0, 0, 0, 1); }
       section.about .links a:hover:after {
         width: 100%;
         color: black; }
@@ -209,6 +214,7 @@ section.about {
     animation: 2s ease-out 0s 1 fadein-bottom-delay1; }
   section.about .fadeout {
     opacity: 0; }
+
 @keyframes fadein-left {
   0% {
     opacity: 0;
@@ -217,6 +223,7 @@ section.about {
     transform: translateX(0px); }
   100% {
     opacity: .3; } }
+
 @keyframes fadein-top {
   0% {
     opacity: 0;
@@ -225,6 +232,7 @@ section.about {
     transform: translateY(0px); }
   100% {
     opacity: 1; } }
+
 @keyframes fadein-right-delay05 {
   0% {
     opacity: 0; }
@@ -235,6 +243,7 @@ section.about {
     transform: translateX(0px); }
   100% {
     opacity: 1; } }
+
 @keyframes fadein-bottom-delay1 {
   0% {
     opacity: 0; }
@@ -245,11 +254,11 @@ section.about {
     transform: translateY(0px); }
   100% {
     opacity: 1; } }
+
 .home {
   display: none; }
   .home .project-thumb {
     text-align: center;
-    transition: opacity 0.4s;
     padding: 20px; }
     .home .project-thumb video, .home .project-thumb img {
       box-shadow: -1px 1px 8px 0px rgba(0, 0, 0, 0.25); }
