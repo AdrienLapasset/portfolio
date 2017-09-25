@@ -158,23 +158,35 @@ section.about {
   padding-top: 50px;
   transition: opacity 1s ease-in; }
   section.about .wrap {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto; }
   section.about .portrait {
     float: left;
-    position: absolute;
     transition: transform .2s ease-out;
     opacity: .3;
-    width: 68%;
-    max-width: 740px;
+    width: 50%;
     -webkit-filter: grayscale(100%);
     /* Safari 6.0 - 9.0 */
     filter: grayscale(100%); }
+    @media (max-width: 1024px) {
+      section.about .portrait {
+        width: 110px;
+        margin: auto; } }
   section.about .presentation {
-    position: absolute;
-    width: 45%;
-    z-index: 70;
-    right: 10%; }
+    float: right;
+    width: 50%;
+    position: relative;
+    z-index: 10;
+    right: 0;
+    width: 500px; }
+    @media (max-width: 1024px) {
+      section.about .presentation {
+        width: 100%;
+        padding: 0 20px; } }
+  @media (max-width: 1024px) {
+    section.about .portrait, section.about .presentation {
+      float: none;
+      text-align: center; } }
   section.about .hello {
     font-size: 72px;
     margin-bottom: 30px; }
@@ -184,7 +196,10 @@ section.about {
     font-weight: 700; }
   section.about p:not(.intro):not(.hello) {
     margin-bottom: 15px;
-    padding-right: 40%; }
+    padding-right: 30%; }
+    @media (max-width: 1024px) {
+      section.about p:not(.intro):not(.hello) {
+        padding-right: 0; } }
   section.about .links {
     margin-top: 100px; }
     section.about .links a {
@@ -192,6 +207,9 @@ section.about {
       display: inline-block; }
       section.about .links a:last-child {
         float: right; }
+        @media (max-width: 1024px) {
+          section.about .links a:last-child {
+            float: none; } }
       section.about .links a:after {
         content: '';
         display: block;
@@ -201,9 +219,19 @@ section.about {
         top: -2px;
         background: black;
         transition: width 0.2s cubic-bezier(0, 0, 0, 1); }
+        @media (max-width: 1024px) {
+          section.about .links a:after {
+            display: none; } }
       section.about .links a:hover:after {
         width: 100%;
         color: black; }
+      @media (max-width: 1024px) {
+        section.about .links a {
+          display: block;
+          margin-bottom: 10px; } }
+    @media (max-width: 1024px) {
+      section.about .links {
+        margin-top: 30px; } }
   section.about .portrait {
     animation: 1s ease-out 0s 1 fadein-left; }
   section.about .hello {

@@ -28,7 +28,7 @@ portfolio.config(['$translateProvider', function ($translateProvider) {
 		'CONTACT': 'Contact me',
 		'Application web': 'Web application',
 		'Diplomé en design graphique et interactivité à l’école supérieur d’art et design Le Havre Rouen. Je suis passionné par la création et l’intégration d’interfaces et plus largement par la réalisation de projets numériques.' : '',
-		'Mes formations et expériences professionnelles mon permis de maitriser les outils de maquettage UI/UX ainsi que le développement front-end.' : '',
+		'Mes formations et expériences professionnelles m\'ont permis de maitriser les outils de maquettage UI/UX ainsi que le développement front-end.' : '',
 		'Toujours curieux de découvrir  les dernières possibilités  du web en terme d’interactivité. J’aime me lancer des défis afin de créer des expériences utilsateurs uniques.' : '',
 	});
 
