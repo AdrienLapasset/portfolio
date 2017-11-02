@@ -122,7 +122,6 @@ h1, h2, h3, p, label {
           width: 60px; } }
     .navbar .navbar-brand .contact-icon, .navbar .navbar-brand .back-icon {
       float: right;
-      display: inline-block;
       width: 25px;
       margin-left: 10px;
       margin-top: -1px; }
