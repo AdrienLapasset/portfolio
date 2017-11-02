@@ -191,6 +191,11 @@ section.about {
 			opacity: 1;
 		}
 	}
+
+	@media (max-width: 768px) {
+		padding-top: 20px;
+		transform: translateY(-25px);
+	}
 }
 
 

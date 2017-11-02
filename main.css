@@ -282,6 +282,10 @@ section.about {
     transform: translateY(0px); }
   100% {
     opacity: 1; } }
+  @media (max-width: 768px) {
+    section.about {
+      padding-top: 20px;
+      transform: translateY(-25px); } }
 
 .home {
   display: none; }
