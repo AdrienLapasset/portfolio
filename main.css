@@ -46,7 +46,7 @@ h1, h2, h3, p, label {
   padding: 0; }
 
 .view {
-  padding-top: 54px;
+  padding-top: 50px;
   height: 100%; }
   @media (max-width: 767px) {
     .view {
@@ -74,13 +74,16 @@ h1, h2, h3, p, label {
     height: 100%;
     width: 510px;
     transition: all 0.3s ease-in-out; }
+    @media (max-width: 767px) {
+      .navbar .navbar-brand {
+        padding: 15px 15px 10px; } }
     .navbar .navbar-brand a:nth-child(2) {
       text-decoration: none; }
       .navbar .navbar-brand a:nth-child(2):hover h1 {
         color: #585858; }
-    .navbar .navbar-brand img {
+    .navbar .navbar-brand .logo {
       width: 30px;
-      margin-right: 5px; }
+      margin-right: 10px; }
     .navbar .navbar-brand h1 {
       font-weight: 700;
       font-size: 18px;

@@ -19,6 +19,10 @@
 		width: 510px;
 		transition: all 0.3s ease-in-out;
 
+		@media (max-width:767px) {
+			padding: 15px 15px 10px;
+		}
+
 		a:nth-child(2) {
 			text-decoration: none;
 
@@ -27,9 +31,9 @@
 			}
 		}
 
-		img {
+		.logo {
 			width: 30px;
-			margin-right: 5px;
+			margin-right: 10px;
 		}
 
 		h1 {
