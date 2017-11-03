@@ -72,18 +72,42 @@ h1, h2, h3, p, label {
   .navbar .navbar-brand {
     color: black;
     height: 100%;
-    width: 510px;
-    transition: all 0.3s ease-in-out; }
+    transition: all 01s ease-in-out; }
     @media (max-width: 767px) {
       .navbar .navbar-brand {
         padding: 15px 15px 10px; } }
     .navbar .navbar-brand a:nth-child(2) {
       text-decoration: none; }
-      .navbar .navbar-brand a:nth-child(2):hover h1 {
-        color: #585858; }
     .navbar .navbar-brand .logo {
-      width: 30px;
-      margin-right: 10px; }
+      width: 40px;
+      margin-right: 10px;
+      vertical-align: middle; }
+      .navbar .navbar-brand .logo__reflect--1 {
+        fill: #ececec;
+        transition: transform .2s .2s; }
+        .navbar .navbar-brand .logo__reflect--1.toggle {
+          transform: translate(25px, -20px);
+          transition: transform .2s; }
+      .navbar .navbar-brand .logo__reflect--2 {
+        fill: #ececec;
+        transform: translate(-30px, 30px);
+        transition: transform .2s; }
+        .navbar .navbar-brand .logo__reflect--2.toggle {
+          transform: translate(0, 0);
+          transition: transform .2s .2s; }
+      .navbar .navbar-brand .logo__reflect--3 {
+        fill: #ececec;
+        transition: transform .2s .2s; }
+        .navbar .navbar-brand .logo__reflect--3.toggle {
+          transform: translate(0, 50px);
+          transition: transform .2s; }
+      .navbar .navbar-brand .logo__reflect--4 {
+        fill: #ececec;
+        transform: translateY(-30px);
+        transition: transform .2s; }
+        .navbar .navbar-brand .logo__reflect--4.toggle {
+          transform: translateY(0);
+          transition: transform .2s .2s; }
     .navbar .navbar-brand h1 {
       font-weight: 700;
       font-size: 18px;
@@ -109,7 +133,7 @@ h1, h2, h3, p, label {
         display: inline-block;
         opacity: 0;
         transform: translateX(10px);
-        transition: all 0.3s ease-in-out; }
+        transition: all 01s ease-in-out; }
       .navbar .navbar-brand.navbar-right:hover > .text {
         color: black;
         opacity: 1;
@@ -141,7 +165,7 @@ h1, h2, h3, p, label {
         @media (min-width: 768px) {
           .navbar .navbar-brand a:first-child .back-icon:hover {
             animation-name: back-anim;
-            animation-duration: 0.3s; }
+            animation-duration: 01s; }
           @keyframes back-anim {
             0% {
               transform: translateX(0px); }
