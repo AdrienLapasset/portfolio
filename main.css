@@ -65,10 +65,10 @@ h1, h2, h3, p, label {
   background-color: #f8f8f8;
   margin: 0; }
   .navbar .offset {
-    transform: translateX(37px); }
+    transform: translateX(47px); }
     @media (max-width: 767px) {
       .navbar .offset {
-        transform: translateX(24px); } }
+        transform: translateX(34px); } }
   .navbar .navbar-brand {
     color: black;
     height: 100%;
@@ -113,15 +113,17 @@ h1, h2, h3, p, label {
           transition: transform .2s .2s; }
     .navbar .navbar-brand h1 {
       font-weight: 700;
-      font-size: 18px;
+      font-size: 20px;
       display: inline-block;
       transition: color .2s; }
     .navbar .navbar-brand span.skills {
-      font-size: 9px;
+      font-size: 10px;
       text-transform: uppercase;
       letter-spacing: 1px;
       color: #b1b1b1;
-      margin-left: 12px; }
+      margin-left: 12px;
+      position: relative;
+      top: 3px; }
       @media (max-width: 767px) {
         .navbar .navbar-brand span.skills {
           display: block;
@@ -155,7 +157,10 @@ h1, h2, h3, p, label {
       margin-top: -1px; }
     .navbar .navbar-brand a:first-child {
       position: absolute;
-      left: -24px; }
+      left: -45px;
+      top: 10px;
+      border-right: solid 2px #ececec;
+      padding: 10px; }
       .navbar .navbar-brand a:first-child .back-icon {
         margin: 0;
         transition: all 0.3s ease-in-out; }
