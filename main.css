@@ -59,7 +59,7 @@ h1, h2, h3, p, label {
   margin: 0; }
 
 .navbar {
-  transition: top 0.2s ease-in-out;
+  transition: top .3s ease-in-out;
   background-color: white;
   border: none;
   background-color: #f8f8f8;
@@ -72,12 +72,15 @@ h1, h2, h3, p, label {
   .navbar .navbar-brand {
     color: black;
     height: 100%;
-    transition: all 01s ease-in-out; }
+    transition: all .2s ease-in-out; }
     @media (max-width: 767px) {
       .navbar .navbar-brand {
         padding: 15px 15px 10px; } }
+    .navbar .navbar-brand * {
+      vertical-align: middle; }
     .navbar .navbar-brand a:nth-child(2) {
-      text-decoration: none; }
+      text-decoration: none;
+      display: block; }
     .navbar .navbar-brand .logo {
       width: 40px;
       margin-right: 10px;
@@ -118,9 +121,7 @@ h1, h2, h3, p, label {
       text-transform: uppercase;
       letter-spacing: 1px;
       color: #b1b1b1;
-      margin-left: 12px;
-      position: relative;
-      bottom: 1px; }
+      margin-left: 12px; }
       @media (max-width: 767px) {
         .navbar .navbar-brand span.skills {
           display: block;
@@ -133,7 +134,7 @@ h1, h2, h3, p, label {
         display: inline-block;
         opacity: 0;
         transform: translateX(10px);
-        transition: all 01s ease-in-out; }
+        transition: all .2s ease-in-out; }
       .navbar .navbar-brand.navbar-right:hover > .text {
         color: black;
         opacity: 1;
@@ -157,7 +158,7 @@ h1, h2, h3, p, label {
       left: -24px; }
       .navbar .navbar-brand a:first-child .back-icon {
         margin: 0;
-        transition: all 0.2s ease-in-out; }
+        transition: all 0.3s ease-in-out; }
         @media (max-width: 767px) {
           .navbar .navbar-brand a:first-child .back-icon {
             margin-top: 8px;
@@ -165,7 +166,7 @@ h1, h2, h3, p, label {
         @media (min-width: 768px) {
           .navbar .navbar-brand a:first-child .back-icon:hover {
             animation-name: back-anim;
-            animation-duration: 01s; }
+            animation-duration: .3s; }
           @keyframes back-anim {
             0% {
               transform: translateX(0px); }

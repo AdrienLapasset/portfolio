@@ -1,5 +1,5 @@
 .navbar {
-	transition: top 0.2s ease-in-out;
+	transition: top .3s ease-in-out;
 	background-color: white;
 	border: none;
 	background-color: #f8f8f8; 
@@ -16,15 +16,19 @@
 	.navbar-brand {
 		color: black;
 		height: 100%;
-		// width: 510px;
-		transition: all 01s ease-in-out;
+		transition: all .2s ease-in-out;
 
 		@media (max-width:767px) {
 			padding: 15px 15px 10px;
 		}
 
+		* {
+			vertical-align: middle;
+		}
+
 		a:nth-child(2) {
 			text-decoration: none;
+			display: block;
 		}
 
 		.logo {
@@ -90,8 +94,6 @@
 			letter-spacing: 1px;
 			color: $grey;
 			margin-left: 12px;
-			position: relative;
-			bottom: 1px;
 
 			@media (max-width:767px) {
 				display: block;
@@ -108,7 +110,7 @@
 				display: inline-block; 
 				opacity: 0;
 				transform: translateX(10px);
-				transition: all 01s ease-in-out;
+				transition: all .2s ease-in-out;
 			}
 
 			&:hover > .text {
@@ -145,7 +147,7 @@
 			
 			.back-icon {
 				margin: 0;
-				transition: all 0.2s ease-in-out;
+				transition: all 0.3s ease-in-out;
 
 				@media (max-width:767px) {
 					margin-top: 8px;
@@ -155,7 +157,7 @@
 				@media (min-width:768px) {
 					&:hover {
 						animation-name: back-anim;
-						animation-duration: 01s;
+						animation-duration: .3s;
 					}
 
 					@keyframes back-anim {
