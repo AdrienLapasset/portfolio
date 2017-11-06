@@ -86,27 +86,28 @@ h1, h2, h3, p, label {
       margin-right: 10px;
       vertical-align: middle; }
       .navbar .navbar-brand .logo__reflect--1 {
-        fill: #ececec;
+        fill: #f8f8f8;
         transition: transform .2s .2s; }
         .navbar .navbar-brand .logo__reflect--1.toggle {
-          transform: translate(25px, -20px);
+          transform: translate(27px, -20px);
           transition: transform .2s; }
       .navbar .navbar-brand .logo__reflect--2 {
-        fill: #ececec;
-        transform: translate(-30px, 30px);
+        fill: #f8f8f8;
+        transform: translate(-35px, 30px);
         transition: transform .2s; }
         .navbar .navbar-brand .logo__reflect--2.toggle {
-          transform: translate(0, 0);
+          transform: translate(0, -2px);
           transition: transform .2s .2s; }
       .navbar .navbar-brand .logo__reflect--3 {
-        fill: #ececec;
-        transition: transform .2s .2s; }
+        fill: #f8f8f8;
+        transition: transform .2s .2s;
+        transform: translateX(-1px); }
         .navbar .navbar-brand .logo__reflect--3.toggle {
-          transform: translate(0, 50px);
+          transform: translateY(40px);
           transition: transform .2s; }
       .navbar .navbar-brand .logo__reflect--4 {
-        fill: #ececec;
-        transform: translateY(-30px);
+        fill: #f8f8f8;
+        transform: translateY(-40px);
         transition: transform .2s; }
         .navbar .navbar-brand .logo__reflect--4.toggle {
           transform: translateY(0);

@@ -38,39 +38,40 @@
 
 			&__reflect {
 				&--1 {
-					fill: $grey-light;
+					fill: $grey-lightest;
 					transition: transform .2s .2s;
 					
 					&.toggle {
-						transform: translate(25px, -20px);
+						transform: translate(27px, -20px);
 						transition: transform .2s;	
 					}
 				}
 
 				&--2 {
-					fill: $grey-light;					
-					transform: translate(-30px, 30px);	
+					fill: $grey-lightest;					
+					transform: translate(-35px, 30px);	
 					transition: transform .2s;
 					
 					&.toggle {
-						transform: translate(0, 0);
+						transform: translate(0, -2px);
 						transition: transform .2s .2s;
 					}
 				}
 
 				&--3 {
-					fill: $grey-light;
+					fill: $grey-lightest;
 					transition: transform .2s .2s;	
+					transform: translateX(-1px);
 					
 					&.toggle {
-						transform: translate(0, 50px);	
+						transform: translateY(40px);	
 						transition: transform .2s;
 					}				
 				}
 
 				&--4 {
-					fill: $grey-light;					
-					transform: translateY(-30px);
+					fill: $grey-lightest;					
+					transform: translateY(-40px);
 					transition: transform .2s;
 
 					&.toggle {
