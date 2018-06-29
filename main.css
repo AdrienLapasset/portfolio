@@ -46,7 +46,7 @@ h1, h2, h3, p, label {
   padding: 0; }
 
 .view {
-  padding-top: 75px;
+  padding-top: 65px;
   height: 100%; }
   @media (max-width: 767px) {
     .view {
@@ -70,12 +70,16 @@ h1, h2, h3, p, label {
       .navbar .offset {
         transform: translateX(34px); } }
   .navbar .navbar-brand {
+    display: flex;
+    align-items: center;
     color: black;
-    height: 100%;
-    transition: all .2s ease-in-out; }
+    transition: all .2s ease-in-out;
+    justify-content: flex-end; }
     @media (max-width: 767px) {
       .navbar .navbar-brand {
-        padding: 15px 15px 10px; } }
+        padding: 15px 15px 10px;
+        justify-content: center;
+        height: 100%; } }
     .navbar .navbar-brand * {
       vertical-align: middle; }
     .navbar .navbar-brand a:nth-child(2) {
@@ -159,7 +163,6 @@ h1, h2, h3, p, label {
     .navbar .navbar-brand a:first-child {
       position: absolute;
       left: -45px;
-      top: 10px;
       border-right: solid 2px #ececec;
       padding: 10px; }
       .navbar .navbar-brand a:first-child .back-icon {
@@ -188,7 +191,6 @@ h1, h2, h3, p, label {
   top: -72px; }
 
 section.about {
-  background-color: white;
   height: 100vh;
   margin: 0 -15px -40px;
   padding-top: 50px;

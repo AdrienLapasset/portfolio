@@ -14,12 +14,16 @@
 	}
 
 	.navbar-brand {
+		display: flex;
+		align-items: center;
 		color: black;
-		height: 100%;
 		transition: all .2s ease-in-out;
+		justify-content: flex-end;
 
 		@media (max-width:767px) {
 			padding: 15px 15px 10px;
+			justify-content: center;
+			height: 100%;
 		}
 
 		* {
@@ -147,7 +151,6 @@
 		a:first-child {
 			position: absolute;
 			left: -45px;
-			top: 10px;
 			border-right: solid 2px $grey-light;
 			padding: 10px;
 
