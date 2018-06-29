@@ -1,5 +1,19 @@
 [
 	{
+		"title": "Medoucine",
+		"category": "développement front-end",
+		"description": "Développement front-end de la plateforme de médecine douce medoucine.com au format desktop et mobile.",
+		"name": "medoucine",
+		"local": false
+	},
+	{
+		"title": "Solen",
+		"category": "développement front-end",
+		"description": "Développement front-end du site solen.co au format desktop et mobile.",
+		"name": "solen",
+		"local": false
+	},
+	{
 		"title": "Wind Mile",
 		"category": "Music",
 		"description": "A smooth and acoustic site for this indie-rock/heavy-pop music band from Lille, France.",
