@@ -1,0 +1,58 @@
+[
+	{
+		"title": "Medoucine",
+		"category": "développement front-end",
+		"description": "Développement front-end de la plateforme de médecine douce medoucine.com au format desktop et mobile.",
+		"name": "medoucine",
+		"local": false
+	},
+	{
+		"title": "Solen",
+		"category": "développement front-end",
+		"description": "Développement front-end du site solen.co au format desktop et mobile.",
+		"name": "solen",
+		"local": false
+	},
+	{
+		"title": "Wind Mile",
+		"category": "Music",
+		"description": "A smooth and acoustic site for this indie-rock/heavy-pop music band from Lille, France.",
+		"name": "windmile",
+		"local": true
+	},
+	{
+		"title": "Avis Utilitaires",
+		"category": "Application web",
+		"description": "Réservez un véhicule utilitaire dans toute la France avec cette application web. Design d'interface et intégration réalisés avec l'agence digitale \"Subvitamine\".",
+		"name": "avis",
+		"local": false
+	},
+	{
+		"title": "Spaceships",
+		"category": "Graphic design",
+		"description": "A series of interactive spaceship plans made by Louise Humbert for her graphic design diploma in ESADHaR.",
+		"name": "spaceship",
+		"local": false
+	},
+	{
+		"title": "Generator",
+		"category": "Graphic design",
+		"description": "Design your own spaceship with this random generator, in collaboration with Louise Humbert.",
+		"name": "generator",
+		"local": false
+	},
+	{
+		"title": "Une saison graphique 2014",
+		"category": "Graphic design",
+		"description": "Let the user create his own layout on the graphic design festival site from Le Havre, France.",
+		"name": "usg",
+		"local": false
+	},
+	{
+		"title": "Alpaga",
+		"category": "Music",
+		"description": "Find the hidden links in this Toulouse based music band site. With Thomas Schencker.",
+		"name": "alpaga",
+		"local": false
+	}
+]
