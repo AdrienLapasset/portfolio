@@ -9,6 +9,6 @@
   </div>
 </template>
 
-<style lang="scss" scoped>
-@import "sass/main.scss";
+<style lang="scss">
+// @import "sass/main.scss";
 </style>
