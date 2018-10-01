@@ -10,7 +10,7 @@
 				<img class="icon contact-icon" src="./assets/icons/contact.svg">
 			</router-link>
 		</header>
-    <!-- <router-view/> -->
+    <router-view/>
   </div>
 </template>
 
