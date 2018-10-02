@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="app" id="app">
 		<header class="header">
 			<!-- <router-link to="/">Home</router-link>  -->
 			<router-link to="/about" class="header__about">
@@ -27,17 +27,20 @@ export default {
 
 <style lang="scss">
 @import "scss/_base.scss";
+.app {
+	padding-top: 50px;
+}
 
 .header {
   display: flex;
   justify-content: space-between;
   height: 50px;
   padding: 0 1em;
-  background-color: $blue;
+	background-image: linear-gradient(-90deg, #003DF4 0%, #001CE6 100%);
   position: fixed;
   top: 0;
   right: 0;
-  left: 0;
+	left: 0;
 
   &__about {
     display: flex;
