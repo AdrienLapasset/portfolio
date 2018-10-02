@@ -32,10 +32,10 @@ export default {
 .home {
   column-count: 3;
   column-gap: 2em;
-  margin: 2em;
+  margin: (calc(2em + 50px)) 2em 2em;
 
   &__project {
-    margin-bottom: 3em;
+    margin-bottom: 2em;
     display: block;
     text-align: center;
     break-inside: avoid;

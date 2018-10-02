@@ -33,6 +33,11 @@ export default {
   justify-content: space-between;
   height: 50px;
   padding: 0 1em;
+  background-color: $blue;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 
   &__about {
     display: flex;
@@ -40,22 +45,21 @@ export default {
 
     &__name {
       font-size: 18px;
+      color: $grey-lightest;
     }
 
     &__skills {
       font-size: 9px;
       text-transform: uppercase;
       letter-spacing: 1px;
-      color: $grey;
+      color: $grey-lightest;
       margin-left: 12px;
-      position: relative;
-      top: 2px;
     }
-	}
-	
-	&__contact {
-		display: flex;
+  }
+
+  &__contact {
+    display: flex;
     align-items: center;
-	}
+  }
 }
 </style>
