@@ -27,7 +27,7 @@
     height: 100%;
     background-image: url("../assets/imgs/portrait.png");
     background-color: $blue;
-    background-blend-mode: multiply;
+    background-blend-mode: luminosity;
     background-size: cover;
     background-position: center;
   }
@@ -47,7 +47,11 @@
   &__intro {
     font-size: 24px;
     margin-bottom: 20px;
-  }
+	}
+	
+	&__text {
+		font-size: 14px;
+	}
 
 
   // Animations
