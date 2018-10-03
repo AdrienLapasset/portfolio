@@ -20,15 +20,14 @@ import MyLogo from "./components/icons/MyLogo.vue";
 export default {
   components: {
     MyLogo
-	},
-	data() {
-		return {
-			onAbout: false
-		}
-	},
+  },
+  data() {
+    return {
+      onAbout: false
+    };
+  },
   watch: {
     $route() {
-			console.log(this.$route.path)
       if (this.$route.path === "/about") {
         this.onAbout = true;
       } else {
@@ -48,7 +47,8 @@ export default {
   justify-content: space-between;
   height: 50px;
   padding: 0 1em;
-  background-image: linear-gradient(-90deg, #003df4 0%, #001ce6 100%);
+
+  background-image: linear-gradient(90deg, #0046ff 0%, #0019ce 100%);
   position: fixed;
   top: 0;
   right: 0;
