@@ -16,6 +16,8 @@
 </template>
 
 <style lang="scss">
+@import "../scss/_animations.scss";
+
 .about {
   display: flex;
   height: 100vh;
@@ -23,7 +25,7 @@
 
   &__portrait {
     display: flex;
-    flex: 0 0 50%;
+    flex: 0 0 40%;
     height: 100%;
     background-image: url("../assets/imgs/portrait.png");
     background-color: $blue;
@@ -47,91 +49,31 @@
   &__intro {
     font-size: 24px;
     margin-bottom: 20px;
-	}
-	
-	&__text {
-		font-size: 14px;
-	}
-
-
-  // Animations
-
-  .about__portrait {
-    animation: 1s ease-out 0s 1 fadein-left;
   }
 
-  .about__hello {
-    animation: 1s ease-out 0s 1 fadein-top;
+  &__text {
+    font-size: 14px;
   }
+}
 
-  .about__text, .about__intro {
-    animation: 1.5s ease-out 0s 1 fadein-right-delay05;
-  }
+.about__portrait {
+  animation: 1s ease-out 0s 1 fadein-left;
+}
 
-  .about__links {
-    animation: 2s ease-out 0s 1 fadein-bottom-delay1;
-  }
+.about__hello {
+  animation: 1s ease-out 0s 1 fadein-top;
+}
 
-  .fadeout {
-    opacity: 0;
-  }
+.about__text,
+.about__intro {
+  animation: 1.5s ease-out 0s 1 fadein-right-delay05;
+}
 
-  @keyframes fadein-left {
-    0% {
-      opacity: 0;
-      transform: translateX(-10px);
-    }
-    40% {
-      transform: translateX(0px);
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+.about__links {
+  animation: 2s ease-out 0s 1 fadein-bottom-delay1;
+}
 
-  @keyframes fadein-top {
-    0% {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    40% {
-      transform: translateY(0px);
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes fadein-right-delay05 {
-    0% {
-      opacity: 0;
-    }
-    25% {
-      transform: translateX(10px);
-      opacity: 0;
-    }
-    50% {
-      transform: translateX(0px);
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes fadein-bottom-delay1 {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      transform: translateY(10px);
-      opacity: 0;
-    }
-    70% {
-      transform: translateY(0px);
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+.fadeout {
+  opacity: 0;
 }
 </style>

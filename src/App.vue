@@ -21,8 +21,10 @@ export default {
   components: {
     MyLogo
 	},
-	data: {
-		onAbout: false
+	data() {
+		return {
+			onAbout: false
+		}
 	},
   watch: {
     $route() {
@@ -40,9 +42,6 @@ export default {
 
 <style lang="scss">
 @import "scss/_base.scss";
-.app {
-  // padding-top: 50px;
-}
 
 .header {
   display: flex;
