@@ -1,6 +1,6 @@
 <template>
   <div class="app" id="app">
-		<header class="header">
+		<header class="header" :class="{ 'header--transparent': onAbout }">
 			<!-- <router-link to="/">Home</router-link>  -->
 			<router-link to="/about" class="header__about">
 				<my-logo /><h1 class="header__about__name">Adrien Lapasset</h1><span class="header__about__skills">Webdesign / Développement front-end</span>
@@ -20,6 +20,19 @@ import MyLogo from "./components/icons/MyLogo.vue";
 export default {
   components: {
     MyLogo
+	},
+	data: {
+		onAbout: false
+	},
+  watch: {
+    $route() {
+			console.log(this.$route.path)
+      if (this.$route.path === "/about") {
+        this.onAbout = true;
+      } else {
+        this.onAbout = false;
+      }
+    }
   }
 };
 </script>
@@ -28,7 +41,7 @@ export default {
 <style lang="scss">
 @import "scss/_base.scss";
 .app {
-	padding-top: 50px;
+  // padding-top: 50px;
 }
 
 .header {
@@ -36,11 +49,11 @@ export default {
   justify-content: space-between;
   height: 50px;
   padding: 0 1em;
-	background-image: linear-gradient(-90deg, #003DF4 0%, #001CE6 100%);
+  background-image: linear-gradient(-90deg, #003df4 0%, #001ce6 100%);
   position: fixed;
   top: 0;
   right: 0;
-	left: 0;
+  left: 0;
 
   &__about {
     display: flex;
@@ -63,6 +76,10 @@ export default {
   &__contact {
     display: flex;
     align-items: center;
+  }
+
+  &--transparent {
+    background-image: none;
   }
 }
 </style>

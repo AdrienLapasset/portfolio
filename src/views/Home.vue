@@ -32,7 +32,7 @@ export default {
 .home {
   column-count: 3;
   column-gap: 2em;
-  margin: (calc(2em + 50px)) 2em 2em;
+  margin: $view-gap 2em 2em;
 
   &__project {
     margin-bottom: 2em;
