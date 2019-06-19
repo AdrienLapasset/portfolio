@@ -1,5 +1,12 @@
 [
 	{
+		"title": "onTracks",
+		"category": "UI/UX design, développement front-end",
+		"description": "Refonte du design et intégration d'une web app permettant de trouver, visualiser, créer et partager des parcours sportifs. Ces parcours sont lus et générés par des bracelets connectés permettant de guider l'utilisateur.",
+		"name": "ontracks",
+		"local": false
+	},
+	{
 		"title": "Medoucine",
 		"category": "développement front-end",
 		"description": "Développement front-end de la plateforme de médecine douce medoucine.com au format desktop et mobile.",
