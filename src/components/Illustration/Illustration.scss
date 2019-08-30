@@ -1,0 +1,47 @@
+.illustration {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	flex-direction: column;
+}
+
+.character {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	animation: float 1.5s ease-in-out infinite alternate;
+}
+
+.shadow {
+	margin-top: 10px;
+	width: 250px;
+	padding: 15px 0;
+	background-color: black;
+	border-radius: 250px / 30px;
+	animation: shadow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(7px);
+	}
+}
+
+@keyframes shadow {
+	from {
+		width: 250px;
+		padding: 15px 0;
+		border-radius: 250px / 30px;
+		background-color: rgb(49, 49, 49);
+	}
+	to {
+		width: 240px;
+		padding: 12px 0;
+		border-radius: 240px / 30px;
+		background-color: black;
+	}
+}
