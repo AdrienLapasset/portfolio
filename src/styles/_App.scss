@@ -1,0 +1,23 @@
+.Home {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 900px;
+		height: 100%;
+		margin: 0 auto;
+	}
+
+	&__text {
+		width: 550px;
+
+		&__hello {
+			font-size: 94px;
+			margin-bottom: 20px;
+		}
+	}
+}
