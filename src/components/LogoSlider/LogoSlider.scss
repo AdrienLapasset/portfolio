@@ -1,7 +1,20 @@
 @import '../../styles/colors';
 
+@mixin animationDelay {
+	$i: 1;
+	$delay: 2;
+	@for $i from 1 through 7 {
+		&:nth-child(#{$i}) {
+			animation-delay: #{$delay}s;
+		}
+		$delay: $delay + .1;
+	}
+}
+
 .LogoSlider {
 	margin-top: auto;
+	animation: fadeFromBottom 1s 1.8s forwards;
+	opacity: 0;
 
 	&__slider {
 		height: 150px;
@@ -34,5 +47,20 @@
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
+		animation: fadeFromBottom .4s forwards;
+		opacity: 0;
+
+		@include animationDelay;
+	}
+}
+
+@keyframes fadeFromBottom {
+	from {
+		transform: translateY(10px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
 	}
 }

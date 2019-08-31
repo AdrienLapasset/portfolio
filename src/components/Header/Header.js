@@ -13,9 +13,9 @@ function Header() {
 				Adrien Lapasset
 			</div>
 			<div className="header__links">
-				<img src={github} alt="" />
-				<img src={gitlab} alt="" />
-				<img src={spotify} alt="" />
+				<img src={github} alt="Lien Github" />
+				<img src={gitlab} alt="Lien Gitlab" />
+				<img src={spotify} alt="Lien Spotify" />
 			</div>
 		</header>
 	);

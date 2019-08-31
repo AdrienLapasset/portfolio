@@ -5,6 +5,8 @@
 	flex-direction: column;
 	height: 400px;
 	width: 250px;
+	animation: fadeIn 2s 1.6s forwards;
+	opacity: 0;
 }
 
 .character {
@@ -44,5 +46,14 @@
 		padding: 12px 0;
 		border-radius: 240px / 30px;
 		background-color: black;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }
