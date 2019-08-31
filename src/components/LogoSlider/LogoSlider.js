@@ -6,7 +6,7 @@ class LogoSlider extends Component {
 		super(props);
 		this.state = {
 			sliderPos: 0,
-			itemWidth: 250,
+			itemWidth: 230,
 			logosList: [
 				'medoucine.svg',
 				'solen.svg',
@@ -51,7 +51,10 @@ class LogoSlider extends Component {
 				<div
 					className="LogoSlider__item"
 					key={index}
-					style={{ backgroundImage: logoSrc !== undefined ? `url(${logoSrc})` : 'none' }}
+					style={{
+						backgroundImage: logoSrc !== undefined ? `url(${logoSrc})` : 'none',
+						width: this.state.itemWidth
+					}}
 				/>
 			);
 		});

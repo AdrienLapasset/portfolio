@@ -15,6 +15,12 @@ class App extends Component {
 							Je suis un développeur créatif (et occasionnellement designer) qui aime les sites
 							responsive, le design minimaliste et les transitions en douceurs.
 						</p>
+						<p className="Home__text__contact">
+							Pour me contacter c’est par ici :<br />
+							<a href="mailto:mail@adrienlapasset.fr" target="_blank" rel="noopener noreferrer">
+								mail@adrienlapasset.fr
+							</a>
+						</p>
 					</div>
 					<Illustration />
 				</div>
