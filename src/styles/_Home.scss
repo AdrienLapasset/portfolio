@@ -2,6 +2,7 @@
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
+	overflow: hidden;
 
 	&__body {
 		display: flex;
@@ -14,6 +15,8 @@
 
 	&__text {
 		width: 550px;
+		line-height: 2;
+		line-height: 1.4;
 
 		&__hello {
 			font-size: 94px;

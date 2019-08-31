@@ -5,6 +5,7 @@ class LogoSlider extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
+			isLogoShowed: false,
 			sliderPos: 0,
 			itemWidth: 230,
 			logosList: [
@@ -17,6 +18,8 @@ class LogoSlider extends Component {
 				'apptamin.png'
 			]
 		};
+
+		this.showLogos = this.showLogos.bind(this);
 	}
 
 	componentDidMount() {
@@ -25,19 +28,33 @@ class LogoSlider extends Component {
 
 	slide() {
 		let i = 0;
+		window.setTimeout(() => {
+			this.slideItem(i);
+			i++;
+		}, 2000);
 		window.setInterval(() => {
-			this.setState((prevState) => {
-				return {
-					sliderPos: (prevState.sliderPos -= this.state.itemWidth)
-				};
-			});
-			const currentList = this.state.logosList;
-			const outItem = currentList[i];
-			currentList.push(outItem);
-			this.setState({ logosList: currentList });
-			currentList[i] = '';
+			this.slideItem(i);
 			i++;
 		}, 7000);
+	}
+
+	slideItem(i) {
+		this.setState((prevState) => {
+			return {
+				sliderPos: (prevState.sliderPos -= this.state.itemWidth)
+			};
+		});
+		const currentList = this.state.logosList;
+		const outItem = currentList[i];
+		currentList.push(outItem);
+		this.setState({ logosList: currentList });
+		currentList[i] = '';
+	}
+
+	showLogos() {
+		this.setState((state) => ({
+			isLogoShowed: !state.isLogoShowed
+		}));
 	}
 
 	render() {
@@ -60,7 +77,7 @@ class LogoSlider extends Component {
 		});
 
 		return (
-			<div className="LogoSlider">
+			<div onClick={this.showLogos} className={`LogoSlider ${this.state.isLogoShowed ? 'LogoSlider--show' : ''}`}>
 				<h2 className="LogoSlider__title">Ils m'ont fait confiance</h2>
 				<div className="LogoSlider__slider">
 					<div className="LogoSlider__container" style={{ width: this.state.itemWidth * 6 }}>

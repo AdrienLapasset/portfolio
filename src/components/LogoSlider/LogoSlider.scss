@@ -2,7 +2,7 @@
 
 @mixin animationDelay {
 	$i: 1;
-	$delay: 2;
+	$delay: 0;
 	@for $i from 1 through 7 {
 		&:nth-child(#{$i}) {
 			animation-delay: #{$delay}s;
@@ -13,8 +13,26 @@
 
 .LogoSlider {
 	margin-top: auto;
-	animation: fadeFromBottom 1s 1.8s forwards;
-	opacity: 0;
+	transform: translateY(120px);
+	transition: transform .4s ease-out;
+	padding-top: 200px;
+	cursor: pointer;
+
+	&:hover:not(.LogoSlider--show) {
+		transform: translateY(100px);
+	}
+
+	&--show {
+		transform: translateY(0px);
+
+		.LogoSlider__item {
+			animation: fadeFromBottom .4s forwards;
+			@include animationDelay;
+		}
+	}
+
+	// animation: fadeFromBottom 1s 1.8s forwards;
+	// opacity: 0;
 
 	&__slider {
 		height: 150px;
@@ -32,7 +50,7 @@
 		text-align: center;
 		color: $grey;
 		text-transform: uppercase;
-		font-size: 16px;
+		font-size: 14px;
 		margin-bottom: 15px;
 	}
 
@@ -47,10 +65,7 @@
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
-		animation: fadeFromBottom .4s forwards;
 		opacity: 0;
-
-		@include animationDelay;
 	}
 }
 
