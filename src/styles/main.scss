@@ -1,25 +1,4 @@
-* {
-	margin: 0;
-	padding: 0;
-}
-
-@font-face {
-	font-family: 'Regular-Semibold';
-	src: url('../assets/fonts/Regular-Semibold.ttf');
-}
-
-body {
-	font-family: 'Regular-Semibold';
-}
-
-h2,
-p {
-	font-size: 24px;
-}
-
-a {
-	color: black;
-}
-
 @import 'colors';
+@import 'media';
+@import 'base';
 @import 'Home';
