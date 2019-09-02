@@ -1,7 +1,10 @@
 @import '../../styles/colors';
 
 .Footer {
-	margin-top: auto;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
 	transform: translateY(120px);
 	transition: transform .4s cubic-bezier(.2, 0, 0, 1);
 	padding-top: 200px;

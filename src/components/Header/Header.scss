@@ -1,12 +1,17 @@
+@import '../../styles/colors';
+
 .header {
 	padding: 34px 43px;
 	display: flex;
 	justify-content: space-between;
+	position: absolute;
+	left: 0;
+	right: 0;
 
 	&__logo {
 		display: flex;
 		align-items: center;
-		animation: fadefromTop .4s;
+		animation: fadefromTop .4s forwards;
 
 		&__icon {
 			height: 28px;
@@ -15,27 +20,29 @@
 	}
 
 	&__links {
-		& > img {
+		& > * {
 			margin-left: 30px;
-			opacity: .3;
-			transition: opacity .2s;
-			animation: fadefromTopLink .4s forwards;
+			transition: fill .2s, stroke .2s;
+			animation: fadefromTop .4s forwards;
 			transform: translateY(-10px);
 			opacity: 0;
+			fill: $grey;
+			stroke: $grey;
 
 			&:hover {
-				opacity: 1;
+				fill: black;
+				stroke: black;
 				cursor: pointer;
 			}
 
 			&:nth-child(1) {
-				animation-delay: .2s;
+				animation-delay: .1s;
 			}
 			&:nth-child(2) {
-				animation-delay: .4s;
+				animation-delay: .2s;
 			}
 			&:nth-child(3) {
-				animation-delay: .6s;
+				animation-delay: .3s;
 			}
 		}
 	}
@@ -49,16 +56,5 @@
 	to {
 		transform: translateY(0);
 		opacity: 1;
-	}
-}
-
-@keyframes fadefromTopLink {
-	from {
-		transform: translateY(-10px);
-		opacity: 0;
-	}
-	to {
-		transform: translateY(0);
-		opacity: .3;
 	}
 }
