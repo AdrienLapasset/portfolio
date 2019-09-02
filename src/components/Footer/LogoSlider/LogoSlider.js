@@ -36,7 +36,6 @@ class LogoSlider extends Component {
 	}
 
 	slide() {
-		console.log(this.state.logosList);
 		this.setState({ isReset: false });
 		this.slideItem();
 		this.intervalId = window.setInterval(() => {
@@ -72,7 +71,7 @@ class LogoSlider extends Component {
 	}
 
 	render() {
-		const logos = require.context('../../assets/logos', true);
+		const logos = require.context('../../../assets/logos', true);
 		const pressList = this.state.logosList.map((item, index) => {
 			let logoSrc;
 			if (item !== '') {
