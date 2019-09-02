@@ -24,7 +24,24 @@
 	}
 
 	&__container {
+		position: relative;
 		overflow-x: hidden;
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: -10px;
+			bottom: -10px;
+			width: 100px;
+			z-index: 1;
+		}
+		&::before {
+			box-shadow: 20px 0 20px black inset;
+		}
+		&::after {
+			right: 0;
+			box-shadow: -20px 0 20px black inset;
+		}
 	}
 
 	&__list {
@@ -38,7 +55,7 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		opacity: 0;
-		animation: fadeOut .4s forwards;
+		animation: fadeOut .2s forwards;
 	}
 }
 
