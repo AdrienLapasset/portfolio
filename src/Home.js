@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header/Header';
 import Illustration from './components/Illustration/Illustration';
-import LogoSlider from './components/LogoSlider/LogoSlider';
+import Footer from './components/Footer/Footer';
 
 class App extends Component {
 	render() {
@@ -24,7 +24,7 @@ class App extends Component {
 					</div>
 					<Illustration />
 				</div>
-				<LogoSlider />
+				<Footer />
 			</div>
 		);
 	}

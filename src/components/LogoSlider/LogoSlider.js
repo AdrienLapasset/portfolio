@@ -5,9 +5,10 @@ class LogoSlider extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			isLogoShowed: false,
 			sliderPos: 0,
 			itemWidth: 230,
+			slideCount: 0,
+			isReset: false,
 			logosList: [
 				'medoucine.svg',
 				'solen.svg',
@@ -18,43 +19,56 @@ class LogoSlider extends Component {
 				'apptamin.png'
 			]
 		};
-
-		this.showLogos = this.showLogos.bind(this);
 	}
 
-	componentDidMount() {
-		this.slide();
+	intervalId = null;
+	transitionDuration = 7; //secondes
+
+	componentDidUpdate(prevProps) {
+		if (prevProps.isShowed !== this.props.isShowed) {
+			if (this.props.isShowed) {
+				this.slide();
+			}
+			if (!this.props.isShowed) {
+				this.resetSlide();
+			}
+		}
 	}
 
 	slide() {
-		let i = 0;
-		window.setTimeout(() => {
-			this.slideItem(i);
-			i++;
-		}, 2000);
-		window.setInterval(() => {
-			this.slideItem(i);
-			i++;
-		}, 7000);
+		console.log(this.state.logosList);
+		this.setState({ isReset: false });
+		this.slideItem();
+		this.intervalId = window.setInterval(() => {
+			this.slideItem();
+		}, this.transitionDuration * 1000);
 	}
 
-	slideItem(i) {
+	slideItem() {
 		this.setState((prevState) => {
 			return {
 				sliderPos: (prevState.sliderPos -= this.state.itemWidth)
 			};
 		});
 		const currentList = this.state.logosList;
-		const outItem = currentList[i];
+		const outItem = currentList[this.state.slideCount];
 		currentList.push(outItem);
+		currentList[this.state.slideCount - 1] = '';
 		this.setState({ logosList: currentList });
-		currentList[i] = '';
+		this.setState((prevState) => {
+			return {
+				slideCount: prevState.slideCount + 1
+			};
+		});
 	}
 
-	showLogos() {
-		this.setState((state) => ({
-			isLogoShowed: !state.isLogoShowed
-		}));
+	resetSlide() {
+		window.setTimeout(() => {
+			clearInterval(this.intervalId);
+			const currentList = this.state.logosList;
+			const newList = currentList.slice(this.state.slideCount);
+			this.setState({ logosList: newList, slideCount: 0, sliderPos: 0, isReset: true });
+		}, 400);
 	}
 
 	render() {
@@ -77,16 +91,18 @@ class LogoSlider extends Component {
 		});
 
 		return (
-			<div onClick={this.showLogos} className={`LogoSlider ${this.state.isLogoShowed ? 'LogoSlider--show' : ''}`}>
-				<h2 className="LogoSlider__title">Ils m'ont fait confiance</h2>
-				<div className="LogoSlider__slider">
-					<div className="LogoSlider__container" style={{ width: this.state.itemWidth * 6 }}>
-						<div
-							className="LogoSlider__list"
-							style={{ transform: `translateX(${this.state.sliderPos}px)` }}
-						>
-							{pressList}
-						</div>
+			<div className={`LogoSlider ${this.props.isShowed ? 'LogoSlider--show' : ''}`}>
+				<div className="LogoSlider__container" style={{ width: this.state.itemWidth * 6 }}>
+					<div
+						className="LogoSlider__list"
+						style={{
+							transform: `translateX(${this.state.sliderPos}px)`,
+							transition: this.state.isReset
+								? 'none'
+								: 'transform ' + this.transitionDuration + 's linear'
+						}}
+					>
+						{pressList}
 					</div>
 				</div>
 			</div>
