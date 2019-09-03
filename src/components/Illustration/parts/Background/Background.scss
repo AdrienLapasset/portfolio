@@ -5,36 +5,42 @@
 	top: -90px;
 	left: -147px;
 
-	.codeBlock {
-		&__contour {
+	.animationDelay {
+		& > * {
 			stroke-dasharray: 1000;
 			stroke-dashoffset: 1000;
+
 			animation: dash 3s 1s cubic-bezier(0.25, 0.1, 0.25, 1.0) forwards;
 			@include animationDelay(1);
 		}
 	}
 
-	.line {
-		&__first {
-			stroke-dasharray: 1000;
-			stroke-dashoffset: 1000;
-			animation: dash 3s 2s cubic-bezier(0.25, 0.1, 0.25, 1.0) forwards;
-			&__point {
-				transform-origin: 450px 485px;
-				transform: scale(0);
-				animation: scale .4s 2.4s cubic-bezier(0.25, 0.1, 0.25, 1.0) forwards;
-			}
-		}
-		&__second {
-			stroke-dasharray: 1000;
-			stroke-dashoffset: 1000;
-			animation: dashSecondLine .4s 3s cubic-bezier(0.25, 0.1, 0.25, 1.0) forwards;
-		}
+	.firstPoint {
+		transform-origin: 450px 485px;
+		transform: scale(0);
+		animation: scale .4s 2.4s cubic-bezier(0.25, 0.1, 0.25, 1.0) forwards;
+	}
+
+	.secondPoint {
+		transform-origin: 245px 30px;
+		transform: scale(0);
+		animation: scale .4s 2.4s cubic-bezier(0.25, 0.1, 0.25, 1.0) forwards;
+	}
+
+	.dashLine {
+		stroke-dasharray: 1000;
+		stroke-dashoffset: 1000;
+		animation: dashSecondLine .4s 3s cubic-bezier(0.25, 0.1, 0.25, 1.0) forwards;
 	}
 
 	.cube {
 		opacity: 0;
-		animation: opacity .4s 3s cubic-bezier(0.25, 0.1, 0.25, 1.0) forwards;
+		animation: opacity 1s cubic-bezier(0.25, 0.1, 0.25, 1.0) forwards;
+	}
+
+	.oneZeroBlock {
+		opacity: 0;
+		animation: opacity 1s cubic-bezier(0.25, 0.1, 0.25, 1.0) forwards;
 	}
 }
 
