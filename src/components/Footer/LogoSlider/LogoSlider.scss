@@ -1,13 +1,4 @@
-@mixin animationDelay {
-	$i: 1;
-	$delay: 0;
-	@for $i from 1 through 7 {
-		&:nth-child(#{$i}) {
-			animation-delay: #{$delay}s;
-		}
-		$delay: $delay + .1;
-	}
-}
+@import '../../../styles/animations';
 
 .LogoSlider {
 	height: 150px;
@@ -19,7 +10,7 @@
 	&--show {
 		.LogoSlider__item {
 			animation: fadeFromBottom .4s forwards;
-			@include animationDelay;
+			@include animationDelay(0);
 		}
 	}
 
