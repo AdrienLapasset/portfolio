@@ -1,4 +1,5 @@
 @import '../../styles/colors';
+@import '../../styles/animations';
 
 .Footer {
 	position: absolute;
@@ -9,6 +10,8 @@
 	transition: transform .4s cubic-bezier(.2, 0, 0, 1);
 	padding-top: 200px;
 	cursor: pointer;
+	opacity: 0;
+	animation: fadeFooter 2s 5s forwards;
 
 	&:hover:not(.Footer--show) {
 		transform: translateY(100px);
@@ -24,5 +27,11 @@
 		text-transform: uppercase;
 		font-size: 14px;
 		margin-bottom: 15px;
+	}
+}
+
+@keyframes fadeFooter {
+	to {
+		opacity: 1;
 	}
 }

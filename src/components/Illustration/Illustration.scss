@@ -3,14 +3,20 @@
 }
 
 .character {
-	position: absolute;
-	top: 90px;
-	left: 150px;
-	opacity: 0;
 	align-items: center;
 	display: flex;
 	flex-direction: column;
+	opacity: 0;
 	animation: fadefromTop 1s .7s forwards, float 1.5s 1.7s ease-in-out infinite alternate;
+}
+
+.container {
+	position: absolute;
+	top: 90px;
+	left: 150px;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
 }
 
 .shadow {
