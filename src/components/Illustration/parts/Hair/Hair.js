@@ -3,7 +3,14 @@ import './Hair.scss';
 
 function Hair() {
 	return (
-		<svg width="48" height="58" viewBox="0 0 48 58" xmlns="http://www.w3.org/2000/svg" className="hair">
+		<svg
+			width="48"
+			height="58"
+			viewBox="0 0 48 58"
+			xmlns="http://www.w3.org/2000/svg"
+			className="hair"
+			preserveAspectRatio="xMidYMid meet"
+		>
 			<path strokeLinecap="round" stroke="#000000" strokeWidth="4" fill="#000000">
 				<animate
 					dur="3s"

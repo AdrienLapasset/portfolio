@@ -1,9 +1,7 @@
 @import '../../../../styles/animations';
 
 .Background {
-	position: absolute;
-	top: -90px;
-	left: -147px;
+	width: 100%;
 
 	.animationDelay {
 		& > * {

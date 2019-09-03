@@ -10,8 +10,8 @@ function Illustration() {
 			<div className="character">
 				<Hair />
 				<Body />
+				<div className="shadow" />
 			</div>
-			<div className="shadow" />
 			<Background />
 		</div>
 	);

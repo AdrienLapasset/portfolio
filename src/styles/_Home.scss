@@ -7,24 +7,31 @@
 	overflow: hidden;
 
 	&__body {
+		margin-top: 120px;
 		display: flex;
-		justify-content: space-between;
+		flex-direction: column-reverse;
 		align-items: center;
 		height: 100%;
+		width: 100%;
 
+		@include lg {
+			margin-top: 0px;
+			flex-direction: row;
+			justify-content: space-between;
+			width: 90%;
+		}
 		@include xl {
-			width: 1000px;
+			width: 1200px;
 		}
 	}
 
 	&__text {
-		width: 550px;
+		width: 100%;
 		line-height: 2;
 		line-height: 1.4;
-		display: none;
 
 		@include lg {
-			display: block;
+			width: 550px;
 		}
 
 		&__hello {
