@@ -9,6 +9,7 @@ class App extends Component {
 			<div className="Home">
 				<Header />
 				<div className="Home__body">
+					<Illustration />
 					<div className="Home__text">
 						<p className="Home__text__hello">Bonjour,</p>
 						<p>
@@ -22,7 +23,6 @@ class App extends Component {
 							</a>
 						</p>
 					</div>
-					<Illustration />
 				</div>
 				<Footer />
 			</div>

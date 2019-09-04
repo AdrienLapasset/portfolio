@@ -1,5 +1,15 @@
+@import '../../styles/media';
+
 .illustration {
 	position: relative;
+	width: 290px;
+
+	@include sm {
+		width: 400px;
+	}
+	@include xl {
+		width: auto;
+	}
 }
 
 .character {
@@ -8,25 +18,53 @@
 	flex-direction: column;
 	opacity: 0;
 	animation: fadefromTop 1s .7s forwards, float 1.5s 1.7s ease-in-out infinite alternate;
-}
 
-.container {
-	position: absolute;
-	top: 90px;
-	left: 150px;
-	align-items: center;
-	display: flex;
-	flex-direction: column;
+	&__container {
+		position: absolute;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		width: 110px;
+		top: 30px;
+		left: 103px;
+
+		@include sm {
+			top: 60px;
+			left: 140px;
+			width: 150px;
+		}
+
+		@include xl {
+			top: 90px;
+			left: 160px;
+			width: auto;
+		}
+	}
 }
 
 .shadow {
 	opacity: 0;
-	margin-top: 10px;
-	width: 240px;
-	padding: 15px 0;
+	margin-top: 5px;
 	background-color: black;
 	border-radius: 240px / 30px;
 	animation: shadowIn 1s .7s forwards, shadow 1.5s 1.7s ease-in-out infinite alternate;
+	width: 120px;
+	height: 10px;
+	border-radius: 120px / 10px;
+
+	@include sm {
+		margin-top: 7px;
+		border-radius: 180px / 20px;
+		width: 180px;
+		height: 20px;
+	}
+
+	@include xl {
+		margin-top: 10px;
+		width: 220px;
+		height: 25px;
+		border-radius: 220px / 25px;
+	}
 }
 
 @keyframes float {
@@ -34,7 +72,7 @@
 		transform: translateY(0);
 	}
 	to {
-		transform: translateY(-7px);
+		transform: translateY(-5px);
 	}
 }
 

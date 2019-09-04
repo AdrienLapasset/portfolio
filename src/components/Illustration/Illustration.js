@@ -7,7 +7,7 @@ import './Illustration.scss';
 function Illustration() {
 	return (
 		<div className="illustration">
-			<div className="container">
+			<div className="character__container">
 				<div className="character">
 					<Hair />
 					<Body />

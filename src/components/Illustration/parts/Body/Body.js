@@ -4,6 +4,7 @@ import './Body.scss';
 function Body() {
 	return (
 		<svg
+			className="Body"
 			width="189px"
 			height="267px"
 			viewBox="0 0 189 267"

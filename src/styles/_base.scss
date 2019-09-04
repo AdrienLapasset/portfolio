@@ -14,7 +14,11 @@ body {
 
 h2,
 p {
-	font-size: 24px;
+	font-size: 18px;
+
+	@include sm {
+		font-size: 24px;
+	}
 }
 
 a {
