@@ -22,25 +22,33 @@ class Home extends Component {
 	screenWidth = null;
 
 	onTouchStart(event) {
-		this.startX = event.touches[0].clientX;
-		this.startY = event.touches[0].clientY;
+		if (this.state.isMobile) {
+			this.startX = event.touches[0].clientX;
+			this.startY = event.touches[0].clientY;
+		}
 	}
 
 	onTouchMove(event) {
-		this.moveX = event.touches[0].clientX;
-		this.moveY = event.touches[0].clientY;
-		let diffX = Math.abs(this.startX - this.moveX);
-		let diffY = Math.abs(this.startY - this.moveY);
-		let diffMax = Math.max(diffX, diffY);
-		let opacity = 1 - diffMax / 200;
-		this.setState({ opacity: opacity });
-		if (opacity <= 0) {
-			this.setState({ isSwipe: true });
+		if (this.state.isMobile) {
+			this.moveX = event.touches[0].clientX;
+			this.moveY = event.touches[0].clientY;
+			let diffX = Math.abs(this.startX - this.moveX);
+			let diffY = Math.abs(this.startY - this.moveY);
+			let diffMax = Math.max(diffX, diffY);
+			let opacity = 1 - diffMax / 100;
+			this.setState({ opacity: opacity });
+			if (opacity <= 0) {
+				this.setState((prevState) => {
+					return { isSwipe: !prevState.isSwipe, opacity: 1 };
+				});
+			}
 		}
 	}
 
 	onTouchEnd() {
-		this.setState({ opacity: 1 });
+		if (this.state.isMobile) {
+			this.setState({ opacity: 1 });
+		}
 	}
 
 	componentDidMount() {
@@ -56,6 +64,9 @@ class Home extends Component {
 		if (window.innerWidth < 992) {
 			this.setState({ isMobile: true });
 		}
+		if (window.innerWidth >= 992) {
+			this.setState({ isMobile: false, isSwipe: false });
+		}
 	}
 
 	render() {
@@ -66,9 +77,9 @@ class Home extends Component {
 				onTouchMove={this.onTouchMove}
 				onTouchEnd={this.onTouchEnd}
 			>
-				{!this.state.showText ? <Illustration opacity={this.state.opacity} /> : ''}
-				{!this.state.isMobile || this.state.showText ? (
-					<div className="Home__text">
+				{!this.state.isSwipe ? <Illustration opacity={this.state.opacity} /> : ''}
+				{!this.state.isMobile || this.state.isSwipe ? (
+					<div className="Home__text" style={{ opacity: this.state.opacity }}>
 						<p className="Home__text__hello">Bonjour,</p>
 						<p>
 							Je suis un développeur créatif (et occasionnellement designer) qui aime les sites
