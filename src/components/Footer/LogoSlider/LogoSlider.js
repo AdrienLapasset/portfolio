@@ -91,6 +91,7 @@ class LogoSlider extends Component {
 
 		return (
 			<div className={`LogoSlider ${this.props.isShowed ? 'LogoSlider--show' : ''}`}>
+				<h2 className="Footer__title Footer__title--mobile">Ils m'ont fait confiance</h2>
 				<div className="LogoSlider__container" style={{ width: this.state.itemWidth * 6 }}>
 					<div
 						className="LogoSlider__list"
