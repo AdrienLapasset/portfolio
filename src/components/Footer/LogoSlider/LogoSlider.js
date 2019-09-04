@@ -8,7 +8,6 @@ class LogoSlider extends Component {
 			sliderPos: 0,
 			itemWidth: 230,
 			slideCount: 0,
-			isReset: false,
 			logosList: [
 				'medoucine.svg',
 				'solen.svg',
@@ -19,10 +18,17 @@ class LogoSlider extends Component {
 				'apptamin.png'
 			]
 		};
+
+		this.onTouchStart = this.onTouchStart.bind(this);
+		this.onTouchMove = this.onTouchMove.bind(this);
+		this.onTouchEnd = this.onTouchEnd.bind(this);
 	}
 
 	intervalId = null;
 	transitionDuration = 7; //secondes
+	startY = null;
+	moveY = null;
+	currentSliderPos = null;
 
 	componentDidUpdate(prevProps) {
 		if (prevProps.isShowed !== this.props.isShowed) {
@@ -36,29 +42,33 @@ class LogoSlider extends Component {
 	}
 
 	slide() {
-		this.setState({ isReset: false });
-		this.slideItem();
 		this.intervalId = window.setInterval(() => {
 			this.slideItem();
-		}, this.transitionDuration * 1000);
+		}, 20);
 	}
 
 	slideItem() {
 		this.setState((prevState) => {
 			return {
-				sliderPos: (prevState.sliderPos -= this.state.itemWidth)
+				sliderPos: (prevState.sliderPos += 1)
 			};
 		});
-		const currentList = this.state.logosList;
-		const outItem = currentList[this.state.slideCount];
-		currentList.push(outItem);
-		currentList[this.state.slideCount - 1] = '';
-		this.setState({ logosList: currentList });
-		this.setState((prevState) => {
-			return {
-				slideCount: prevState.slideCount + 1
-			};
-		});
+		this.pushItem();
+	}
+
+	pushItem() {
+		if (this.state.sliderPos % this.state.itemWidth === 0) {
+			const currentList = this.state.logosList;
+			const outItem = currentList[this.state.slideCount];
+			currentList.push(outItem);
+			currentList[this.state.slideCount - 1] = '';
+			this.setState({ logosList: currentList });
+			this.setState((prevState) => {
+				return {
+					slideCount: prevState.slideCount + 1
+				};
+			});
+		}
 	}
 
 	resetSlide() {
@@ -66,8 +76,27 @@ class LogoSlider extends Component {
 			clearInterval(this.intervalId);
 			const currentList = this.state.logosList;
 			const newList = currentList.slice(this.state.slideCount);
-			this.setState({ logosList: newList, slideCount: 0, sliderPos: 0, isReset: true });
+			this.setState({ logosList: newList, slideCount: 0, sliderPos: 0 });
 		}, 400);
+	}
+
+	onTouchStart(event) {
+		clearInterval(this.intervalId);
+		this.startX = Math.round(event.touches[0].clientX);
+		this.currentSliderPos = this.state.sliderPos;
+	}
+
+	onTouchMove(event) {
+		this.moveX = Math.round(event.touches[0].clientX);
+		let diffX = this.startX - this.moveX;
+		let newSliderPos = diffX + this.currentSliderPos;
+		if (newSliderPos >= 0 && newSliderPos <= this.currentSliderPos + this.state.itemWidth) {
+			this.setState({ sliderPos: newSliderPos });
+		}
+	}
+
+	onTouchEnd() {
+		this.slide();
 	}
 
 	render() {
@@ -90,18 +119,15 @@ class LogoSlider extends Component {
 		});
 
 		return (
-			<div className={`LogoSlider ${this.props.isShowed ? 'LogoSlider--show' : ''}`}>
+			<div
+				className={`LogoSlider ${this.props.isShowed ? 'LogoSlider--show' : ''}`}
+				onTouchStart={this.onTouchStart}
+				onTouchMove={this.onTouchMove}
+				onTouchEnd={this.onTouchEnd}
+			>
 				<h2 className="Footer__title Footer__title--mobile">Ils m'ont fait confiance</h2>
 				<div className="LogoSlider__container" style={{ width: this.state.itemWidth * 6 }}>
-					<div
-						className="LogoSlider__list"
-						style={{
-							transform: `translateX(${this.state.sliderPos}px)`,
-							transition: this.state.isReset
-								? 'none'
-								: 'transform ' + this.transitionDuration + 's linear'
-						}}
-					>
+					<div className="LogoSlider__list" style={{ transform: `translateX(${-this.state.sliderPos}px)` }}>
 						{pressList}
 					</div>
 				</div>
