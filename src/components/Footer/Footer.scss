@@ -1,5 +1,6 @@
 @import '../../styles/colors';
 @import '../../styles/animations';
+@import '../../styles/media';
 
 .Footer {
 	position: absolute;
@@ -8,10 +9,13 @@
 	right: 0;
 	transform: translateY(120px);
 	transition: transform .4s cubic-bezier(.2, 0, 0, 1);
-	padding-top: 200px;
 	cursor: pointer;
 	opacity: 0;
 	animation: fadeFooter 2s 5s forwards;
+
+	@include lg {
+		padding-top: 200px;
+	}
 
 	&:hover:not(.Footer--show) {
 		transform: translateY(100px);

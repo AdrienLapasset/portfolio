@@ -3,6 +3,7 @@
 .illustration {
 	position: relative;
 	width: 290px;
+	transition: opacity .2s ease-out;
 
 	@include sm {
 		width: 400px;
