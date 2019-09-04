@@ -8,12 +8,18 @@
 	padding: 0;
 }
 
-.App {
-	overflow-y: hidden;
+html {
+	background-color: black;
 }
 
 body {
 	font-family: 'Regular-Semibold';
+	background-color: white;
+}
+
+.App {
+	overflow-y: hidden;
+	min-height: 100vh;
 }
 
 h2,
