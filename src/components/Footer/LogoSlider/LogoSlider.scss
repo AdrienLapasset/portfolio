@@ -1,0 +1,56 @@
+@import '../../../styles/animations';
+@import '../../../styles/media';
+
+.LogoSlider {
+	height: 100px;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@include sm {
+		height: 150px;
+	}
+
+	&--show {
+		.LogoSlider__item {
+			animation: fadeFromBottom .4s forwards;
+			@include animationDelay(0);
+		}
+	}
+
+	&__container {
+		position: relative;
+		overflow-x: hidden;
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: -10px;
+			bottom: -10px;
+			width: 100px;
+			z-index: 1;
+		}
+		&::before {
+			box-shadow: 20px 0 20px black inset;
+		}
+		&::after {
+			right: 0;
+			box-shadow: -20px 0 20px black inset;
+		}
+	}
+
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		flex-shrink: 0;
+		height: 40px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		opacity: 0;
+		animation: fadeOut .2s forwards;
+	}
+}

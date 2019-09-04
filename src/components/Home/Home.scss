@@ -1,0 +1,81 @@
+@import '../../styles/media';
+
+.Home {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 15px;
+	margin: auto;
+
+	@include lg {
+		margin-top: 0px;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 980px;
+	}
+
+	@include xl {
+		width: 1200px;
+	}
+
+	&__text {
+		width: 100%;
+		line-height: 1.4;
+
+		@include lg {
+			width: 500px;
+		}
+
+		@include xl {
+			width: 550px;
+		}
+
+		&__hello {
+			font-size: 64px;
+			margin-bottom: 10px;
+
+			@include sm {
+				margin-bottom: 30px;
+				font-size: 94px;
+			}
+		}
+
+		&__contact {
+			margin-top: 20px;
+
+			@include sm {
+				margin-top: 40px;
+			}
+		}
+
+		& > p {
+			opacity: 0;
+			animation: fadefromleft .4s forwards;
+
+			&:nth-child(1) {
+				animation-delay: .4s;
+			}
+			&:nth-child(2) {
+				animation-delay: .5s;
+			}
+			&:nth-child(3) {
+				animation-delay: .6s;
+			}
+		}
+	}
+}
+
+@keyframes fadefromleft {
+	from {
+		transform: translateX(-20px);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}

@@ -1,25 +1,71 @@
+@import '../../styles/media';
+
 .illustration {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	flex-direction: column;
+	position: relative;
+	width: 290px;
+	transition: opacity .2s ease-out;
+
+	@include sm {
+		width: 400px;
+	}
+	@include xl {
+		width: auto;
+	}
 }
 
 .character {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	animation: float 1.5s ease-in-out infinite alternate;
+	opacity: 0;
+	animation: fadefromTop 1s forwards, float 1.5s 1s ease-in-out infinite alternate;
+
+	&__container {
+		position: absolute;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		width: 110px;
+		top: 30px;
+		left: 103px;
+
+		@include sm {
+			top: 60px;
+			left: 140px;
+			width: 150px;
+		}
+
+		@include xl {
+			top: 90px;
+			left: 160px;
+			width: auto;
+		}
+	}
 }
 
 .shadow {
-	margin-top: 10px;
-	width: 250px;
-	padding: 15px 0;
+	opacity: 0;
+	margin-top: 5px;
 	background-color: black;
-	border-radius: 250px / 30px;
-	animation: shadow 1.5s ease-in-out infinite alternate;
+	border-radius: 240px / 30px;
+	animation: shadowIn 1s .1s forwards, shadow 1.5s 1.1s ease-in-out infinite alternate;
+	width: 120px;
+	height: 10px;
+	border-radius: 120px / 10px;
+
+	@include sm {
+		margin-top: 7px;
+		border-radius: 180px / 20px;
+		width: 180px;
+		height: 20px;
+	}
+
+	@include xl {
+		margin-top: 10px;
+		width: 220px;
+		height: 25px;
+		border-radius: 220px / 25px;
+	}
 }
 
 @keyframes float {
@@ -27,21 +73,39 @@
 		transform: translateY(0);
 	}
 	to {
-		transform: translateY(7px);
+		transform: translateY(-5px);
+	}
+}
+
+@keyframes shadowIn {
+	from {
+		opacity: 0;
+		transform: scale(0);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
 	}
 }
 
 @keyframes shadow {
 	from {
-		width: 250px;
-		padding: 15px 0;
-		border-radius: 250px / 30px;
-		background-color: rgb(49, 49, 49);
+		transform: scale(1);
+		background-color: black;
+		filter: blur(1px);
 	}
 	to {
-		width: 240px;
-		padding: 12px 0;
-		border-radius: 240px / 30px;
-		background-color: black;
+		transform: scale(1.05);
+		background-color: rgb(51, 51, 51);
+		filter: blur(2px);
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }

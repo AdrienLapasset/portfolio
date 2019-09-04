@@ -1,1 +1,67 @@
+@import '../../styles/colors';
+@import '../../styles/media';
 
+.header {
+	padding: 34px 15px;
+	display: flex;
+	justify-content: space-between;
+
+	@include sm {
+		padding: 34px 43px;
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		animation: fadefromTop .4s forwards;
+
+		&__icon {
+			height: 28px;
+			margin-right: 9px;
+		}
+	}
+
+	&__links {
+		display: flex;
+		& > a {
+			margin-left: 20px;
+			transition: fill .2s, stroke .2s;
+			animation: fadefromTop .4s forwards;
+			transform: translateY(-10px);
+			opacity: 0;
+			fill: $grey;
+			stroke: $grey;
+
+			@include sm {
+				margin-left: 30px;
+			}
+
+			&:hover {
+				fill: black;
+				stroke: black;
+				cursor: pointer;
+			}
+
+			&:nth-child(1) {
+				animation-delay: .1s;
+			}
+			&:nth-child(2) {
+				animation-delay: .2s;
+			}
+			&:nth-child(3) {
+				animation-delay: .3s;
+			}
+		}
+	}
+}
+
+@keyframes fadefromTop {
+	from {
+		transform: translateY(-10px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}

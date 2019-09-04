@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Hair from './parts/Hair/Hair';
 import Body from './parts/Body/Body';
+import Background from './parts/Background/Background';
 import './Illustration.scss';
 
-function Illustration() {
-	return (
-		<div className="illustration">
-			<div className="character">
-				<Hair />
-				<Body />
+class Illustration extends Component {
+	render() {
+		return (
+			<div className="illustration" style={{ opacity: this.props.opacity }}>
+				<div className="character__container">
+					<div className="character">
+						<Hair />
+						<Body />
+					</div>
+					<div className="shadow" />
+				</div>
+				<Background />
 			</div>
-			<div className="shadow" />
-		</div>
-	);
+		);
+	}
 }
 
 export default Illustration;

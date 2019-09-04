@@ -4,12 +4,14 @@ import './Body.scss';
 function Body() {
 	return (
 		<svg
+			className="Body"
 			width="189px"
 			height="267px"
 			viewBox="0 0 189 267"
 			version="1.1"
 			xmlns="http://www.w3.org/2000/svg"
 			xmlnsXlink="http://www.w3.org/1999/xlink"
+			preserveAspectRatio="xMidYMid meet"
 		>
 			<g id="Home" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 				<g id="Illustration" transform="translate(-29.000000, -22.000000)" stroke="#000000" strokeWidth="4">
@@ -29,11 +31,29 @@ function Body() {
 								<path
 									d="M6.08246896,41.6325948 C0.478293533,38.8513387 -4.19591856,24.6154925 6.08246896,8.8277452 C12.9347273,-1.69741969 25.7266816,-1.69741969 44.4583319,8.8277452 L138.576675,58.5483873 L131.350731,73.7587424 C51.5746734,54.1954813 9.8185859,43.4867655 6.08246896,41.6325948 Z"
 									id="Path-2"
-								/>
+								>
+									<animateTransform
+										attributeName="transform"
+										attributeType="XML"
+										type="rotate"
+										values="0 0 0;1.5 0 0;0 0 0"
+										dur="3s"
+										repeatCount="indefinite"
+									/>
+								</path>
 								<path
 									d="M132.591142,71.0520894 L146.281757,77.5261873 C156.00587,94.8229709 162.762225,103.471363 166.550821,103.471363 C172.233714,103.471363 162.745995,73.6857769 160.676837,71.0520894 C159.297398,69.2962977 151.733689,66.509948 137.98571,62.6930403 L132.591142,71.0520894 Z"
 									id="Path-3"
-								/>
+								>
+									<animateTransform
+										attributeName="transform"
+										attributeType="XML"
+										type="rotate"
+										values="0 0 0;1 0 0;0 0 0"
+										dur="3s"
+										repeatCount="indefinite"
+									/>
+								</path>
 							</g>
 							<g id="Group">
 								<path
@@ -43,7 +63,15 @@ function Body() {
 								/>
 								<path
 									d="M132.591142,71.0520894 L143.378786,75.9652283 C141.256005,96.7589255 142.088912,107.155774 145.877508,107.155774 C151.560401,107.155774 158.959434,73.7587424 157.692733,71.0520894 C156.848266,69.247654 150.279258,66.4613043 137.98571,62.6930403 L132.591142,71.0520894 Z"
-									id="Path-3"
+									id="frontLeg"
+								/>
+								<animateTransform
+									attributeName="transform"
+									attributeType="XML"
+									type="rotate"
+									values="0 0 0;.5 0 0;0 0 0"
+									dur="3s"
+									repeatCount="indefinite"
 								/>
 							</g>
 						</g>

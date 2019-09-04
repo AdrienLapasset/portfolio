@@ -1,0 +1,67 @@
+@import '../../styles/colors';
+@import '../../styles/animations';
+@import '../../styles/media';
+
+.Footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	transform: translateY(60px);
+	transition: transform .4s cubic-bezier(.2, 0, 0, 1);
+	cursor: pointer;
+	opacity: 0;
+	animation: fadeFooter 2s 5s forwards;
+
+	@include lg {
+		padding-top: 200px;
+	}
+
+	@include sm {
+		transform: translateY(120px);
+		&:hover:not(.Footer--show) {
+			transform: translateY(100px);
+		}
+	}
+
+	&--show {
+		transform: translateY(0px);
+
+		.Footer__title {
+			opacity: 0;
+		}
+	}
+
+	&__title {
+		transition: opacity .2s;
+		opacity: 1;
+		text-align: center;
+		color: $grey;
+		text-transform: uppercase;
+		font-size: 14px;
+		margin-bottom: 15px;
+		display: none;
+
+		@include sm {
+			display: block;
+		}
+
+		&--mobile {
+			text-transform: none;
+			display: block;
+			position: absolute;
+			bottom: 56px;
+			color: white;
+
+			@include sm {
+				display: none;
+			}
+		}
+	}
+}
+
+@keyframes fadeFooter {
+	to {
+		opacity: 1;
+	}
+}
