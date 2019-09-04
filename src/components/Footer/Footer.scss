@@ -17,7 +17,7 @@
 		padding-top: 200px;
 	}
 
-	@include sm {
+	@include md {
 		transform: translateY(120px);
 		&:hover:not(.Footer--show) {
 			transform: translateY(100px);
@@ -42,7 +42,7 @@
 		margin-bottom: 15px;
 		display: none;
 
-		@include sm {
+		@include md {
 			display: block;
 		}
 
@@ -53,7 +53,7 @@
 			bottom: 56px;
 			color: white;
 
-			@include sm {
+			@include md {
 				display: none;
 			}
 		}
