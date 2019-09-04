@@ -18,7 +18,7 @@
 	display: flex;
 	flex-direction: column;
 	opacity: 0;
-	animation: fadefromTop 1s .7s forwards, float 1.5s 1.7s ease-in-out infinite alternate;
+	animation: fadefromTop 1s forwards, float 1.5s 1s ease-in-out infinite alternate;
 
 	&__container {
 		position: absolute;
@@ -48,7 +48,7 @@
 	margin-top: 5px;
 	background-color: black;
 	border-radius: 240px / 30px;
-	animation: shadowIn 1s .7s forwards, shadow 1.5s 1.7s ease-in-out infinite alternate;
+	animation: shadowIn 1s .1s forwards, shadow 1.5s 1.1s ease-in-out infinite alternate;
 	width: 120px;
 	height: 10px;
 	border-radius: 120px / 10px;

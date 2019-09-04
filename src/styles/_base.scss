@@ -8,10 +8,12 @@
 	padding: 0;
 }
 
-html,
+.App {
+	overflow-y: hidden;
+}
+
 body {
 	font-family: 'Regular-Semibold';
-	overflow: hidden;
 }
 
 h2,
