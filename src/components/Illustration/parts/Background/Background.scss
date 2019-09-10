@@ -10,7 +10,7 @@
 			stroke-dashoffset: 1000;
 
 			animation: dash 3s cubic-bezier(0.25, 0.1, 0.25, 1.0) forwards;
-			@include animationDelay(.5);
+			@include animationDelay(.5, 100);
 		}
 	}
 

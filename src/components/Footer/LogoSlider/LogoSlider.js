@@ -25,7 +25,6 @@ class LogoSlider extends Component {
 	}
 
 	intervalId = null;
-	transitionDuration = 7; //secondes
 	startY = null;
 	moveY = null;
 	currentSliderPos = null;
@@ -53,22 +52,22 @@ class LogoSlider extends Component {
 				sliderPos: (prevState.sliderPos += 1)
 			};
 		});
-		this.pushItem();
+		if (this.state.sliderPos % this.state.itemWidth === 0) {
+			this.pushItem();
+		}
 	}
 
 	pushItem() {
-		if (this.state.sliderPos % this.state.itemWidth === 0) {
-			const currentList = this.state.logosList;
-			const outItem = currentList[this.state.slideCount];
-			currentList.push(outItem);
-			currentList[this.state.slideCount - 1] = '';
-			this.setState({ logosList: currentList });
-			this.setState((prevState) => {
-				return {
-					slideCount: prevState.slideCount + 1
-				};
-			});
-		}
+		const currentList = this.state.logosList;
+		const outItem = currentList[this.state.slideCount];
+		currentList.push(outItem);
+		currentList[this.state.slideCount - 1] = '';
+		this.setState({ logosList: currentList });
+		this.setState((prevState) => {
+			return {
+				slideCount: prevState.slideCount + 1
+			};
+		});
 	}
 
 	resetSlide() {
@@ -90,13 +89,17 @@ class LogoSlider extends Component {
 		this.moveX = Math.round(event.touches[0].clientX);
 		let diffX = this.startX - this.moveX;
 		let newSliderPos = diffX + this.currentSliderPos;
-		if (newSliderPos >= 0 && newSliderPos <= this.currentSliderPos + this.state.itemWidth) {
+		if (
+			newSliderPos - this.state.itemWidth * (this.state.logosList.length - 7) >= 0 &&
+			newSliderPos <= this.state.itemWidth * 6 - this.currentSliderPos
+		) {
 			this.setState({ sliderPos: newSliderPos });
+			console.log(this.currentSliderPos);
 		}
 	}
 
 	onTouchEnd() {
-		this.slide();
+		// this.slide();
 	}
 
 	render() {
@@ -121,9 +124,9 @@ class LogoSlider extends Component {
 		return (
 			<div
 				className={`LogoSlider ${this.props.isShowed ? 'LogoSlider--show' : ''}`}
-				onTouchStart={this.onTouchStart}
-				onTouchMove={this.onTouchMove}
-				onTouchEnd={this.onTouchEnd}
+				// onTouchStart={this.onTouchStart}
+				// onTouchMove={this.onTouchMove}
+				// onTouchEnd={this.onTouchEnd}
 			>
 				<h2 className="Footer__title Footer__title--mobile">Ils m'ont fait confiance</h2>
 				<div className="LogoSlider__container" style={{ width: this.state.itemWidth * 6 }}>
