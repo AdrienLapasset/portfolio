@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Header.scss';
 import logoAdrienLapasset from '../../assets/logos/logo-adrien-lapasset.svg';
+import MaltIcon from '../../assets/icons/malt.js';
+import LinkedinIcon from '../../assets/icons/linkedin.js';
 import GithubIcon from '../../assets/icons/github.js';
 import GitlabIcon from '../../assets/icons/gitlab.js';
 import SpotifyIcon from '../../assets/icons/spotify.js';
@@ -22,6 +24,16 @@ class Header extends Component {
 					Adrien Lapasset
 				</div>
 				<div className="header__links">
+					<a href="https://www.malt.fr/profile/adrienlapasset" target="_blank" rel="noopener noreferrer">
+						<MaltIcon />
+					</a>
+					<a
+						href="https://www.linkedin.com/in/adrien-lapasset-87b3b164/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<LinkedinIcon />
+					</a>
 					<a href="https://github.com/AdrienLapasset" target="_blank" rel="noopener noreferrer">
 						<GithubIcon />
 					</a>
