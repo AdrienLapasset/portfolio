@@ -4,7 +4,7 @@
 		&:nth-child(#{$i}) {
 			animation-delay: #{$delayFrom}s;
 		}
-		$delayFrom: $delayFrom + .1;
+		$delayFrom: $delayFrom + .08;
 	}
 }
 

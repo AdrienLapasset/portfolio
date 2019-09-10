@@ -8,9 +8,6 @@
 	@include sm {
 		width: 400px;
 	}
-	@include xl {
-		width: auto;
-	}
 }
 
 .character {
@@ -34,12 +31,6 @@
 			left: 140px;
 			width: 150px;
 		}
-
-		@include xl {
-			top: 90px;
-			left: 160px;
-			width: auto;
-		}
 	}
 }
 
@@ -59,13 +50,6 @@
 		width: 180px;
 		height: 20px;
 	}
-
-	@include xl {
-		margin-top: 10px;
-		width: 220px;
-		height: 25px;
-		border-radius: 220px / 25px;
-	}
 }
 
 @keyframes float {
@@ -73,7 +57,7 @@
 		transform: translateY(0);
 	}
 	to {
-		transform: translateY(-5px);
+		transform: translateY(-4px);
 	}
 }
 

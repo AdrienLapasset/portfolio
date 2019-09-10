@@ -4,23 +4,18 @@
 
 .Footer {
 	position: fixed;
-	bottom: 0;
+	bottom: -100%;
 	left: 0;
 	right: 0;
 	transform: translateY(60px);
 	transition: transform .4s cubic-bezier(.2, 0, 0, 1);
 	cursor: pointer;
-	opacity: 0;
-	animation: fadeFooter 2s 5s forwards;
-
-	@include lg {
-		padding-top: 200px;
-	}
+	animation: fadeFooter 2s 2.5s forwards cubic-bezier(.2, 0, 0, 1);
 
 	@include md {
-		transform: translateY(120px);
+		transform: translateY(100px);
 		&:hover:not(.Footer--show) {
-			transform: translateY(100px);
+			transform: translateY(80px);
 		}
 	}
 
@@ -29,6 +24,9 @@
 
 		.Footer__title {
 			opacity: 0;
+			@include md {
+				opacity: 1;
+			}
 		}
 	}
 
@@ -39,7 +37,7 @@
 		color: $grey;
 		text-transform: uppercase;
 		font-size: 14px;
-		margin-bottom: 15px;
+		margin-bottom: 10px;
 		display: none;
 
 		@include md {
@@ -50,7 +48,7 @@
 			text-transform: none;
 			display: block;
 			position: absolute;
-			bottom: 56px;
+			bottom: 62px;
 			color: white;
 
 			@include md {
@@ -62,6 +60,6 @@
 
 @keyframes fadeFooter {
 	to {
-		opacity: 1;
+		bottom: 0%;
 	}
 }

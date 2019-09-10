@@ -10,6 +10,25 @@ class Footer extends Component {
 		};
 
 		this.toggleFooter = this.toggleFooter.bind(this);
+		this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
+	}
+
+	componentDidMount() {
+		this.updateWindowDimensions();
+		window.addEventListener('resize', this.updateWindowDimensions);
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener('resize', this.updateWindowDimensions);
+	}
+
+	updateWindowDimensions() {
+		if (window.innerWidth < 992) {
+			this.setState({ isShowed: false });
+		}
+		if (window.innerWidth >= 992) {
+			this.setState({ isShowed: true });
+		}
 	}
 
 	toggleFooter() {
