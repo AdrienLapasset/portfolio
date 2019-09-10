@@ -4,13 +4,15 @@
 
 .Footer {
 	position: fixed;
-	bottom: -100%;
+	bottom: 0;
 	left: 0;
 	right: 0;
 	transform: translateY(60px);
 	transition: transform .4s cubic-bezier(.2, 0, 0, 1);
 	cursor: pointer;
-	animation: fadeFooter 2s 2.5s forwards cubic-bezier(.2, 0, 0, 1);
+	animation: fadeFooter .4s 4s forwards cubic-bezier(.2, 0, 0, 1);
+	padding-top: 200px;
+	opacity: 0;
 
 	@include md {
 		transform: translateY(100px);
@@ -60,6 +62,6 @@
 
 @keyframes fadeFooter {
 	to {
-		bottom: 0%;
+		opacity: 1;
 	}
 }

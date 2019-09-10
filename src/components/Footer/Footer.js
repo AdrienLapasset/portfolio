@@ -27,7 +27,9 @@ class Footer extends Component {
 			this.setState({ isShowed: false });
 		}
 		if (window.innerWidth >= 992) {
-			this.setState({ isShowed: true });
+			window.setTimeout(() => {
+				this.setState({ isShowed: true });
+			}, 4000);
 		}
 	}
 
