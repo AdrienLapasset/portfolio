@@ -120,7 +120,9 @@ class LogoSlider extends Component {
 						backgroundImage: logoSrc !== undefined ? `url(${logoSrc})` : 'none',
 						width: this.state.itemWidth
 					}}
-				/>
+				>
+					<span>{item.url}</span>
+				</a>
 			);
 		});
 
