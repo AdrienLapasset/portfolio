@@ -8,14 +8,14 @@ class LogoSlider extends Component {
 			sliderPos: 0,
 			itemWidth: 230,
 			slideCount: 0,
-			logosList: [
-				'medoucine.svg',
-				'solen.svg',
-				'switfi.svg',
-				'eutelmed.svg',
-				'bazimo.png',
-				'ontracks.png',
-				'apptamin.png'
+			companyList: [
+				{ name: 'medoucine.svg', url: 'https://www.medoucine.com' },
+				{ name: 'solen.svg', url: 'https://www.solen.co' },
+				{ name: 'switfi.svg', url: 'https://www.switfi.fr' },
+				{ name: 'eutelmed.svg', url: 'https://eutelmed.com' },
+				{ name: 'bazimo.png', url: 'https://www.bazimo.fr' },
+				{ name: 'ontracks.png', url: 'https://www.ontracks.co' },
+				{ name: 'apptamin.png', url: 'https://www.apptamin.com' }
 			]
 		};
 
@@ -58,11 +58,11 @@ class LogoSlider extends Component {
 	}
 
 	pushItem() {
-		const currentList = this.state.logosList;
+		const currentList = this.state.companyList;
 		const outItem = currentList[this.state.slideCount];
 		currentList.push(outItem);
 		currentList[this.state.slideCount - 1] = '';
-		this.setState({ logosList: currentList });
+		this.setState({ companyList: currentList });
 		this.setState((prevState) => {
 			return {
 				slideCount: prevState.slideCount + 1
@@ -73,9 +73,9 @@ class LogoSlider extends Component {
 	resetSlide() {
 		window.setTimeout(() => {
 			clearInterval(this.intervalId);
-			const currentList = this.state.logosList;
+			const currentList = this.state.companyList;
 			const newList = currentList.slice(this.state.slideCount);
-			this.setState({ logosList: newList, slideCount: 0, sliderPos: 0 });
+			this.setState({ companyList: newList, slideCount: 0, sliderPos: 0 });
 		}, 400);
 	}
 
@@ -90,7 +90,7 @@ class LogoSlider extends Component {
 		let diffX = this.startX - this.moveX;
 		let newSliderPos = diffX + this.currentSliderPos;
 		if (
-			newSliderPos - this.state.itemWidth * (this.state.logosList.length - 7) >= 0 &&
+			newSliderPos - this.state.itemWidth * (this.state.companyList.length - 7) >= 0 &&
 			newSliderPos <= this.state.itemWidth * 6 - this.currentSliderPos
 		) {
 			this.setState({ sliderPos: newSliderPos });
@@ -99,18 +99,21 @@ class LogoSlider extends Component {
 	}
 
 	onTouchEnd() {
-		// this.slide();
+		this.slide();
 	}
 
 	render() {
 		const logos = require.context('../../../assets/logos', true);
-		const pressList = this.state.logosList.map((item, index) => {
+		const pressList = this.state.companyList.map((item, index) => {
 			let logoSrc;
 			if (item !== '') {
-				logoSrc = logos(`./${item}`);
+				logoSrc = logos(`./${item.name}`);
 			}
 			return (
-				<div
+				<a
+					href={item.url}
+					target="_blank"
+					rel="noopener noreferrer"
 					className="LogoSlider__item"
 					key={index}
 					style={{
