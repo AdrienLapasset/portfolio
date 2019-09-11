@@ -8,20 +8,20 @@
 	justify-content: center;
 	align-items: center;
 
-	@include sm {
-		height: 150px;
+	@include md {
+		height: 120px;
 	}
 
 	&--show {
 		.LogoSlider__item {
 			animation: fadeFromBottom .4s forwards;
-			@include animationDelay(0);
+			@include animationDelay(0, 6);
 		}
 	}
 
 	&__container {
 		position: relative;
-		overflow-x: hidden;
+		overflow: hidden;
 		&::before,
 		&::after {
 			content: '';

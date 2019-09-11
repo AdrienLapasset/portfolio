@@ -1,10 +1,10 @@
-@mixin animationDelay($delayFrom) {
+@mixin animationDelay($delayFrom, $itemsNumber) {
 	$i: 1;
-	@for $i from 1 through 100 {
+	@for $i from 1 through $itemsNumber {
 		&:nth-child(#{$i}) {
 			animation-delay: #{$delayFrom}s;
 		}
-		$delayFrom: $delayFrom + .1;
+		$delayFrom: $delayFrom + .08;
 	}
 }
 
