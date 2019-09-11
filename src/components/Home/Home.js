@@ -83,7 +83,7 @@ class Home extends Component {
 						<p className="Home__text__hello">Bonjour,</p>
 						<p>
 							Je suis un développeur créatif (et occasionnellement designer) qui aime les sites
-							responsive, le design minimaliste et les transitions en douceurs.
+							responsive, le design minimaliste et les transitions en douceur.
 						</p>
 						<p className="Home__text__contact">
 							Pour me contacter c’est par ici :<br />
