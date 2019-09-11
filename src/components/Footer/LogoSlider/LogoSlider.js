@@ -28,6 +28,11 @@ class LogoSlider extends Component {
 	startY = null;
 	moveY = null;
 	currentSliderPos = null;
+	logoNb = 0;
+
+	componentDidMount() {
+		this.logoNb = this.state.companyList.length;
+	}
 
 	componentDidUpdate(prevProps) {
 		if (prevProps.isShowed !== this.props.isShowed) {
@@ -90,11 +95,10 @@ class LogoSlider extends Component {
 		let diffX = this.startX - this.moveX;
 		let newSliderPos = diffX + this.currentSliderPos;
 		if (
-			newSliderPos - this.state.itemWidth * (this.state.companyList.length - 7) >= 0 &&
-			newSliderPos <= this.state.itemWidth * 6 - this.currentSliderPos
+			newSliderPos - this.state.itemWidth * (this.state.companyList.length - this.logoNb) >= 0 &&
+			newSliderPos <= this.state.companyList.length * this.state.itemWidth - window.innerWidth
 		) {
 			this.setState({ sliderPos: newSliderPos });
-			console.log(this.currentSliderPos);
 		}
 	}
 
@@ -129,9 +133,9 @@ class LogoSlider extends Component {
 		return (
 			<div
 				className={`LogoSlider ${this.props.isShowed ? 'LogoSlider--show' : ''}`}
-				// onTouchStart={this.onTouchStart}
-				// onTouchMove={this.onTouchMove}
-				// onTouchEnd={this.onTouchEnd}
+				onTouchStart={this.onTouchStart}
+				onTouchMove={this.onTouchMove}
+				onTouchEnd={this.onTouchEnd}
 			>
 				<h2 className="Footer__title Footer__title--mobile">Ils m'ont fait confiance</h2>
 				<div className="LogoSlider__container" style={{ width: this.state.itemWidth * 6 }}>
