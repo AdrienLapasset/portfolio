@@ -11,10 +11,10 @@
 	transition: transform .4s cubic-bezier(.2, 0, 0, 1);
 	cursor: pointer;
 	animation: fadeFooter .4s 4s forwards cubic-bezier(.2, 0, 0, 1);
-	padding-top: 200px;
 	opacity: 0;
 
 	@include md {
+		padding-top: 200px;
 		transform: translateY(100px);
 		&:hover:not(.Footer--show) {
 			transform: translateY(80px);
