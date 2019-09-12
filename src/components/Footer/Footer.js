@@ -27,25 +27,26 @@ class Footer extends Component {
 
 	componentDidUpdate(prevProps) {
 		if (prevProps !== this.props) {
-			console.log(this.props.diffY);
-			if (0 < this.props.diffY < this.initPosition && !this.state.isShowed) {
+			if (this.props.diffY > 0 && this.props.diffY < this.initPosition && this.state.positionY !== 0) {
 				this.setState({ positionY: this.initPosition - this.props.diffY });
-				if (this.props.isTouch === false) {
-					this.setState({ positionY: this.initPosition });
-				}
 			}
 
-			if (this.props.diffY >= this.initPosition) {
+			if (this.props.diffY >= this.initPosition && !this.state.isShowed) {
 				this.setState({ isShowed: true });
 				this.setState({ positionY: 0 });
 			}
 
-			if (this.props.diffY < 0 && this.state.isShowed) {
+			if (
+				this.props.diffY < 0 &&
+				this.props.diffY > -this.initPosition &&
+				this.state.positionY !== this.initPosition
+			) {
 				this.setState({ positionY: -this.props.diffY });
 				this.setState({ isShowed: false });
-				if (this.props.isTouch === false) {
-					this.setState({ positionY: this.initPosition });
-				}
+			}
+
+			if (this.props.isTouch === false && !this.state.isShowed) {
+				this.setState({ positionY: this.initPosition });
 			}
 		}
 	}
