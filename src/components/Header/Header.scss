@@ -6,6 +6,9 @@
 	padding: 34px 15px;
 	display: flex;
 	justify-content: space-between;
+	position: absolute;
+	left: 0;
+	right: 0;
 
 	@include sm {
 		padding: 34px 43px;

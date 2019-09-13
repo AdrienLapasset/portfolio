@@ -14,15 +14,14 @@ class Footer extends Component {
 		this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
 	}
 
-	initPosition = 60;
+	initPosition = null;
 
 	componentDidMount() {
-		this.updateWindowDimensions();
-		window.addEventListener('resize', this.updateWindowDimensions);
-	}
-
-	componentWillUnmount() {
-		window.removeEventListener('resize', this.updateWindowDimensions);
+		if (this.props.isMobile) {
+			this.initPosition = 60;
+		} else {
+			this.initPosition = null;
+		}
 	}
 
 	componentDidUpdate(prevProps) {
