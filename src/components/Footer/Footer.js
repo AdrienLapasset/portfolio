@@ -19,9 +19,9 @@ class Footer extends Component {
 
 	componentDidMount() {
 		if (this.props.isMobile) {
-			this.initPosition = 60;
+			this.setState({ positionY: 60 });
 		} else {
-			this.initPosition = null;
+			this.setState({ positionY: null });
 		}
 	}
 
