@@ -27,7 +27,7 @@ class Footer extends Component {
 
 	componentDidUpdate(prevProps) {
 		if (prevProps !== this.props) {
-			if (!this.state.isLogoTouched) {
+			if (!this.state.isLogoTouched || !this.state.isShowed) {
 				this.handlePositionY();
 			}
 
