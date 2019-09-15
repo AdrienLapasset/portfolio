@@ -7,14 +7,14 @@ class Footer extends Component {
 		super(props);
 		this.state = {
 			isShowed: false,
-			positionY: this.initPosition
+			positionY: null
 		};
 
 		this.toggleFooter = this.toggleFooter.bind(this);
 		this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
 	}
 
-	initPosition = null;
+	initPosition = 60;
 
 	componentDidMount() {
 		if (this.props.isMobile) {

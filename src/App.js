@@ -50,8 +50,9 @@ class App extends Component {
 		if (this.state.isMobile) {
 			this.moveY = event.touches[0].clientY;
 			let newDiffY = this.startY - this.moveY;
-			this.setState({ diffY: newDiffY });
-			if (newDiffY >= 100 && !this.state.isSwipe) {
+			if (newDiffY < 100) {
+				this.setState({ diffY: newDiffY });
+			} else if (newDiffY >= 100 && !this.state.isSwipe) {
 				this.setState({ isSwipe: true, diffY: 0 });
 			}
 		}
