@@ -88,6 +88,7 @@ class LogoSlider extends Component {
 		clearInterval(this.intervalId);
 		this.startX = Math.round(event.touches[0].clientX);
 		this.currentSliderPos = this.state.sliderPos;
+		this.props.isTouched(true);
 	}
 
 	onTouchMove(event) {
@@ -104,6 +105,7 @@ class LogoSlider extends Component {
 
 	onTouchEnd() {
 		this.slide();
+		this.props.isTouched(false);
 	}
 
 	render() {

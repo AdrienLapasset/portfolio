@@ -7,7 +7,8 @@ class Footer extends Component {
 		super(props);
 		this.state = {
 			isShowed: false,
-			positionY: null
+			positionY: null,
+			isLogoTouched: false
 		};
 
 		this.toggleFooter = this.toggleFooter.bind(this);
@@ -26,22 +27,8 @@ class Footer extends Component {
 
 	componentDidUpdate(prevProps) {
 		if (prevProps !== this.props) {
-			if (this.props.diffY > 0 && this.props.diffY < this.initPosition && this.state.positionY !== 0) {
-				this.setState({ positionY: this.initPosition - this.props.diffY });
-			}
-
-			if (this.props.diffY >= this.initPosition && !this.state.isShowed) {
-				this.setState({ isShowed: true });
-				this.setState({ positionY: 0 });
-			}
-
-			if (
-				this.props.diffY < 0 &&
-				this.props.diffY > -this.initPosition &&
-				this.state.positionY !== this.initPosition
-			) {
-				this.setState({ positionY: -this.props.diffY });
-				this.setState({ isShowed: false });
+			if (!this.state.isLogoTouched) {
+				this.handlePositionY();
 			}
 
 			if (this.props.isTouch === false && !this.state.isShowed) {
@@ -69,6 +56,30 @@ class Footer extends Component {
 		}
 	}
 
+	handleLogoTouched = (state) => {
+		this.setState({ isLogoTouched: state });
+	};
+
+	handlePositionY() {
+		if (this.props.diffY > 0 && this.props.diffY < this.initPosition && this.state.positionY !== 0) {
+			this.setState({ positionY: this.initPosition - this.props.diffY });
+		}
+
+		if (this.props.diffY >= this.initPosition && !this.state.isShowed) {
+			this.setState({ isShowed: true });
+			this.setState({ positionY: 0 });
+		}
+
+		if (
+			this.props.diffY < 0 &&
+			this.props.diffY > -this.initPosition &&
+			this.state.positionY !== this.initPosition
+		) {
+			this.setState({ positionY: -this.props.diffY });
+			this.setState({ isShowed: false });
+		}
+	}
+
 	render() {
 		return (
 			<div
@@ -79,7 +90,7 @@ class Footer extends Component {
 				style={{ transform: `translateY(${this.state.positionY}px)` }}
 			>
 				<h2 className="Footer__title">Ils m'ont fait confiance</h2>
-				<LogoSlider isShowed={this.state.isShowed} />
+				<LogoSlider isShowed={this.state.isShowed} isTouched={this.handleLogoTouched} />
 			</div>
 		);
 	}
