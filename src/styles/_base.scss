@@ -8,16 +8,22 @@
 	padding: 0;
 }
 
+html,
 body {
-	font-family: 'Regular-Semibold';
-}
-
-.App {
-	position: absolute;
+	position: fixed;
+	overflow: hidden;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
+	font-family: 'Regular-Semibold';
+	overscroll-behavior: none;
+}
+
+.App {
+	position: absolute;
+	width: 100%;
+	height: 100%;
 }
 
 h2,
