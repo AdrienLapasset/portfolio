@@ -19,7 +19,7 @@ class Footer extends Component {
 
 	componentDidMount() {
 		if (this.props.isMobile) {
-			this.setState({ positionY: 60 });
+			this.setState({ positionY: this.initPosition });
 		} else {
 			this.setState({ positionY: null });
 		}
@@ -31,7 +31,7 @@ class Footer extends Component {
 				this.handlePositionY();
 			}
 
-			if (this.props.isTouch === false && !this.state.isShowed) {
+			if (!this.props.isTouch && !this.state.isShowed && this.props.isMobile) {
 				this.setState({ positionY: this.initPosition });
 			}
 		}
