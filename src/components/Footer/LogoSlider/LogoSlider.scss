@@ -14,6 +14,7 @@
 
 	&--show {
 		.LogoSlider__item {
+			display: block;
 			animation: fadeFromBottom .4s forwards;
 			@include animationDelay(0, 6);
 		}
@@ -52,5 +53,10 @@
 		background-position: center;
 		opacity: 0;
 		animation: fadeOut .2s forwards;
+		display: none;
+
+		span {
+			display: none;
+		}
 	}
 }
