@@ -53,6 +53,7 @@ class Footer extends Component {
 			this.setState((state) => ({
 				isShowed: !state.isShowed
 			}));
+			this.props.isShowed(this.state.isShowed);
 		}
 	}
 

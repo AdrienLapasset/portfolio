@@ -12,7 +12,7 @@ class Home extends Component {
 
 	componentDidUpdate(prevProps) {
 		if (prevProps !== this.props) {
-			if (!this.props.isSwipe && this.props.isTouch) {
+			if (this.props.isTouch) {
 				let newOpacity = 1 - this.props.diffY / 100;
 				this.setState({ opacity: newOpacity });
 			} else {

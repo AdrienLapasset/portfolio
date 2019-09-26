@@ -11,7 +11,8 @@ class App extends Component {
 			opacity: 1,
 			isSwipe: false,
 			isMobile: false,
-			isTouch: false
+			isTouch: false,
+			isFooterShowed: false
 		};
 		this.onTouchStart = this.onTouchStart.bind(this);
 		this.onTouchMove = this.onTouchMove.bind(this);
@@ -50,10 +51,13 @@ class App extends Component {
 		if (this.state.isMobile) {
 			this.moveY = event.touches[0].clientY;
 			let newDiffY = this.startY - this.moveY;
-			if (newDiffY < 100) {
+			console.log(newDiffY);
+			if (newDiffY > -100 && newDiffY < 100) {
 				this.setState({ diffY: newDiffY });
 			} else if (newDiffY >= 100 && !this.state.isSwipe) {
 				this.setState({ isSwipe: true, diffY: 0 });
+			} else if (newDiffY <= -100 && this.state.isSwipe && !this.state.isFooterShowed) {
+				this.setState({ isSwipe: false, diffY: 0 });
 			}
 		}
 	}
@@ -63,6 +67,10 @@ class App extends Component {
 			this.setState({ isTouch: false, diffY: 0 });
 		}
 	}
+
+	handleFooterShowed = (state) => {
+		this.setState({ isFooterShowed: state });
+	};
 
 	render() {
 		return (
@@ -85,6 +93,7 @@ class App extends Component {
 						isSwipe={this.state.isSwipe}
 						isTouch={this.state.isTouch}
 						diffY={this.state.diffY}
+						isShowed={this.handleFooterShowed}
 					/>
 				) : null}
 			</div>
