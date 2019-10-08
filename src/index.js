@@ -7,7 +7,7 @@ import Observer from 'fontfaceobserver';
 
 const font = new Observer('Regular-Semibold');
 // Render App after font is loaded
-font.load().then(() => {
+font.load(null, 100000).then(() => {
 	ReactDOM.render(<App />, document.getElementById('root'));
 });
 
