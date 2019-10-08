@@ -3,8 +3,13 @@ import ReactDOM from 'react-dom';
 import './styles/main.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Observer from 'fontfaceobserver';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const font = new Observer('Regular-Semibold');
+// Render App after font is loaded
+font.load().then(() => {
+	ReactDOM.render(<App />, document.getElementById('root'));
+});
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
