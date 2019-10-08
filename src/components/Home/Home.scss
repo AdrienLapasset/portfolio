@@ -54,7 +54,7 @@
 
 		& > p {
 			opacity: 0;
-			animation: fadefromleft forwards;
+			animation: fadefromleft .4s forwards;
 
 			@include md {
 				&:nth-child(1) {
