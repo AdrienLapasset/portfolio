@@ -15,7 +15,7 @@
 	display: flex;
 	flex-direction: column;
 	opacity: 0;
-	animation: fadefromTop 1s forwards, float 1.5s 1s ease-in-out infinite alternate;
+	animation: fadefromTop 1s forwards, float 1.5s ease-in-out infinite alternate;
 
 	&__container {
 		position: absolute;

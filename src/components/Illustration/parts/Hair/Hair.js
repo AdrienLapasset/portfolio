@@ -8,11 +8,19 @@ function Hair() {
 			height="58"
 			viewBox="0 0 48 58"
 			xmlns="http://www.w3.org/2000/svg"
+			xmlnsXlink="http://www.w3.org/1999/xlink"
+			version="1.1"
 			className="Hair"
 			preserveAspectRatio="xMidYMid meet"
 		>
-			<path strokeLinecap="round" stroke="#000000" strokeWidth="4" fill="#000000">
-				<animate
+			<path
+				strokeLinecap="round"
+				stroke="#000000"
+				strokeWidth="4"
+				fill="#000000"
+				d="M10.1706277,31.9968218 C4.72354258,29.6697587 2,25.7823152 2,20.3344913 C2,14.8866674 3.97240972,9.77517031 7.91722915,5 C9.48224294,11.391675 11.57277,15.2393289 14.1888104,16.5429617 C18.112871,18.4984109 36.9642795,12.1658967 42.9880932,18.4984109 C47.0039689,22.720087 47.0039689,35.2206167 42.9880932,56"
+			>
+				{/* <animate
 					dur="3s"
 					repeatCount="indefinite"
 					attributeName="d"
@@ -25,7 +33,7 @@ function Hair() {
 					keySplines=".5 .5 .5 1;
 											.5 0 .5 1;
 											.5 0 .5 .5"
-				/>
+				/> */}
 			</path>
 		</svg>
 	);

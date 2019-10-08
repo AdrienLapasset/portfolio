@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Header.scss';
-import logoAdrienLapasset from '../../assets/logos/logo-adrien-lapasset.svg';
+import LogoAdrienLapasset from '../../assets/logos/logo-adrien-lapasset.js';
 import MaltIcon from '../../assets/icons/malt.js';
 import LinkedinIcon from '../../assets/icons/linkedin.js';
 import GithubIcon from '../../assets/icons/github.js';
@@ -20,7 +20,7 @@ class Header extends Component {
 		return (
 			<header className="header">
 				<div className="header__logo" onClick={this.onClickLogo}>
-					<img className="header__logo__icon" src={logoAdrienLapasset} alt="Logo Adrien Lapasset" />
+					<LogoAdrienLapasset />
 					Adrien Lapasset
 				</div>
 				<div className="header__links">
