@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Home.scss';
 import Illustration from '../Illustration/Illustration';
+import SwipeIcon from './SwipeIcon/SwipeIcon';
 
 class Home extends Component {
 	constructor(props) {
@@ -40,6 +41,7 @@ class Home extends Component {
 						</p>
 					</div>
 				) : null : null}
+				{this.props.isMobile && !this.props.isSwipe ? <SwipeIcon /> : null}
 			</div>
 		);
 	}

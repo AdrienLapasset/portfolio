@@ -1,0 +1,47 @@
+.SwipeIcon {
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	margin-top: 40px;
+	animation: swipeIconFadeIn .4s 3s forwards;
+	transform: translateY(10px);
+	opacity: 0;
+
+	.arrow {
+		border: solid black;
+		border-width: 0 2px 2px 0;
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		transform: rotate(-135deg);
+		animation: swipeIcon 1s alternate infinite;
+
+		&:first-child {
+			animation-delay: .3s;
+		}
+	}
+}
+
+@keyframes swipeIcon {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes swipeIconFadeIn {
+	from {
+		transform: translateY(3px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
