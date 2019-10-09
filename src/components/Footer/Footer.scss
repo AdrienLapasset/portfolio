@@ -8,13 +8,12 @@
 	left: 0;
 	right: 0;
 	cursor: pointer;
-	animation: fadeFooter .4s .4s forwards cubic-bezier(.2, 0, 0, 1);
+	animation: fadeFooter .4s .8s forwards cubic-bezier(.2, 0, 0, 1);
 	opacity: 0;
 
 	@include md {
 		padding-top: 100px;
 		transform: translateY(100px);
-		animation-delay: 4s;
 		&:hover:not(.Footer--show) {
 			transform: translateY(80px);
 		}

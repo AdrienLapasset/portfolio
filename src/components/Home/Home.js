@@ -25,7 +25,7 @@ class Home extends Component {
 		return (
 			<div className="Home">
 				{!this.props.isSwipe ? <Illustration opacity={this.state.opacity} /> : ''}
-				{!this.props.isMobile || this.props.isSwipe ? (
+				{this.props.isFontLoaded ? !this.props.isMobile || this.props.isSwipe ? (
 					<div className="Home__text" style={{ opacity: this.state.opacity }}>
 						<p className="Home__text__hello">Bonjour,</p>
 						<p>
@@ -39,9 +39,7 @@ class Home extends Component {
 							</a>
 						</p>
 					</div>
-				) : (
-					''
-				)}
+				) : null : null}
 			</div>
 		);
 	}

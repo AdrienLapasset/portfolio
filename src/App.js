@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
+import Observer from 'fontfaceobserver';
 
 class App extends Component {
 	constructor(props) {
@@ -11,7 +12,8 @@ class App extends Component {
 			opacity: 1,
 			isSwipe: false,
 			isMobile: false,
-			isTouch: false
+			isTouch: false,
+			isFontLoaded: false
 		};
 		this.onTouchStart = this.onTouchStart.bind(this);
 		this.onTouchMove = this.onTouchMove.bind(this);
@@ -22,6 +24,11 @@ class App extends Component {
 	moveX = null;
 
 	componentDidMount() {
+		const font = new Observer('Regular-Semibold');
+		font.load(null, 100000).then(() => {
+			this.setState({ isFontLoaded: true });
+		});
+
 		this.updateWindowDimensions();
 		window.addEventListener('resize', this.updateWindowDimensions);
 	}
@@ -72,21 +79,22 @@ class App extends Component {
 				onTouchMove={this.onTouchMove}
 				onTouchEnd={this.onTouchEnd}
 			>
-				<Header />
+				{this.state.isFontLoaded ? <Header /> : ''}
 				<Home
 					isMobile={this.state.isMobile}
 					isSwipe={this.state.isSwipe}
 					isTouch={this.state.isTouch}
 					diffY={this.state.diffY}
+					isFontLoaded={this.state.isFontLoaded}
 				/>
-				{this.state.isSwipe || !this.state.isMobile ? (
+				{this.state.isFontLoaded ? this.state.isSwipe || !this.state.isMobile ? (
 					<Footer
 						isMobile={this.state.isMobile}
 						isSwipe={this.state.isSwipe}
 						isTouch={this.state.isTouch}
 						diffY={this.state.diffY}
 					/>
-				) : null}
+				) : null : null}
 			</div>
 		);
 	}
