@@ -1,6 +1,6 @@
 .SwipeIcon {
 	position: absolute;
-	bottom: 20px;
+	bottom: 15px;
 	left: 0;
 	right: 0;
 	align-items: center;
@@ -15,20 +15,20 @@
 		border: solid black;
 		border-width: 0 2px 2px 0;
 		display: inline-block;
-		width: 8px;
-		height: 8px;
+		width: 10px;
+		height: 10px;
 		transform: rotate(-135deg);
 		animation: swipeIcon 1s alternate infinite;
 
 		&:first-child {
-			animation-delay: .3s;
+			animation-delay: .5s;
 		}
 	}
 }
 
 @keyframes swipeIcon {
 	from {
-		opacity: 1;
+		opacity: .4;
 	}
 	to {
 		opacity: 0;
