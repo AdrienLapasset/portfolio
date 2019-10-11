@@ -139,7 +139,9 @@ class LogoSlider extends Component {
 				onTouchMove={this.onTouchMove}
 				onTouchEnd={this.onTouchEnd}
 			>
-				<h2 className="Footer__title Footer__title--mobile">Ils m'ont fait confiance</h2>
+				<h2 className="Footer__title Footer__title--mobile" style={{ opacity: this.props.footerPos / 60 }}>
+					Ils m'ont fait confiance
+				</h2>
 				<div className="LogoSlider__container" style={{ width: this.state.itemWidth * 6 }}>
 					<div className="LogoSlider__list" style={{ transform: `translateX(${-this.state.sliderPos}px)` }}>
 						{pressList}

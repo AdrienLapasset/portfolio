@@ -77,7 +77,6 @@ class App extends Component {
 
 	handleFooterShowed = (isFooterShowed) => {
 		this.isFooterShowed = isFooterShowed;
-		console.log(isFooterShowed);
 	};
 
 	render() {

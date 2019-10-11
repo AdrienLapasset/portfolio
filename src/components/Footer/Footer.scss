@@ -36,7 +36,6 @@
 	}
 
 	&__title {
-		transition: opacity .2s;
 		opacity: 1;
 		text-align: center;
 		color: $grey;
@@ -46,6 +45,7 @@
 		display: none;
 
 		@include md {
+			transition: opacity .2s;
 			display: block;
 			background-color: white;
 			box-shadow: 0px -15px 15px 10px white;

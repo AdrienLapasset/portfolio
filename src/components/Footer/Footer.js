@@ -92,7 +92,11 @@ class Footer extends Component {
 				style={{ transform: `translateY(${this.state.positionY}px)` }}
 			>
 				<h2 className="Footer__title">Ils m'ont fait confiance</h2>
-				<LogoSlider isShowed={this.state.isShowed} isTouched={this.handleLogoTouched} />
+				<LogoSlider
+					footerPos={this.state.positionY}
+					isShowed={this.state.isShowed}
+					isTouched={this.handleLogoTouched}
+				/>
 			</div>
 		);
 	}
