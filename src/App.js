@@ -22,6 +22,7 @@ class App extends Component {
 	}
 	startY = null;
 	moveX = null;
+	isFooterShowed = false;
 
 	componentDidMount() {
 		const font = new Observer('Regular-Semibold');
@@ -62,6 +63,9 @@ class App extends Component {
 			} else if (newDiffY >= 100 && !this.state.isSwipe) {
 				this.setState({ isSwipe: true, diffY: 0 });
 			}
+			if (newDiffY < -100 && !this.isFooterShowed) {
+				this.setState({ isSwipe: false, diffY: 0 });
+			}
 		}
 	}
 
@@ -70,6 +74,11 @@ class App extends Component {
 			this.setState({ isTouch: false, diffY: 0 });
 		}
 	}
+
+	handleFooterShowed = (isFooterShowed) => {
+		this.isFooterShowed = isFooterShowed;
+		console.log(isFooterShowed);
+	};
 
 	render() {
 		return (
@@ -93,6 +102,7 @@ class App extends Component {
 						isSwipe={this.state.isSwipe}
 						isTouch={this.state.isTouch}
 						diffY={this.state.diffY}
+						isShowed={this.handleFooterShowed}
 					/>
 				) : null : null}
 			</div>

@@ -66,8 +66,8 @@ class Footer extends Component {
 		}
 
 		if (this.props.diffY >= this.initPosition && !this.state.isShowed) {
-			this.setState({ isShowed: true });
-			this.setState({ positionY: 0 });
+			this.setState({ isShowed: true, positionY: 0 });
+			this.props.isShowed(true);
 		}
 
 		if (
@@ -75,8 +75,10 @@ class Footer extends Component {
 			this.props.diffY > -this.initPosition &&
 			this.state.positionY !== this.initPosition
 		) {
-			this.setState({ positionY: -this.props.diffY });
-			this.setState({ isShowed: false });
+			this.setState({ positionY: -this.props.diffY, isShowed: false });
+		}
+		if (this.state.positionY === this.initPosition) {
+			this.props.isShowed(false);
 		}
 	}
 

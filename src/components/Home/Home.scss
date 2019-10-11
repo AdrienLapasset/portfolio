@@ -25,9 +25,11 @@
 	&__text {
 		width: 100%;
 		line-height: 1.4;
+		margin: 70px 0px auto;
 
 		@include lg {
 			width: 500px;
+			margin: 0;
 		}
 
 		@include xl {
