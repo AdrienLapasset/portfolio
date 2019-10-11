@@ -13,7 +13,6 @@
 	@include md {
 		animation: footer .4s .8s forwards cubic-bezier(.2, 0, 0, 1);
 		bottom: -150px;
-		padding-top: 100px;
 		box-shadow: none;
 		&:hover:not(.Footer--show) {
 			transform: translateY(-20px);
