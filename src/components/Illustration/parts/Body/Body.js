@@ -2,6 +2,7 @@ import React from 'react';
 import './Body.scss';
 
 function Body() {
+	console.log(document.getElementById('toto').getPathData());
 	return (
 		<svg
 			className="Body"
@@ -58,7 +59,7 @@ function Body() {
 							<g id="Group">
 								<path
 									d="M6.08246896,41.6325948 C0.478293533,38.8513387 -4.19591856,24.6154925 6.08246896,8.8277452 C12.9347273,-1.69741969 25.7266816,-1.69741969 44.4583319,8.8277452 L138.576675,58.5483873 L131.350731,73.7587424 C51.5746734,54.1954813 9.8185859,43.4867655 6.08246896,41.6325948 Z"
-									id="Path-2"
+									id="toto"
 									fill="#FFFFFF"
 								/>
 								<path
