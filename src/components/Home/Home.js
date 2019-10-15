@@ -2,13 +2,17 @@ import React, { Component } from 'react';
 import './Home.scss';
 import Illustration from '../Illustration/Illustration';
 import SwipeIcon from './SwipeIcon/SwipeIcon';
+import CopyIcon from '../../assets/icons/copyIcon';
 
 class Home extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			opacity: 1
+			opacity: 1,
+			isEmailCopied: false
 		};
+
+		this.onClickEmail = this.onClickEmail.bind(this);
 	}
 
 	componentDidUpdate(prevProps) {
@@ -20,6 +24,25 @@ class Home extends Component {
 				this.setState({ opacity: 1 });
 			}
 		}
+	}
+
+	onClickEmail() {
+		this.copyEmailToClipboard();
+		this.setState({ isEmailCopied: true });
+		setTimeout(() => {
+			this.setState({ isEmailCopied: false });
+		}, 2000);
+	}
+
+	copyEmailToClipboard() {
+		let el = document.createElement('textarea');
+		el.value = 'mail@adrienlapasset.fr';
+		el.setAttribute('readonly', '');
+		el.style = { position: 'absolute', left: '-9999px' };
+		document.body.appendChild(el);
+		el.select();
+		document.execCommand('copy');
+		document.body.removeChild(el);
 	}
 
 	render() {
@@ -34,10 +57,14 @@ class Home extends Component {
 							responsive, le design minimaliste et les transitions en douceur.
 						</p>
 						<p className="Home__text__contact">
-							Pour me contacter c’est par ici :<br />
-							<a href="mailto:mail@adrienlapasset.fr" target="_blank" rel="noopener noreferrer">
+							Mon adresse email :
+							<button className="Home__email" onClick={this.onClickEmail}>
 								mail@adrienlapasset.fr
-							</a>
+								<CopyIcon />
+								{this.state.isEmailCopied ? (
+									<span className="Home__email__feedback">Copié !</span>
+								) : null}
+							</button>
 						</p>
 					</div>
 				) : null : null}

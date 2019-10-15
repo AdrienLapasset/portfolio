@@ -27,8 +27,10 @@ body {
 }
 
 h2,
-p {
+p,
+button {
 	font-size: 18px;
+	font-family: 'Regular-Semibold';
 
 	@include md {
 		font-size: 24px;
