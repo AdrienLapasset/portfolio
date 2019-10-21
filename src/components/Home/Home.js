@@ -56,16 +56,16 @@ class Home extends Component {
 							Je suis un développeur créatif (et occasionnellement designer) qui aime les sites
 							responsive, le design minimaliste et les transitions en douceur.
 						</p>
-						<p className="Home__text__contact">
-							Mon adresse email :
-							<button className="Home__email" onClick={this.onClickEmail}>
+						<p className="Home__text__contact">Pour me contacter c’est par ici :</p>
+						<div className="Home__email">
+							<a href="mailto:mail@adrienlapasset.fr" target="_blank" rel="noopener noreferrer">
 								mail@adrienlapasset.fr
+							</a>
+							<button className="Home__email__copyBtn" onClick={this.onClickEmail}>
 								<CopyIcon />
-								{this.state.isEmailCopied ? (
-									<span className="Home__email__feedback">Copié !</span>
-								) : null}
 							</button>
-						</p>
+							{this.state.isEmailCopied ? <span className="Home__email__feedback">Copiée !</span> : null}
+						</div>
 					</div>
 				) : null : null}
 				{this.props.isMobile && !this.props.isSwipe ? <SwipeIcon /> : null}

@@ -48,14 +48,15 @@
 
 		&__contact {
 			margin-top: 20px;
-			display: flex;
+			font-size: 15px;
 
 			@include sm {
+				font-size: 19px;
 				margin-top: 40px;
 			}
 		}
 
-		& > p {
+		& > * {
 			opacity: 0;
 			animation: fadefromleft .4s forwards;
 
@@ -69,34 +70,38 @@
 				&:nth-child(3) {
 					animation-delay: .6s;
 				}
+				&:nth-child(4) {
+					animation-delay: .7s;
+				}
 			}
 		}
 	}
 
 	&__email {
-		margin-left: 5px;
-		border: none;
+		margin-top: 10px;
 		text-decoration: none;
-		cursor: pointer;
 		display: flex;
 		align-items: center;
-		outline: none;
 
-		&:hover {
-			.copyIcon {
-				opacity: 1;
-				margin-left: 7px;
-			}
+		a {
+			cursor: pointer;
 		}
 
-		.copyIcon {
-			opacity: 0;
-			transition: opacity .1s, margin-left .2s;
+		&__copyBtn {
+			cursor: pointer;
+			background-color: black;
+			margin-left: 15px;
+			border: none;
+			outline: none;
+			border-radius: 3px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 30px;
+			height: 30px;
 		}
 
 		&__feedback {
-			position: absolute;
-			right: 10px;
 			opacity: 0;
 			font-size: 16px;
 			margin-left: 10px;
