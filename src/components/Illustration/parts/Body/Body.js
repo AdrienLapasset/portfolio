@@ -2,7 +2,6 @@ import React from 'react';
 import './Body.scss';
 
 function Body() {
-	console.log(document.getElementById('toto').getPathData());
 	return (
 		<svg
 			className="Body"

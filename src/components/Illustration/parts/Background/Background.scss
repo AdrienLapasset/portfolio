@@ -6,11 +6,15 @@
 
 	.animationDelay {
 		& > * {
-			stroke-dasharray: 1000;
-			stroke-dashoffset: 1000;
+			// animation: dash 3s cubic-bezier(0.25, 0.1, 0.25, 1.0) forwards;
+			// @include animationDelay(.5, 100);
 
-			animation: dash 3s cubic-bezier(0.25, 0.1, 0.25, 1.0) forwards;
-			@include animationDelay(.5, 100);
+			&:hover {
+				stroke-dasharray: 1000;
+				stroke-dashoffset: 1000;
+				transition: stroke-dashoffset 1s;
+				// animation: dash 3s cubic-bezier(0.25, 0.1, 0.25, 1.0) forwards;
+			}
 		}
 	}
 
