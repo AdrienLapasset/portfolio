@@ -36,7 +36,7 @@ class Home extends Component {
 
 	copyEmailToClipboard() {
 		let el = document.createElement('textarea');
-		el.value = 'mail@adrienlapasset.fr';
+		el.value = 'aflapasset@gmail.com';
 		el.setAttribute('readonly', '');
 		el.style = { position: 'absolute', left: '-9999px' };
 		document.body.appendChild(el);
@@ -58,8 +58,8 @@ class Home extends Component {
 						</p>
 						<p className="Home__text__contact">Pour me contacter c’est par ici :</p>
 						<div className="Home__email">
-							<a href="mailto:mail@adrienlapasset.fr" target="_blank" rel="noopener noreferrer">
-								mail@adrienlapasset.fr
+							<a href="mailto:aflapasset@gmail.com" target="_blank" rel="noopener noreferrer">
+								aflapasset@gmail.com
 							</a>
 							<button className="Home__email__copyBtn" onClick={this.onClickEmail}>
 								<CopyIcon />
